@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ReservationService.Domain.Enums
+namespace ReservationService.Entities.Enums
 {
     public enum ReservationStatus
     {
-        ACTIVE,
-        CANCELED
+        ACTIVE = 1,
+        CANCELED = 2
     }
 }

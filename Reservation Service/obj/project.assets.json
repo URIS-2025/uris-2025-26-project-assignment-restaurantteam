@@ -5984,9 +5984,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GRADIVO\\4.GOD\\1.SEMESTAR\\URIS\\Projekat URIS 2026\\Projekat URIS\\Reservation Service\\Reservation Service.csproj",
-      "projectName": "Reservation Service",
-      "projectPath": "D:\\GRADIVO\\4.GOD\\1.SEMESTAR\\URIS\\Projekat URIS 2026\\Projekat URIS\\Reservation Service\\Reservation Service.csproj",
+      "projectUniqueName": "D:\\GRADIVO\\4.GOD\\1.SEMESTAR\\URIS\\Projekat URIS 2026\\Projekat URIS\\Reservation Service\\ReservationService.csproj",
+      "projectName": "ReservationService",
+      "projectPath": "D:\\GRADIVO\\4.GOD\\1.SEMESTAR\\URIS\\Projekat URIS 2026\\Projekat URIS\\Reservation Service\\ReservationService.csproj",
       "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
       "outputPath": "D:\\GRADIVO\\4.GOD\\1.SEMESTAR\\URIS\\Projekat URIS 2026\\Projekat URIS\\Reservation Service\\obj\\",
       "projectStyle": "PackageReference",
