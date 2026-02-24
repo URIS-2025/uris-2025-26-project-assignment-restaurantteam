@@ -1,4 +1,5 @@
-﻿using AuthenticationService.Models.Dto;
+﻿using AuthenticationService.Model;
+using AuthenticationService.Model.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +9,8 @@ namespace AuthenticationService.Data.Auth
 {
     public interface IAuthenticationHelper
     {
-        public bool AuthenticatePrincipal(Principal principal);
-
-        public string GenerateJwt(Principal principal);
+        string HashPassword(string password);
+        bool VerifyPassword(string password, string storedHash);
+        LoginResponseDto GenerateJwtToken(AuthUser user);
     }
 }

@@ -1,57 +1,71 @@
-﻿using AuthenticationService.Data.User;
-using AuthenticationService.Models.Dto;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Text;
+﻿using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using System.Text; // za Encoding.UTF8
+using AuthenticationService.Model;
+using AuthenticationService.Model.Dto;
+using Microsoft.Extensions.Configuration;
 
 namespace AuthenticationService.Data.Auth
 {
     public class AuthenticationHelper : IAuthenticationHelper
     {
-        private readonly IConfiguration configuration;
-        private readonly IUserRepository userRepository;
+        private readonly string _jwtSecret;
+        private readonly int _jwtLifespan; // u minutima
 
-        public AuthenticationHelper(IConfiguration configuration, IUserRepository userRepository)
+        public AuthenticationHelper(IConfiguration configuration)
         {
-            this.configuration = configuration;
-            this.userRepository = userRepository;
+            _jwtSecret = configuration["Jwt:Secret"];
+            _jwtLifespan = int.Parse(configuration["Jwt:LifespanMinutes"]);
+        }
+        //  Hashiranje password-a (jednostavno sa SHA256)
+        public string HashPassword(string password)
+        {
+            using var sha256 = System.Security.Cryptography.SHA256.Create();
+            var bytes = Encoding.UTF8.GetBytes(password);
+            var hash = sha256.ComputeHash(bytes);
+            return Convert.ToBase64String(hash);
         }
 
-        /// <summary>
-        /// Vrši autentifikaciju principala
-        /// </summary>
-        /// <param name="principal">Principal za autentifikaciju</param>
-        /// <returns></returns>
-        public bool AuthenticatePrincipal(Principal principal)
+        //  Verifikacija password-a
+        public bool VerifyPassword(string password, string storedHash)
         {
-            if (userRepository.UserWithCredentialsExists(principal.Username, principal.Password))
+            var hashOfInput = HashPassword(password);
+            return hashOfInput == storedHash;
+        }
+
+        //  Generisanje JWT tokena
+        public LoginResponseDto GenerateJwtToken(AuthUser user)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_jwtSecret);
+
+            var claims = new[]
             {
-                return true;
-            }
+                new Claim(ClaimTypes.NameIdentifier, user.IdUser.ToString()),
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Role, user.Role)
+            };
 
-            return false;
-        }
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddMinutes(_jwtLifespan),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
 
-        /// <summary>
-        /// Generiše novi token za autentifikovanog principala
-        /// </summary>
-        /// <param name="principal">Autentifikovani principal</param>
-        /// <returns></returns>
-        public string GenerateJwt(Principal principal)
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
 
-            var token = new JwtSecurityToken(configuration["Jwt:Issuer"],
-                                             configuration["Jwt:Issuer"],
-                                             null,
-                                             expires: DateTime.Now.AddMinutes(120),
-                                             signingCredentials: credentials);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            return new LoginResponseDto
+            {
+                IdUser = user.IdUser,
+                Username = user.Username,
+                Role = user.Role,
+                Token = tokenString,
+                ExpiresAt = tokenDescriptor.Expires.Value
+            };
         }
     }
 }

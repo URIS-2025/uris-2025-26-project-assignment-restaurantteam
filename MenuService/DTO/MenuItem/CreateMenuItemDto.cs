@@ -11,6 +11,8 @@ namespace MenuService.DTO.MenuItem
         public string Description { get; set; }
         public decimal Price { get; set; }
         public int Calories { get; set; }
+        public bool IsAvailable { get; set; }
+
         public List<int> CategoryIds { get; set; }
         public List<int> IngredientIds { get; set; }
     }

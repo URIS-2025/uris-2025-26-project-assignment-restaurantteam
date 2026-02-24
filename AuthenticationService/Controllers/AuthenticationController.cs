@@ -1,41 +1,44 @@
-﻿using AuthenticationService.Data.Auth;
-using AuthenticationService.Models.Dto;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using AuthenticationService.Data.Auth;
+using AuthenticationService.Model;
+using AuthenticationService.Model.Dto;
+using System.Threading.Tasks;
+using AuthenticationService.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace AuthenticationService.Controllers
 {
-    [Route("api/auth")]
     [ApiController]
-    public class AuthenticationController : Controller
+    [Route("api/[controller]")]
+    public class AuthenticationController : ControllerBase
     {
-        private readonly IAuthenticationHelper _authenticationHelper;
+        private readonly IAuthenticationHelper _authHelper;
+        private readonly AuthenticationDbContext _context;
 
-        public AuthenticationController(IAuthenticationHelper authenticationHelper)
+        public AuthenticationController(IAuthenticationHelper authHelper, AuthenticationDbContext context)
         {
-            _authenticationHelper = authenticationHelper;
+            _authHelper = authHelper;
+            _context = context;
         }
 
-        /// <summary>
-        /// Sluzi za autentifikaciju korisnika
-        /// </summary>
-        /// <param name="principal">Model sa podacima na osnovu kojih se vrši autentifikacija</param>
-        /// <returns></returns>
-        [HttpPost("authenticate")]
-        [Consumes("application/json")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public IActionResult Authenticate(Principal principal)
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginRequestDto loginDto)
         {
-            //Pokušaj autentifikacije
-            if (_authenticationHelper.AuthenticatePrincipal(principal))
-            {
-                var tokenString = _authenticationHelper.GenerateJwt(principal);
-                return Ok(new { token = tokenString });
-            }
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == loginDto.Username);
+            if (user == null) return Unauthorized("Korisnik ne postoji");
 
-            //Ukoliko autentifikacija nije uspela vraća se status 401
-            return Unauthorized();
+            if (!_authHelper.VerifyPassword(loginDto.Password, user.Password))
+                return Unauthorized("Pogrešna lozinka");
+
+            var authUser = new AuthUser
+            {
+                IdUser = user.IdUser,
+                Username = user.Username,
+                Role = user.Role.ToString()
+            };
+
+            var token = _authHelper.GenerateJwtToken(authUser);
+            return Ok(token);
         }
     }
 }

@@ -9,29 +9,16 @@ namespace AccountService.Entities
 {
     public class User
     {
-        public int IdUser { get; private set; }
-        public string Username { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
-        public string PhoneNumber { get; private set; }
-        public UserRole Role { get; private set; }
+        public int IdUser { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string PhoneNumber { get; set; }
+        public Enums.UserRole Role { get; set; }
 
-        public Address Address { get; private set; }
+        public int? IdAddress { get; set; }
+        public Address Address { get; set; }
 
-        private User() { }
-
-        public User(string username, string email, string password, string phoneNumber)
-        {
-            Username = username;
-            Email = email;
-            Password = password;
-            PhoneNumber = phoneNumber;
-            Role = UserRole.CUSTOMER;
-        }
-
-        public void ChangeRole(UserRole role)
-        {
-            Role = role;
-        }
+        
     }
 }

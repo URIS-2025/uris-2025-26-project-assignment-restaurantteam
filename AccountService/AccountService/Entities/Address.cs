@@ -7,19 +7,10 @@ namespace AccountService.Entities
 {
     public class Address
     {
-        public string Street { get; private set; }
-        public int StreetNumber { get; private set; }
-        public int PostalCode { get; private set; }
-        public string Country { get; private set; }
-
-        private Address() { }
-
-        public Address(string street, int streetNumber, int postalCode, string country)
-        {
-            Street = street;
-            StreetNumber = streetNumber;
-            PostalCode = postalCode;
-            Country = country;
-        }
+        public Address() { }
+        public string Street { get; set; }
+        public int StreetNumber { get; set; }
+        public int PostalCode { get; set; }
+        public string Country { get; set; }       
     }
 }

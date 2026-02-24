@@ -1,13 +1,18 @@
-﻿using System.Linq;
-
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MenuService.Data;
 using MenuService.DTO.MenuItem;
+using MenuService.DTO.Category;
+using MenuService.DTO.Ingredient;
 using MenuService.Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MenuService.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/menu")]
     public class MenuController : ControllerBase
@@ -19,94 +24,180 @@ namespace MenuService.Controllers
             _context = context;
         }
 
+        // GET: api/menu
         [HttpGet]
-        public IActionResult GetMenu()
+        public async Task<ActionResult<IEnumerable<MenuItemResponseDto>>> GetMenu()
         {
-            var items = _context.MenuItems
-                .Where(m => m.IsAvailable)
-                .ToList();
+            var menuItems = await _context.MenuItems
+                .Include(m => m.MenuItemCategories)
+                    .ThenInclude(mc => mc.Category)
+                .Include(m => m.MenuItemIngredients)
+                    .ThenInclude(mi => mi.Ingredient)
+                .ToListAsync();
 
-            return Ok(items);
+            return menuItems.Select(MapToResponseDto).ToList();
         }
 
+        // GET: api/menu/{id}
         [HttpGet("{id}")]
-        public IActionResult GetMenuItem(int id)
+        public async Task<ActionResult<MenuItemResponseDto>> GetMenuItem(int id)
         {
-            var item = _context.MenuItems.Find(id);
-            if (item == null) return NotFound();
+            var menuItem = await _context.MenuItems
+                .Include(m => m.MenuItemCategories)
+                    .ThenInclude(mc => mc.Category)
+                .Include(m => m.MenuItemIngredients)
+                    .ThenInclude(mi => mi.Ingredient)
+                .FirstOrDefaultAsync(m => m.IdMenuItem == id);
 
-            return Ok(item);
+            if (menuItem == null)
+                return NotFound();
+
+            return MapToResponseDto(menuItem);
         }
 
-        [HttpGet("by-category/{categoryId}")]
-        public IActionResult GetByCategory(int categoryId)
-        {
-            var items = _context.MenuItems
-                .Where(m => m.IsAvailable &&
-                    m.Categories.Any(c => c.IdCategory == categoryId))
-                .ToList();
-
-            return Ok(items);
-        }
-
+        // POST: api/menu
+        [Authorize(Roles = "Admin")]
         [HttpPost]
-        public IActionResult Create(CreateMenuItemDto dto)
+        public async Task<ActionResult<MenuItemResponseDto>> CreateMenuItem(CreateMenuItemDto dto)
         {
-            var item = new MenuItem(
-                dto.MenuItemName,
-                dto.Description,
-                dto.Price,
-                dto.Calories
-            );
-
-            foreach (var categoryId in dto.CategoryIds)
+            var menuItem = new MenuItem
             {
-                item.Categories.Add(new MenuItemCategory
+                MenuItemName = dto.MenuItemName,
+                Description = dto.Description,
+                Price = dto.Price,
+                Calories = dto.Calories,
+                IsAvailable = dto.IsAvailable
+            };
+
+            _context.MenuItems.Add(menuItem);
+            await _context.SaveChangesAsync();
+
+            // Categories
+            if (dto.CategoryIds != null)
+            {
+                foreach (var categoryId in dto.CategoryIds)
                 {
-                    IdCategory = categoryId
-                });
+                    _context.MenuItemCategories.Add(new MenuItemCategory
+                    {
+                        IdMenuItem = menuItem.IdMenuItem,
+                        IdCategory = categoryId
+                    });
+                }
             }
 
-            foreach (var ingredientId in dto.IngredientIds)
+            // Ingredients
+            if (dto.IngredientIds != null)
             {
-                item.Ingredients.Add(new MenuItemIngredient
+                foreach (var ingredientId in dto.IngredientIds)
                 {
-                    IdIngredient = ingredientId
-                });
+                    _context.MenuItemIngredients.Add(new MenuItemIngredient
+                    {
+                        IdMenuItem = menuItem.IdMenuItem,
+                        IdIngredient = ingredientId
+                    });
+                }
             }
 
-            _context.MenuItems.Add(item);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
-            return Ok(item);
+            return CreatedAtAction(nameof(GetMenuItem),
+                new { id = menuItem.IdMenuItem },
+                MapToResponseDto(menuItem));
         }
 
+        // PUT: api/menu/{id}
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public IActionResult Update(int id, UpdateMenuItemDto dto)
+        public async Task<IActionResult> UpdateMenuItem(int id, UpdateMenuItemDto dto)
         {
-            var item = _context.MenuItems.Find(id);
-            if (item == null) return NotFound();
+            var menuItem = await _context.MenuItems
+                .Include(m => m.MenuItemCategories)
+                .Include(m => m.MenuItemIngredients)
+                .FirstOrDefaultAsync(m => m.IdMenuItem == id);
 
-            item.GetType().GetProperty("MenuItemName")?.SetValue(item, dto.MenuItemName);
-            item.GetType().GetProperty("Description")?.SetValue(item, dto.Description);
-            item.GetType().GetProperty("Price")?.SetValue(item, dto.Price);
-            item.GetType().GetProperty("Calories")?.SetValue(item, dto.Calories);
-            item.GetType().GetProperty("IsAvailable")?.SetValue(item, dto.IsAvailable);
+            if (menuItem == null)
+                return NotFound();
 
-            _context.SaveChanges();
-            return Ok(item);
+            menuItem.MenuItemName = dto.MenuItemName;
+            menuItem.Description = dto.Description;
+            menuItem.Price = dto.Price;
+            menuItem.Calories = dto.Calories;
+            menuItem.IsAvailable = dto.IsAvailable;
+
+            // Clear old relations
+            _context.MenuItemCategories.RemoveRange(menuItem.MenuItemCategories);
+            _context.MenuItemIngredients.RemoveRange(menuItem.MenuItemIngredients);
+
+            // Add new relations
+            if (dto.CategoryIds != null)
+            {
+                foreach (var categoryId in dto.CategoryIds)
+                {
+                    _context.MenuItemCategories.Add(new MenuItemCategory
+                    {
+                        IdMenuItem = id,
+                        IdCategory = categoryId
+                    });
+                }
+            }
+
+            if (dto.IngredientIds != null)
+            {
+                foreach (var ingredientId in dto.IngredientIds)
+                {
+                    _context.MenuItemIngredients.Add(new MenuItemIngredient
+                    {
+                        IdMenuItem = id,
+                        IdIngredient = ingredientId
+                    });
+                }
+            }
+
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Deactivate(int id)
+        // DELETE: api/menu/{id}
+        [Authorize(Roles = "Admin")]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> DeleteMenuItem(int id)
         {
-            var item = _context.MenuItems.Find(id);
-            if (item == null) return NotFound();
+            var menuItem = await _context.MenuItems.FindAsync(id);
+            if (menuItem == null)
+                return NotFound();
 
-            item.Deactivate();
-            _context.SaveChanges();
+            _context.MenuItems.Remove(menuItem);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
 
-            return Ok("Menu item deactivated");
+        // -----------------------------
+        // Mapping helper
+        // -----------------------------
+        private static MenuItemResponseDto MapToResponseDto(MenuItem menuItem)
+        {
+            return new MenuItemResponseDto
+            {
+                IdMenuItem = menuItem.IdMenuItem,
+                MenuItemName = menuItem.MenuItemName,
+                Description = menuItem.Description,
+                Price = menuItem.Price,
+                Calories = menuItem.Calories,
+                IsAvailable = menuItem.IsAvailable,
+                Categories = menuItem.MenuItemCategories?
+                    .Select(mc => new CategoryDto
+                    {
+                        IdCategory = mc.Category.IdCategory,
+                        CategoryName = mc.Category.CategoryName
+                    }).ToList(),
+                Ingredients = menuItem.MenuItemIngredients?
+                    .Select(mi => new IngredientDto
+                    {
+                        IdIngredient = mi.Ingredient.IdIngredient,
+                        IngredientName = mi.Ingredient.IngredientName,
+                        IsAllergen = mi.Ingredient.IsAllergen
+                    }).ToList()
+            };
         }
     }
 }

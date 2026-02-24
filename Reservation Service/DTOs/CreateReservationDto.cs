@@ -6,7 +6,6 @@ namespace ReservationService.DTO
     {
         public DateTime ReservationDate { get; set; }
         public int NumberOfGuests { get; set; }
-        public int IdUser { get; set; }
         public int IdTable { get; set; }
     }
 }

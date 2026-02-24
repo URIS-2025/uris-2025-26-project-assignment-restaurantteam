@@ -10,13 +10,6 @@ namespace MenuService.Entities
         public int IdIngredient { get; private set; }
         public string IngredientName { get; private set; }
         public bool IsAllergen { get; private set; }
-
-        private Ingredient() { }
-
-        public Ingredient(string name, bool isAllergen)
-        {
-            IngredientName = name;
-            IsAllergen = isAllergen;
-        }
+        public ICollection<MenuItemIngredient> MenuItemIngredients { get; set; }
     }
 }

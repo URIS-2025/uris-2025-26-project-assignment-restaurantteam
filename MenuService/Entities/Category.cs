@@ -9,12 +9,6 @@ namespace MenuService.Entities
     {
         public int IdCategory { get; private set; }
         public string CategoryName { get; private set; }
-
-        private Category() { }
-
-        public Category(string name)
-        {
-            CategoryName = name;
-        }
+        public ICollection<MenuItemCategory> MenuItemCategories { get; set; }
     }
 }

@@ -1,5 +1,5 @@
-﻿using AccountService.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using AccountService.Entities;
 
 namespace AccountService.Data
 {
@@ -9,15 +9,18 @@ namespace AccountService.Data
             : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // User-Address 1:1 relacija
             modelBuilder.Entity<User>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
+                        .HasOne(u => u.Address)
+                        .WithOne()
+                        .HasForeignKey<User>(u => u.IdAddress)
+                        .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<User>()
-                .OwnsOne(u => u.Address);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
