@@ -53,7 +53,6 @@ D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Se
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Service\obj\Debug\net5.0\staticwebassets\ReservationService.StaticWebAssets.xml
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Service\obj\Debug\net5.0\scopedcss\bundle\ReservationService.styles.css
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Service\obj\Debug\net5.0\ReservationService.RazorTargetAssemblyInfo.cache
-D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Service\obj\Debug\net5.0\ReservationService.csproj.CopyComplete
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Service\obj\Debug\net5.0\ReservationService.dll
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Service\obj\Debug\net5.0\ref\ReservationService.dll
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\Reservation Service\obj\Debug\net5.0\ReservationService.pdb

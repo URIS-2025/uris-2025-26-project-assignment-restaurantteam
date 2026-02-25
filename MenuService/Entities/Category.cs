@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,8 +8,9 @@ namespace MenuService.Entities
 {
     public class Category
     {
-        public int IdCategory { get; private set; }
-        public string CategoryName { get; private set; }
+        [Key]
+        public int IdCategory { get; set; }
+        public string CategoryName { get; set; }
         public ICollection<MenuItemCategory> MenuItemCategories { get; set; }
     }
 }

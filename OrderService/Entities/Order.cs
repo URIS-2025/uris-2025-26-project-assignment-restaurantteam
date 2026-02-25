@@ -1,12 +1,14 @@
 ﻿using OrderService.Entities.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace OrderService.Entities
 {
   
     public class Order
     {
+        [Key]
         public int IdOrder { get; set; }
         public int IdUser { get; set; }
         public OrderStatus OrderStatus { get; set; }

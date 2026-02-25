@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,6 +10,7 @@ namespace ReservationService.Entities
 {
     public class Reservation
     {
+        [Key]
         public int IdReservation { get; set; }
         public DateTime ReservationDate { get; set; }
         public int NumberOfGuests { get; set; }

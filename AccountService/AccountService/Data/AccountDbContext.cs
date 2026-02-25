@@ -9,16 +9,19 @@ namespace AccountService.Data
             : base(options) { }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Address> Addresses { get; set; }
+        //public DbSet<Address> Addresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // User-Address 1:1 relacija
+            // User-Address kao value object (owned type)
             modelBuilder.Entity<User>()
-                        .HasOne(u => u.Address)
-                        .WithOne()
-                        .HasForeignKey<User>(u => u.IdAddress)
-                        .OnDelete(DeleteBehavior.Cascade);
+                .OwnsOne(u => u.Address, a =>
+                {
+                    a.Property(p => p.Street).HasMaxLength(200);
+                    a.Property(p => p.StreetNumber);
+                    a.Property(p => p.PostalCode);
+                    a.Property(p => p.Country).HasMaxLength(100);
+                });
 
             base.OnModelCreating(modelBuilder);
         }

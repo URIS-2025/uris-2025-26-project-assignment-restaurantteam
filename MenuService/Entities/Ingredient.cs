@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,9 +8,10 @@ namespace MenuService.Entities
 {
     public class Ingredient
     {
-        public int IdIngredient { get; private set; }
-        public string IngredientName { get; private set; }
-        public bool IsAllergen { get; private set; }
+        [Key]
+        public int IdIngredient { get; set; }
+        public string IngredientName { get; set; }
+        public bool IsAllergen { get; set; }
         public ICollection<MenuItemIngredient> MenuItemIngredients { get; set; }
     }
 }
