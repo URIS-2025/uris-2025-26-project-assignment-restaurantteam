@@ -79,8 +79,9 @@ namespace OrderService.Controllers
             if (order == null)
                 return NotFound();
 
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var role = User.FindFirst(ClaimTypes.Role).Value;
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+                return Unauthorized();
+            var role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty;
 
             if (order.IdUser != userId && role != "ADMIN")
                 return Forbid();
@@ -108,8 +109,9 @@ namespace OrderService.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrder(CreateOrderDto dto)
         {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+                return Unauthorized();
+
             // POZIV KA AccountService
             var client = _httpClientFactory.CreateClient("AccountService");
             var response = await client.GetAsync($"/api/users/internal/{userId}");
@@ -168,8 +170,9 @@ namespace OrderService.Controllers
             if (order == null)
                 return NotFound();
 
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var role = User.FindFirst(ClaimTypes.Role).Value;
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+                return Unauthorized();
+            var role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty;
 
             if (order.IdUser != userId && role != "ADMIN")
                 return Forbid();
