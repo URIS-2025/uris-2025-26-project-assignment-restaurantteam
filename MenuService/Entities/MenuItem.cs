@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MenuService.Entities
 {
@@ -10,10 +7,21 @@ namespace MenuService.Entities
     {
         [Key]
         public int IdMenuItem { get; set; }
+
+        [Required]
+        [MaxLength(200)]
         public string MenuItemName { get; set; }
+
+        [MaxLength(500)]
         public string Description { get; set; }
+
+        [Required]
+        [Range(0.01, 10000)]
         public decimal Price { get; set; }
+
+        [Range(0, 5000)]
         public int Calories { get; set; }
+
         public bool IsAvailable { get; set; }
 
         public ICollection<MenuItemCategory> MenuItemCategories { get; set; }

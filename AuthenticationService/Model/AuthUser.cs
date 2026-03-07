@@ -1,18 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace AuthenticationService.Model
 {
     public class AuthUser
     {
+        [Key]
         public int IdUser { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Role { get; set; } // CUSTOMER, EMPLOYEE, ADMIN
 
-        // Po potrebi, možete dodati email ili phone za login
+        [Required]
+        [MaxLength(100)]
+        public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [MaxLength(200)]
         public string Email { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+
+        [Required]
+        public string Role { get; set; }
     }
 }

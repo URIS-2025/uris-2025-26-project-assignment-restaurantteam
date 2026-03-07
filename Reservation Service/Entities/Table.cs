@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-
+﻿using System.ComponentModel.DataAnnotations;
 using ReservationService.Entities.Enums;
 
 namespace ReservationService.Entities
@@ -12,7 +7,12 @@ namespace ReservationService.Entities
     {
         [Key]
         public int IdTable { get; set; }
+
+        [Required]
+        [Range(1, 20)]
         public int NumberOfSeats { get; set; }
+
+        [Required]
         public TableStatus Status { get; set; }
     }
 }

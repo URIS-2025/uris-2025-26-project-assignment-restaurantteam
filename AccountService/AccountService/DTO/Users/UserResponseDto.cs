@@ -20,7 +20,7 @@ namespace AccountService.DTO.Users
     {
         public string Street { get; set; }
         public int StreetNumber { get; set; }
-        public int PostalCode { get; set; }
+        public string PostalCode { get; set; }
         public string Country { get; set; }
     }
 }

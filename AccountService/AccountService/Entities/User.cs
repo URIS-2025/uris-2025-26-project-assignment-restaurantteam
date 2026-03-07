@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
-
+﻿using System.ComponentModel.DataAnnotations;
 using AccountService.Entities.Enums;
 
 namespace AccountService.Entities
@@ -12,15 +7,27 @@ namespace AccountService.Entities
     {
         [Key]
         public int IdUser { get; set; }
+
+        [Required]
+        [MaxLength(100)]
         public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [MaxLength(200)]
         public string Email { get; set; }
+
+        [Required]
+        [MinLength(6)]
         public string Password { get; set; }
+
+        [MaxLength(20)]
         public string PhoneNumber { get; set; }
-        public Enums.UserRole Role { get; set; }
+
+        [Required]
+        public UserRole Role { get; set; }
 
         public int? IdAddress { get; set; }
         public Address Address { get; set; }
-
-        
     }
 }
