@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ReservationService.Data;
-using ReservationService.DTO;
 using ReservationService.DTOs;
 using ReservationService.Entities;
 using ReservationService.Entities.Enums;
@@ -174,6 +173,73 @@ namespace ReservationService.Controllers
             _context.Reservations.Remove(reservation);
             await _context.SaveChangesAsync();
 
+            return NoContent();
+        }
+        // ==============================
+        // TABLE endpoints
+        // ==============================
+
+        // GET: api/reservations/tables
+        [HttpGet("tables")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetTables()
+        {
+            var tables = await _context.Tables.ToListAsync();
+            var result = tables.Select(t => new TableDto
+            {
+                IdTable = t.IdTable,
+                NumberOfSeats = t.NumberOfSeats,
+                Status = t.Status
+            }).ToList();
+            return Ok(result);
+        }
+
+        // POST: api/reservations/tables
+        [HttpPost("tables")]
+        [Authorize(Roles = "ADMIN")]
+        public async Task<IActionResult> CreateTable(TableDto dto)
+        {
+            var table = new Table
+            {
+                NumberOfSeats = dto.NumberOfSeats,
+                Status = TableStatus.FREE
+            };
+            _context.Tables.Add(table);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetTables), new { id = table.IdTable }, dto);
+        }
+
+        // PUT: api/reservations/tables/{id}
+        [HttpPut("tables/{id}")]
+        [Authorize(Roles = "ADMIN")]
+        public async Task<IActionResult> UpdateTable(int id, TableDto dto)
+        {
+            var table = await _context.Tables.FindAsync(id);
+            if (table == null) return NotFound();
+
+            table.NumberOfSeats = dto.NumberOfSeats;
+            table.Status = dto.Status;
+
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        // DELETE: api/reservations/tables/{id}
+        [HttpDelete("tables/{id}")]
+        [Authorize(Roles = "ADMIN")]
+        public async Task<IActionResult> DeleteTable(int id)
+        {
+            var table = await _context.Tables.FindAsync(id);
+            if (table == null) return NotFound();
+
+            var hasActiveReservations = await _context.Reservations
+                .AnyAsync(r => r.IdTable == id && r.Status == ReservationStatus.ACTIVE);
+
+            if (hasActiveReservations)
+                return BadRequest("Ne možete obrisati sto koji ima aktivne rezervacije.");
+
+            _context.Tables.Remove(table);
+            await _context.SaveChangesAsync();
             return NoContent();
         }
     }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ReservationService.DTO
+namespace ReservationService.DTOs
 {
     public class CreateReservationDto
     {
