@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gUXllJr8pXHjDzjagyDFrvPkdrANb5lv/PDxe+3pM5AOY3n6CS7eYZsZm+3gF+CHxR3kmcEKvJwOP1X8UUI/bg==",
+  "dgSpecHash": "dNo3H2sTnBWYEK1+j9AuBHtknsOAflS/E0s8B6a4vj+Un5ymhTNt6hC1SpBv5xC00Pmv3DxtsgKomgE/PUuZrw==",
   "success": true,
   "projectFilePath": "D:\\GRADIVO\\4.GOD\\1.SEMESTAR\\URIS\\Projekat URIS 2026\\Projekat URIS\\AuthenticationService\\AuthenticationService.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Pavel\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\Pavel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
     "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",

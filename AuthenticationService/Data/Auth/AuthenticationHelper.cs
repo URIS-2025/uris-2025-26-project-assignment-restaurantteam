@@ -19,20 +19,13 @@ namespace AuthenticationService.Data.Auth
             _jwtSecret = configuration["Jwt:Secret"];
             _jwtLifespan = int.Parse(configuration["Jwt:LifespanMinutes"]);
         }
-        //  Hashiranje password-a (jednostavno sa SHA256)
-        public string HashPassword(string password)
-        {
-            using var sha256 = System.Security.Cryptography.SHA256.Create();
-            var bytes = Encoding.UTF8.GetBytes(password);
-            var hash = sha256.ComputeHash(bytes);
-            return Convert.ToBase64String(hash);
-        }
 
-        //  Verifikacija password-a
+        public string HashPassword(string password) {
+            return BCrypt.Net.BCrypt.HashPassword(password, workFactor: 12);
+        }
         public bool VerifyPassword(string password, string storedHash)
         {
-            var hashOfInput = HashPassword(password);
-            return hashOfInput == storedHash;
+            return BCrypt.Net.BCrypt.Verify(password, storedHash);
         }
 
         //  Generisanje JWT tokena

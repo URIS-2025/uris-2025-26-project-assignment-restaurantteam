@@ -21,6 +21,22 @@ namespace AuthenticationService.Controllers
             _context = context;
         }
 
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterRequestDto dto)
+        {
+            var exists = await _context.Users.AnyAsync(u => u.Username == dto.Username); 
+            if (exists) return Conflict("Korisnik već postoji"); 
+            var user = new AuthUser
+            {
+                Username = dto.Username,
+                Email = dto.Email,
+                Password = _authHelper.HashPassword(dto.Password), // BCrypt!
+                Role = "CUSTOMER" };
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+                return Ok("Registracija uspješna"); 
+        }
+                
         [HttpPost("login")]
         public async Task<ActionResult<LoginResponseDto>> Login([FromBody] LoginRequestDto loginDto)
         {
