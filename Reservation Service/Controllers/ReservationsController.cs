@@ -74,8 +74,9 @@ namespace ReservationService.Controllers
             if (reservation == null)
                 return NotFound();
 
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var role = User.FindFirst(ClaimTypes.Role).Value;
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+                return Unauthorized();
+            var role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty;
 
             if (reservation.IdUser != userId && role != "ADMIN")
                 return Forbid();
@@ -103,7 +104,8 @@ namespace ReservationService.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateReservation(CreateReservationDto dto)
         {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+                return Unauthorized();
 
             var table = await _context.Tables.FindAsync(dto.IdTable);
             if (table == null || table.Status != TableStatus.FREE)
@@ -136,8 +138,9 @@ namespace ReservationService.Controllers
             if (reservation == null)
                 return NotFound();
 
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var role = User.FindFirst(ClaimTypes.Role).Value;
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+                return Unauthorized();
+            var role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty;
 
             if (reservation.IdUser != userId && role != "ADMIN")
                 return Forbid();
@@ -158,8 +161,9 @@ namespace ReservationService.Controllers
             if (reservation == null)
                 return NotFound();
 
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var role = User.FindFirst(ClaimTypes.Role).Value;
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+                return Unauthorized();
+            var role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty;
 
             if (reservation.IdUser != userId && role != "ADMIN")
                 return Forbid();
