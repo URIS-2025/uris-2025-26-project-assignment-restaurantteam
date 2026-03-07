@@ -56,7 +56,7 @@ namespace MenuService.Controllers
         }
 
         // POST: api/menu
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "ADMIN")]
         [HttpPost]
         public async Task<ActionResult<MenuItemResponseDto>> CreateMenuItem(CreateMenuItemDto dto)
         {
@@ -106,7 +106,7 @@ namespace MenuService.Controllers
         }
 
         // PUT: api/menu/{id}
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "ADMIN")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateMenuItem(int id, UpdateMenuItemDto dto)
         {
@@ -158,7 +158,7 @@ namespace MenuService.Controllers
         }
 
         // DELETE: api/menu/{id}
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "ADMIN")]
         [HttpPut("{id}")]
         public async Task<IActionResult> DeleteMenuItem(int id)
         {
