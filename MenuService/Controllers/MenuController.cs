@@ -199,5 +199,89 @@ namespace MenuService.Controllers
                     }).ToList()
             };
         }
+        // ==============================
+        // CATEGORY endpoints
+        // ==============================
+
+        // GET: api/menu/categories
+        [HttpGet("categories")]
+        [AllowAnonymous]
+        public async Task<ActionResult<IEnumerable<CategoryDto>>> GetCategories()
+        {
+            var categories = await _context.Categories.ToListAsync();
+            return categories.Select(c => new CategoryDto
+            {
+                IdCategory = c.IdCategory,
+                CategoryName = c.CategoryName
+            }).ToList();
+        }
+
+        // POST: api/menu/categories
+        [HttpPost("categories")]
+        [Authorize(Roles = "ADMIN")]
+        public async Task<IActionResult> CreateCategory(CategoryDto dto)
+        {
+            var category = new Category { CategoryName = dto.CategoryName };
+            _context.Categories.Add(category);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetCategories), new { id = category.IdCategory }, dto);
+        }
+
+        // DELETE: api/menu/categories/{id}
+        [HttpDelete("categories/{id}")]
+        [Authorize(Roles = "ADMIN")]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null) return NotFound();
+            _context.Categories.Remove(category);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        // ==============================
+        // INGREDIENT endpoints
+        // ==============================
+
+        // GET: api/menu/ingredients
+        [HttpGet("ingredients")]
+        [AllowAnonymous]
+        public async Task<ActionResult<IEnumerable<IngredientDto>>> GetIngredients()
+        {
+            var ingredients = await _context.Ingredients.ToListAsync();
+            return ingredients.Select(i => new IngredientDto
+            {
+                IdIngredient = i.IdIngredient,
+                IngredientName = i.IngredientName,
+                IsAllergen = i.IsAllergen
+            }).ToList();
+        }
+
+        // POST: api/menu/ingredients
+        [HttpPost("ingredients")]
+        [Authorize(Roles = "ADMIN")]
+        public async Task<IActionResult> CreateIngredient(IngredientDto dto)
+        {
+            var ingredient = new Ingredient
+            {
+                IngredientName = dto.IngredientName,
+                IsAllergen = dto.IsAllergen
+            };
+            _context.Ingredients.Add(ingredient);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetIngredients), new { id = ingredient.IdIngredient }, dto);
+        }
+
+        // DELETE: api/menu/ingredients/{id}
+        [HttpDelete("ingredients/{id}")]
+        [Authorize(Roles = "ADMIN")]
+        public async Task<IActionResult> DeleteIngredient(int id)
+        {
+            var ingredient = await _context.Ingredients.FindAsync(id);
+            if (ingredient == null) return NotFound();
+            _context.Ingredients.Remove(ingredient);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }
