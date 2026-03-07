@@ -7,6 +7,7 @@ using OrderService.Entities;
 using OrderService.Entities.Enums;
 using System;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -18,10 +19,12 @@ namespace OrderService.Controllers
     public class OrderController : ControllerBase
     {
         private readonly OrderDbContext _context;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public OrderController(OrderDbContext context)
+        public OrderController(OrderDbContext context, IHttpClientFactory httpClientFactory)
         {
             _context = context;
+            _httpClientFactory = httpClientFactory;
         }
 
         // GET: api/orders
@@ -106,6 +109,15 @@ namespace OrderService.Controllers
         public async Task<IActionResult> CreateOrder(CreateOrderDto dto)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            
+            // POZIV KA AccountService
+            var client = _httpClientFactory.CreateClient("AccountService");
+            var response = await client.GetAsync($"/api/users/internal/{userId}");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return BadRequest("User does not exist in AccountService.");
+            }
 
             var order = new Order
             {

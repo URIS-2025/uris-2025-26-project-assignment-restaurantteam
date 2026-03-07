@@ -34,6 +34,14 @@ namespace OrderService
             services.AddControllers();
             services.AddSwaggerGen();
 
+            // ----------------------------
+            // Dodato za inter-service komunikaciju
+            services.AddHttpClient("AccountService", client => {
+                client.BaseAddress = new Uri(Configuration["Services:AccountService"]);
+                client.DefaultRequestHeaders.Add("X-Internal-Key", Configuration["InternalApi:Key"]);
+            });
+            // ----------------------------
+
             // JWT Authentication
             var key = Encoding.ASCII.GetBytes(Configuration["Jwt:Secret"]);
 
