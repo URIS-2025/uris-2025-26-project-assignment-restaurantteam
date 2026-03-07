@@ -19,7 +19,7 @@ namespace AccountService.Data
                 Email = "admin@example.com",
                 PhoneNumber = "123456789",
                 Role = UserRole.ADMIN,
-                Password = "admin123" // kasnije hashirati
+                Password = BCrypt.Net.BCrypt.HashPassword("admin123", workFactor: 12)
             };
 
             context.Users.Add(adminUser);

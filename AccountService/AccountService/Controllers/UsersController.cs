@@ -9,6 +9,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace AccountService.Controllers
 {
@@ -17,10 +18,12 @@ namespace AccountService.Controllers
     public class UsersController : ControllerBase
     {
         private readonly AccountDbContext _context;
+        private readonly IConfiguration _configuration;
 
-        public UsersController(AccountDbContext context)
+        public UsersController(AccountDbContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         // GET: api/users -> samo ADMIN vidi sve
@@ -106,6 +109,27 @@ namespace AccountService.Controllers
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
             return NoContent();
+        }
+
+        // GET: api/users/internal/{id}
+        // Koristi se za inter-service komunikaciju
+        [HttpGet("internal/{id}")]
+        public async Task<IActionResult> InternalGetUser(int id)
+        {
+            var apiKey = Request.Headers["X-Internal-Key"].FirstOrDefault();
+            if (apiKey != _configuration["InternalApi:Key"])
+                return Unauthorized();
+
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
+                return NotFound();
+
+            return Ok(new
+            {
+                user.IdUser,
+                user.Username,
+                user.Role
+            });
         }
 
         // ==============================
