@@ -110,6 +110,9 @@ namespace ReservationService.Controllers
             if (table == null || table.Status != TableStatus.FREE)
                 return BadRequest("Table is not available");
 
+            if (table.NumberOfSeats < dto.NumberOfGuests)
+                return BadRequest($"Sto ima {table.NumberOfSeats} mjesta, a traženo je {dto.NumberOfGuests}.");
+
             var reservation = new Reservation
             {
                 ReservationDate = dto.ReservationDate,
