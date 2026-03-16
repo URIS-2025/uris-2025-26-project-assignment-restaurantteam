@@ -100,9 +100,16 @@ namespace MenuService.Controllers
 
             await _context.SaveChangesAsync();
 
+            var createdItem = await _context.MenuItems
+                .Include(m => m.MenuItemCategories)
+                    .ThenInclude(mc => mc.Category)
+                .Include(m => m.MenuItemIngredients)
+                    .ThenInclude(mi => mi.Ingredient)
+                .FirstOrDefaultAsync(m => m.IdMenuItem == menuItem.IdMenuItem);
+
             return CreatedAtAction(nameof(GetMenuItem),
                 new { id = menuItem.IdMenuItem },
-                MapToResponseDto(menuItem));
+                MapToResponseDto(createdItem));
         }
 
         // PUT: api/menu/{id}
@@ -158,8 +165,8 @@ namespace MenuService.Controllers
         }
 
         // DELETE: api/menu/{id}
+        [HttpDelete("{id}")]
         [Authorize(Roles = "ADMIN")]
-        [HttpPut("{id}")]
         public async Task<IActionResult> DeleteMenuItem(int id)
         {
             var menuItem = await _context.MenuItems.FindAsync(id);
@@ -224,7 +231,8 @@ namespace MenuService.Controllers
             var category = new Category { CategoryName = dto.CategoryName };
             _context.Categories.Add(category);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetCategories), new { id = category.IdCategory }, dto);
+            return CreatedAtAction(nameof(GetCategories), 
+                new { id = category.IdCategory }, dto);
         }
 
         // DELETE: api/menu/categories/{id}
