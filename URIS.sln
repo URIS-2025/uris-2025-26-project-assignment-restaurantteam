@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountService", "URIS\AccountService.csproj", "{88E03917-9BC1-41BD-BADF-B6CD3D035591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{D1B7BACF-7C46-4064-87DD-515C09E1F156}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88E03917-9BC1-41BD-BADF-B6CD3D035591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E03917-9BC1-41BD-BADF-B6CD3D035591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E03917-9BC1-41BD-BADF-B6CD3D035591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E03917-9BC1-41BD-BADF-B6CD3D035591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B7BACF-7C46-4064-87DD-515C09E1F156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B7BACF-7C46-4064-87DD-515C09E1F156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B7BACF-7C46-4064-87DD-515C09E1F156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B7BACF-7C46-4064-87DD-515C09E1F156}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3227B5F-7DB8-486A-A5E5-F2518B41DD1C}
+	EndGlobalSection
+EndGlobal
