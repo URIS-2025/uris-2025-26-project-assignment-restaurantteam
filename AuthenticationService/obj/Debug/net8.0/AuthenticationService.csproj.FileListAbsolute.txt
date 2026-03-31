@@ -80,3 +80,4 @@ C:\Users\pavle\source\repos\URIS\AuthenticationService\obj\Debug\net8.0\Authenti
 C:\Users\pavle\source\repos\URIS\AuthenticationService\obj\Debug\net8.0\AuthenticationService.genruntimeconfig.cache
 C:\Users\pavle\source\repos\URIS\AuthenticationService\obj\Debug\net8.0\ref\AuthenticationService.dll
 C:\Users\pavle\source\repos\URIS\AuthenticationService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\pavle\source\repos\URIS\AuthenticationService\obj\Debug\net8.0\AuthenticationService.sourcelink.json
