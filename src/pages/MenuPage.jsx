@@ -167,7 +167,7 @@ function MenuPage() {
                       onChange={(e) => setNewItem({ ...newItem, description: e.target.value })} />
                   </div>
                   <div className="col-md-3">
-                    <label className="form-label">Cijena (KM)</label>
+                    <label className="form-label">Cena (RSD)</label>
                     <input type="number" className="form-control" value={newItem.price}
                       onChange={(e) => setNewItem({ ...newItem, price: parseFloat(e.target.value) })} />
                   </div>
@@ -241,7 +241,7 @@ function MenuPage() {
                     onChange={(e) => setEditItem({ ...editItem, description: e.target.value })} />
                 </div>
                 <div className="col-md-3">
-                  <label className="form-label">Cijena (KM)</label>
+                  <label className="form-label">Cena (RSD)</label>
                   <input type="number" className="form-control" value={editItem.price}
                     onChange={(e) => setEditItem({ ...editItem, price: parseFloat(e.target.value) })} />
                 </div>
@@ -274,7 +274,7 @@ function MenuPage() {
                     <h5 className="card-title">{item.menuItemName}</h5>
                     <p className="card-text text-muted">{item.description}</p>
                     <p className="card-text">
-                      <strong>{item.price} KM</strong> · {item.calories} kcal
+                      <strong>{item.price} RSD</strong> · {item.calories} kcal
                     </p>
                     <div className="mb-2">
                       {item.categories.map(c => (
