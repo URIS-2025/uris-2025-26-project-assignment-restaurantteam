@@ -6,6 +6,7 @@ import RegisterPage from './pages/RegisterPage'
 import MenuPage from './pages/MenuPage'
 import OrdersPage from './pages/OrdersPage'
 import ReservationsPage from './pages/ReservationsPage'
+import UsersPage from './pages/UsersPage'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/orders" element={<OrdersPage />} />
             <Route path="/reservations" element={<ReservationsPage />} />
             <Route path="/" element={<MenuPage />} />
+            <Route path="/users" element={<UsersPage />} />
           </Routes>
         </div>
       </BrowserRouter>

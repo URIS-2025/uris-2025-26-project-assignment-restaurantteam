@@ -19,8 +19,8 @@ function LoginPage() {
 
     try {
       const response = await loginUser(username, password)
-      const { token } = response.data
-      login(token)
+      const { token, role } = response.data
+      login(token, role)
       navigate('/menu')
     } catch (err) {
       setError('Pogrešno korisničko ime ili lozinka.')
