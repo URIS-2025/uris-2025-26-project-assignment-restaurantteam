@@ -10,22 +10,56 @@ function Navbar() {
     navigate('/')
   }
 
+  const handleMouseEnter = (e) => {
+    e.target.style.backgroundColor = '#c9a84c'
+    e.target.style.color = '#1a1a1a'
+  }
+
+  const handleMouseLeave = (e) => {
+    e.target.style.backgroundColor = 'transparent'
+    e.target.style.color = '#c9a84c'
+  }
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <Link className="navbar-brand" to="/">🍽️ Restaurant App</Link>
-        <div className="navbar-nav ms-auto">
-          <Link className="nav-link" to="/">Početna</Link>
-          <Link className="nav-link" to="/menu">Meni</Link>
-          {token && <Link className="nav-link" to="/orders">Narudžbine</Link>}
-          {token && <Link className="nav-link" to="/reservations">Rezervacije</Link>}
+    <nav style={{
+      backgroundColor: '#1a1a1a',
+      borderBottom: '2px solid #c9a84c',
+      position: 'sticky',
+      top: 0,
+      zIndex: 1000
+    }}>
+      <div className="container d-flex justify-content-between align-items-center" style={{ height: '80px' }}>
+
+        {/* Logo */}
+        <Link to="/" style={{
+          color: '#c9a84c',
+          textDecoration: 'none',
+          fontSize: '1.8rem',
+          fontWeight: 'bold',
+          fontFamily: 'Georgia, serif',
+          letterSpacing: '1px'
+        }}>
+          🍽️ Restaurant
+        </Link>
+
+        {/* Links */}
+        <div className="d-flex align-items-center gap-3">
+          <NavLink to="/" label="Početna" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+          <NavLink to="/menu" label="Meni" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+          {token && <NavLink to="/orders" label="Narudžbine" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
+          {token && <NavLink to="/reservations" label="Rezervacije" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
           {token && role === 'ADMIN' && (
-            <Link className="nav-link" to="/users">Korisnici</Link>
+            <NavLink to="/users" label="Korisnici" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
           )}
-          {!token && <Link className="nav-link" to="/login">Login</Link>}
-          {!token && <Link className="nav-link" to="/register">Register</Link>}
+          {!token && <NavLink to="/login" label="Login" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
+          {!token && <NavLink to="/register" label="Registracija" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
           {token && (
-            <button className="btn btn-outline-light btn-sm ms-2" onClick={handleLogout}>
+            <button
+              onClick={handleLogout}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={buttonStyle}
+            >
               Odjavi se
             </button>
           )}
@@ -33,6 +67,33 @@ function Navbar() {
       </div>
     </nav>
   )
+}
+
+function NavLink({ to, label, onMouseEnter, onMouseLeave }) {
+  return (
+    <Link
+      to={to}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      style={buttonStyle}
+    >
+      {label}
+    </Link>
+  )
+}
+
+const buttonStyle = {
+  color: '#c9a84c',
+  textDecoration: 'none',
+  fontSize: '1rem',
+  letterSpacing: '1px',
+  fontFamily: 'Georgia, serif',
+  border: '1px solid #c9a84c',
+  padding: '8px 20px',
+  borderRadius: '6px',
+  backgroundColor: 'transparent',
+  cursor: 'pointer',
+  transition: 'all 0.2s'
 }
 
 export default Navbar
