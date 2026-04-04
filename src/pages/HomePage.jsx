@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 function HomePage() {
@@ -6,113 +6,185 @@ function HomePage() {
   const navigate = useNavigate()
 
   const handleReservationClick = () => {
-  if (token) {
-    navigate('/reservations')
-  } else {
-    navigate('/login', { state: { from: '/reservations' } })
+    if (token) {
+      navigate('/reservations')
+    } else {
+      navigate('/login', { state: { from: '/reservations' } })
+    }
   }
-}
 
   return (
     <div>
       {/* Hero sekcija */}
-      <div className="p-5 mb-4 bg-dark text-white rounded-3 text-center">
-        <h1 className="display-4 fw-bold">🍽️ Dobrodošli u naš Restoran</h1>
-        <p className="lead mt-3">
-          Uživajte u autentičnim okusima domaće kuhinje. 
-          Sveži sastojci, ljubav u svakom zalogaju.
+      <div style={{
+        background: 'linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%)',
+        borderRadius: '12px',
+        padding: '80px 40px',
+        textAlign: 'center',
+        marginBottom: '40px',
+        border: '2px solid #c9a84c'
+      }}>
+        <p style={{ color: '#c9a84c', letterSpacing: '4px', fontSize: '0.9rem', marginBottom: '16px' }}>
+          DOBRODOŠLI
         </p>
-        <div className="mt-4">
-          <Link to="/menu" className="btn btn-light btn-lg me-3">Pogledaj Meni</Link>
-          <Link to="/register" className="btn btn-outline-light btn-lg">Registruj se</Link>
+        <h1 style={{
+          color: '#f5f0e8',
+          fontSize: '3.5rem',
+          fontWeight: 'bold',
+          marginBottom: '20px',
+          fontFamily: 'Georgia, serif'
+        }}>
+          🍽️ Naš Restoran
+        </h1>
+        <p style={{ color: '#ede8dc', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 36px' }}>
+          Uživajte u autentičnim okusima domaće kuhinje. Sveži sastojci, ljubav u svakom zalogaju.
+        </p>
+        <div>
+          <button onClick={() => navigate('/menu')} style={{
+            backgroundColor: '#c9a84c',
+            color: '#1a1a1a',
+            border: 'none',
+            padding: '14px 36px',
+            borderRadius: '6px',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            marginRight: '16px',
+            cursor: 'pointer'
+          }}>
+            Pogledaj Meni
+          </button>
+          <button onClick={() => navigate('/register')} style={{
+            backgroundColor: 'transparent',
+            color: '#c9a84c',
+            border: '2px solid #c9a84c',
+            padding: '14px 36px',
+            borderRadius: '6px',
+            fontSize: '1rem',
+            fontWeight: 'bold',
+            cursor: 'pointer'
+          }}>
+            Registruj se
+          </button>
         </div>
       </div>
 
       {/* Opis restorana */}
-      <div className="card p-5 mb-4">
-        <h2 className="text-center mb-4">O našem restoranu</h2>
-        <p className="lead text-muted">
-            Naš restoran osnovan je sa jednom misijom — donijeti autentičan ukus domaće kuhinje 
-            na vaš tanjir. Svaki dan naši kuvari sa godinama iskustva pripremaju jela od najsvježijih 
-            lokalnih namirnica, birajući samo ono najbolje što nam sezona nudi. Kod nas nema kompromisa 
-            kada je kvalitet u pitanju.
+      <div style={{
+        backgroundColor: '#fff9f0',
+        border: '1px solid #e8c96d',
+        borderRadius: '12px',
+        padding: '48px',
+        marginBottom: '40px'
+      }}>
+        <h2 style={{ color: '#1a1a1a', textAlign: 'center', marginBottom: '32px', borderBottom: '2px solid #c9a84c', paddingBottom: '16px' }}>
+          O našem restoranu
+        </h2>
+        <p style={{ color: '#2c2c2c', lineHeight: '1.9', fontSize: '1.05rem' }}>
+          Naš restoran osnovan je sa jednom misijom — donijeti autentičan ukus domaće kuhinje
+          na vaš tanjir. Svaki dan naši kuvari sa godinama iskustva pripremaju jela od najsvežijih
+          lokalnih namirnica, birajući samo ono najbolje što nam sezona nudi. Kod nas nema kompromisa
+          kada je kvalitet u pitanju.
         </p>
-        <p className="text-muted mt-3">
-            Naša kuhinja spaja tradicionalne recepte sa modernim tehnikama pripreme. 
-            Bilo da ste ljubitelj klasičnih mesnih jela, svježe pripremljenih pasta ili 
-            vegetarijanskih specijaliteta — naš meni ima nešto za svakoga. Posebno smo ponosni 
-            na naše sezonske specijalitete koji se mijenjaju kako bismo uvijek ponudili 
-            najsvježije i najukusnije kombinacije.
+        <p style={{ color: '#2c2c2c', lineHeight: '1.9', fontSize: '1.05rem', marginTop: '20px' }}>
+          Naša kuhinja spaja tradicionalne recepte sa modernim tehnikama pripreme.
+          Bilo da ste ljubitelj klasičnih mesnih jela, sveže pripremljenih pasta ili
+          vegetarijanskih specijaliteta — naš meni ima nešto za svakoga. Posebno smo ponosni
+          na naše sezonske specijalitete koji se mijenjaju kako bismo uvijek ponudili
+          najsvežije i najukusnije kombinacije.
         </p>
-        <p className="text-muted mt-3">
-            Više od hrane, nudimo iskustvo. Topla i prijatna atmosfera, ljubazno osoblje i 
-            pažljivo osmišljen ambijent čine svaki posjet nezaboravnim. Bez obzira da li dolazite 
-            na poslovni ručak, porodičnu večeru ili romantičan izlazak — naš restoran je pravo 
-            mesto za vas.  
-            mjesto za vas.{' '}
-            <span onClick={handleReservationClick}
-                style={{ cursor: 'pointer', color: '#0d6efd', textDecoration: 'underline' }}>
-                Rezervišite svoj sto
-            </span>
-            {' '}danas i uvjerite se sami zašto nas naši gosti uvijek iznova biraju.
+        <p style={{ color: '#2c2c2c', lineHeight: '1.9', fontSize: '1.05rem', marginTop: '20px' }}>
+          Više od hrane, nudimo iskustvo. Topla i prijatna atmosfera, ljubazno osoblje i
+          pažljivo osmišljen ambijent čine svaki posjet nezaboravnim. Bez obzira da li dolazite
+          na poslovni ručak, porodičnu večeru ili romantičan izlazak — naš restoran je pravo
+          mjesto za vas.{' '}
+          <span onClick={handleReservationClick} style={{
+            color: '#c9a84c',
+            textDecoration: 'underline',
+            cursor: 'pointer',
+            fontWeight: 'bold'
+          }}>
+            Rezervišite svoj sto
+          </span>
+          {' '}danas i uvjerite se sami zašto nas naši gosti uvijek iznova biraju.
         </p>
       </div>
 
       {/* Info kartice */}
       <div className="row g-4 mb-4">
-        <div className="col-md-4">
-          <div className="card h-100 text-center p-4">
-            <div style={{ fontSize: '3rem' }}>🕐</div>
-            <h4 className="mt-3">Radno vrijeme</h4>
-            <p className="text-muted">Pon - Pet: 08:00 - 23:00</p>
-            <p className="text-muted">Sub - Ned: 10:00 - 00:00</p>
+        {[
+          { icon: '🕐', title: 'Radno vrijeme', lines: ['Pon - Pet: 08:00 - 23:00', 'Sub - Ned: 10:00 - 00:00'] },
+          { icon: '📍', title: 'Lokacija', lines: ['Ulica bb, Grad', 'Srbija'] },
+          { icon: '📞', title: 'Kontakt', lines: ['+381 xx xxx xxxx', 'restoran@email.com'] }
+        ].map((card, i) => (
+          <div key={i} className="col-md-4">
+            <div style={{
+              backgroundColor: '#1a1a1a',
+              borderRadius: '12px',
+              padding: '36px',
+              textAlign: 'center',
+              border: '1px solid #c9a84c',
+              height: '100%'
+            }}>
+              <div style={{ fontSize: '2.5rem' }}>{card.icon}</div>
+              <h4 style={{ color: '#c9a84c', margin: '16px 0 12px' }}>{card.title}</h4>
+              {card.lines.map((line, j) => (
+                <p key={j} style={{ color: '#ede8dc', margin: '4px 0' }}>{line}</p>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card h-100 text-center p-4">
-            <div style={{ fontSize: '3rem' }}>📍</div>
-            <h4 className="mt-3">Lokacija</h4>
-            <p className="text-muted">Ulica bb, Grad</p>
-            <p className="text-muted">Srbija</p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card h-100 text-center p-4">
-            <div style={{ fontSize: '3rem' }}>📞</div>
-            <h4 className="mt-3">Kontakt</h4>
-            <p className="text-muted">+381 xx xxx xxxx</p>
-            <p className="text-muted">restoran@email.com</p>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Zašto mi */}
-      <div className="card p-5 text-center mb-4">
-        <h2 className="mb-4">Zašto izabrati nas?</h2>
+      <div style={{
+        backgroundColor: '#fff9f0',
+        border: '1px solid #e8c96d',
+        borderRadius: '12px',
+        padding: '48px',
+        marginBottom: '40px',
+        textAlign: 'center'
+      }}>
+        <h2 style={{ color: '#1a1a1a', marginBottom: '36px', borderBottom: '2px solid #c9a84c', paddingBottom: '16px' }}>
+          Zašto izabrati nas?
+        </h2>
         <div className="row g-3">
-          <div className="col-md-3">
-            <div style={{ fontSize: '2rem' }}>🥗</div>
-            <h6 className="mt-2">Sveži sastojci</h6>
-          </div>
-          <div className="col-md-3">
-            <div style={{ fontSize: '2rem' }}>👨‍🍳</div>
-            <h6 className="mt-2">Iskusni kuvari</h6>
-          </div>
-          <div className="col-md-3">
-            <div style={{ fontSize: '2rem' }}>🚀</div>
-            <h6 className="mt-2">Brza dostava</h6>
-          </div>
-          <div className="col-md-3">
-            <div style={{ fontSize: '2rem' }}>💯</div>
-            <h6 className="mt-2">Kvalitet garantovan</h6>
-          </div>
+          {[
+            { icon: '🥗', text: 'Sveži sastojci' },
+            { icon: '👨‍🍳', text: 'Iskusni kuvari' },
+            { icon: '🚀', text: 'Brza usluga' },
+            { icon: '💯', text: 'Kvalitet garantovan' }
+          ].map((item, i) => (
+            <div key={i} className="col-md-3">
+              <div style={{ fontSize: '2.5rem' }}>{item.icon}</div>
+              <h6 style={{ color: '#2c2c2c', marginTop: '12px', fontWeight: 'bold' }}>{item.text}</h6>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* CTA - poziv na akciju */}
-      <div className="text-center mb-4">
-        <h3>Već imate nalog?</h3>
-        <Link to="/login" className="btn btn-dark btn-lg mt-2">Prijavite se</Link>
+      {/* CTA */}
+      <div style={{
+        background: 'linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%)',
+        borderRadius: '12px',
+        padding: '48px',
+        textAlign: 'center',
+        marginBottom: '40px',
+        border: '2px solid #c9a84c'
+      }}>
+        <h3 style={{ color: '#f5f0e8', marginBottom: '8px' }}>Već imate nalog?</h3>
+        <p style={{ color: '#c9a84c', marginBottom: '24px' }}>Prijavite se i naručite već danas!</p>
+        <button onClick={() => navigate('/login')} style={{
+          backgroundColor: '#c9a84c',
+          color: '#1a1a1a',
+          border: 'none',
+          padding: '14px 48px',
+          borderRadius: '6px',
+          fontSize: '1rem',
+          fontWeight: 'bold',
+          cursor: 'pointer'
+        }}>
+          Prijavite se
+        </button>
       </div>
     </div>
   )

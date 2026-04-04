@@ -1,0 +1,15 @@
+:root {
+  --cream: #f5f0e8;
+  --cream-dark: #ede8dc;
+  --gold: #c9a84c;
+  --gold-light: #e8c96d;
+  --dark: #1a1a1a;
+  --text-dark: #2c2c2c;
+  --text-muted: #6b6457;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-dark);
+  font-family: 'Georgia', serif;
+}
