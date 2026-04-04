@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { loginUser } from '../api/authApi'
 import { useAuth } from '../context/AuthContext'
 
@@ -11,17 +11,20 @@ function LoginPage() {
 
   const { login } = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()                    
+  const from = location.state?.from || '/menu'      
+
 
   const handleLogin = async (e) => {
     e.preventDefault()
     setError('')
     setLoading(true)
 
-    try {
+     try {
       const response = await loginUser(username, password)
       const { token, role } = response.data
       login(token, role)
-      navigate('/menu')
+      navigate(from)                               
     } catch (err) {
       setError('Pogrešno korisničko ime ili lozinka.')
     } finally {

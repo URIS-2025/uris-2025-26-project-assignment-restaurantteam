@@ -7,7 +7,7 @@ function Navbar() {
 
   const handleLogout = () => {
     logout()
-    navigate('/login')
+    navigate('/')
   }
 
   return (
@@ -15,6 +15,7 @@ function Navbar() {
       <div className="container">
         <Link className="navbar-brand" to="/">🍽️ Restaurant App</Link>
         <div className="navbar-nav ms-auto">
+          <Link className="nav-link" to="/">Početna</Link>
           <Link className="nav-link" to="/menu">Meni</Link>
           {token && <Link className="nav-link" to="/orders">Narudžbine</Link>}
           {token && <Link className="nav-link" to="/reservations">Rezervacije</Link>}
