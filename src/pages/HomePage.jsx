@@ -37,7 +37,7 @@ function HomePage() {
           🍽️ Naš Restoran
         </h1>
         <p style={{ color: '#ede8dc', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 36px' }}>
-          Uživajte u autentičnim okusima domaće kuhinje. Sveži sastojci, ljubav u svakom zalogaju.
+          Uživajte u autentičnim ukusima domaće kuhinje. Sveži sastojci, ljubav u svakom zalogaju.
         </p>
         <div>
           <button onClick={() => navigate('/menu')} style={{
@@ -80,7 +80,7 @@ function HomePage() {
           O našem restoranu
         </h2>
         <p style={{ color: '#2c2c2c', lineHeight: '1.9', fontSize: '1.05rem' }}>
-          Naš restoran osnovan je sa jednom misijom — donijeti autentičan ukus domaće kuhinje
+          Naš restoran osnovan je sa jednom misijom — doneti autentičan ukus domaće kuhinje
           na vaš tanjir. Svaki dan naši kuvari sa godinama iskustva pripremaju jela od najsvežijih
           lokalnih namirnica, birajući samo ono najbolje što nam sezona nudi. Kod nas nema kompromisa
           kada je kvalitet u pitanju.
@@ -89,14 +89,14 @@ function HomePage() {
           Naša kuhinja spaja tradicionalne recepte sa modernim tehnikama pripreme.
           Bilo da ste ljubitelj klasičnih mesnih jela, sveže pripremljenih pasta ili
           vegetarijanskih specijaliteta — naš meni ima nešto za svakoga. Posebno smo ponosni
-          na naše sezonske specijalitete koji se mijenjaju kako bismo uvijek ponudili
+          na naše sezonske specijalitete koji se menjaju kako bismo uvek ponudili
           najsvežije i najukusnije kombinacije.
         </p>
         <p style={{ color: '#2c2c2c', lineHeight: '1.9', fontSize: '1.05rem', marginTop: '20px' }}>
           Više od hrane, nudimo iskustvo. Topla i prijatna atmosfera, ljubazno osoblje i
-          pažljivo osmišljen ambijent čine svaki posjet nezaboravnim. Bez obzira da li dolazite
+          pažljivo osmišljen ambijent čine svaku posetu nezaboravnom. Bez obzira da li dolazite
           na poslovni ručak, porodičnu večeru ili romantičan izlazak — naš restoran je pravo
-          mjesto za vas.{' '}
+          mesto za vas.{' '}
           <span onClick={handleReservationClick} style={{
             color: '#c9a84c',
             textDecoration: 'underline',
@@ -105,14 +105,14 @@ function HomePage() {
           }}>
             Rezervišite svoj sto
           </span>
-          {' '}danas i uvjerite se sami zašto nas naši gosti uvijek iznova biraju.
+          {' '}danas i uverite se sami zašto nas naši gosti uvek iznova biraju.
         </p>
       </div>
 
       {/* Info kartice */}
       <div className="row g-4 mb-4">
         {[
-          { icon: '🕐', title: 'Radno vrijeme', lines: ['Pon - Pet: 08:00 - 23:00', 'Sub - Ned: 10:00 - 00:00'] },
+          { icon: '🕐', title: 'Radno vreme', lines: ['Pon - Pet: 08:00 - 23:00', 'Sub - Ned: 10:00 - 00:00'] },
           { icon: '📍', title: 'Lokacija', lines: ['Ulica bb, Grad', 'Srbija'] },
           { icon: '📞', title: 'Kontakt', lines: ['+381 xx xxx xxxx', 'restoran@email.com'] }
         ].map((card, i) => (

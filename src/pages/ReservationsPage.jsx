@@ -121,7 +121,7 @@ function ReservationsPage() {
         borderBottom: '2px solid #c9a84c',
         marginBottom: '40px'
       }}>
-        <p style={{ color: '#c9a84c', letterSpacing: '4px', fontSize: '0.85rem', marginBottom: '12px' }}>REZERVIŠITE MJESTO</p>
+        <p style={{ color: '#c9a84c', letterSpacing: '4px', fontSize: '0.85rem', marginBottom: '12px' }}>REZERVIŠITE MESTO</p>
         <h1 style={{ color: '#1a1a1a', fontFamily: 'Georgia, serif', fontSize: '2.8rem', marginBottom: '12px' }}>Rezervacije</h1>
         <p style={{ color: '#6b6457', fontSize: '1rem' }}>Osigurajte svoj sto unapred</p>
       </div>
@@ -190,7 +190,7 @@ function ReservationsPage() {
                     <option value="">-- Izaberi sto --</option>
                     {tables.filter(t => t.status === 0).map(t => (
                       <option key={t.idTable} value={t.idTable}>
-                        Sto #{t.idTable} ({t.numberOfSeats} mjesta)
+                        Sto #{t.idTable} ({t.numberOfSeats} mesta)
                       </option>
                     ))}
                   </select>
@@ -320,7 +320,7 @@ function ReservationsPage() {
             <form onSubmit={handleCreateTable}>
               <div className="row g-3">
                 <div className="col-md-3">
-                  <label style={labelStyle}>Broj mjesta</label>
+                  <label style={labelStyle}>Broj mesta</label>
                   <input type="number" style={inputStyle} min="1"
                     value={newTable.numberOfSeats}
                     onFocus={e => e.target.style.borderColor = '#c9a84c'}
@@ -352,7 +352,7 @@ function ReservationsPage() {
               <h5 style={cardTitleStyle}>Izmeni sto</h5>
               <div className="row g-3">
                 <div className="col-md-3">
-                  <label style={labelStyle}>Broj mjesta</label>
+                  <label style={labelStyle}>Broj mesta</label>
                   <input type="number" style={inputStyle} min="1"
                     value={editTable.numberOfSeats}
                     onFocus={e => e.target.style.borderColor = '#c9a84c'}
@@ -407,7 +407,7 @@ function ReservationsPage() {
                     <p style={{ color: '#f5f0e8', fontFamily: 'Georgia, serif', fontSize: '1.5rem', margin: '0 0 8px' }}>
                       🪑 {t.numberOfSeats}
                     </p>
-                    <p style={{ color: '#6b6457', fontSize: '0.8rem', margin: '0 0 12px' }}>mjesta</p>
+                    <p style={{ color: '#6b6457', fontSize: '0.8rem', margin: '0 0 12px' }}>mesta</p>
                     <span style={{
                       backgroundColor: tableStatusLabels[t.status]?.bg,
                       color: tableStatusLabels[t.status]?.color,

@@ -167,7 +167,7 @@ function MenuPage() {
           textAlign: 'center',
           fontFamily: 'Georgia, serif'
         }}>
-          Prijavite se da biste vidjeli kompletan meni →{' '}
+          Prijavite se da biste videli kompletan meni →{' '}
           <span onClick={() => window.location.href = '/login'}
             style={{ textDecoration: 'underline', cursor: 'pointer' }}>
             Login
