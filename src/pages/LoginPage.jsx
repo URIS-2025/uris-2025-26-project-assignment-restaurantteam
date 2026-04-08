@@ -15,21 +15,21 @@ function LoginPage() {
   const from = location.state?.from || '/menu'
 
   const handleLogin = async (e) => {
-    e.preventDefault()
-    setError('')
-    setLoading(true)
+  e.preventDefault()
+  setError('')
+  setLoading(true)
 
-    try {
-      const response = await loginUser(username, password)
-      const { token, role } = response.data
-      login(token, role)
-      navigate(from)
-    } catch (err) {
-      setError('Pogrešno korisničko ime ili lozinka.')
-    } finally {
-      setLoading(false)
-    }
+  try {
+    const response = await loginUser(username, password)
+    const { token, role, idUser, username: uname } = response.data
+    login(token, role, idUser, uname)
+    navigate(from)
+  } catch (err) {
+    setError('Pogrešno korisničko ime ili lozinka.')
+  } finally {
+    setLoading(false)
   }
+}
 
   return (
     <div style={{

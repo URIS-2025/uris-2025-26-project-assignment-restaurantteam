@@ -5,6 +5,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
+import ProfilePage from './pages/ProfilePage'
 import RegisterPage from './pages/RegisterPage'
 import MenuPage from './pages/MenuPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -33,6 +34,9 @@ function App() {
               <ProtectedRoute><UsersPage /></ProtectedRoute>
             } />
             <Route path="*" element={<NotFoundPage />} />
+            <Route path="/profile" element={
+              <ProtectedRoute><ProfilePage /></ProtectedRoute>
+            } />
           </Routes>
         </div>
         <Footer />

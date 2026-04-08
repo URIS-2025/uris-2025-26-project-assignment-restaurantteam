@@ -53,6 +53,7 @@ function Navbar() {
           )}
           {!token && <NavLink to="/login" label="Login" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
           {!token && <NavLink to="/register" label="Registracija" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
+          {token && <NavLink to="/profile" label="Profil" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />}
           {token && (
             <button
               onClick={handleLogout}
