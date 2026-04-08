@@ -24,6 +24,7 @@ function MenuPage() {
   const [editItem, setEditItem] = useState(null)
   const [newCategory, setNewCategory] = useState('')
   const [newIngredient, setNewIngredient] = useState({ ingredientName: '', isAllergen: false })
+  const [selectedCategory, setSelectedCategory] = useState(null)
 
   const fetchAll = async () => {
     try {
@@ -121,6 +122,10 @@ function MenuPage() {
       </div>
     </div>
   )
+
+  const filteredItems = selectedCategory
+  ? menuItems.filter(item => item.categories.some(c => c.idCategory === selectedCategory))
+  : menuItems
 
   return (
     <div style={{ paddingBottom: '60px' }}>
@@ -346,9 +351,43 @@ function MenuPage() {
             </div>
           )}
 
+          {/* Filter po kategorijama */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '32px' }}>
+            <button
+              onClick={() => setSelectedCategory(null)}
+              style={{
+                backgroundColor: selectedCategory === null ? '#c9a84c' : 'transparent',
+                color: selectedCategory === null ? '#1a1a1a' : '#c9a84c',
+                border: '1px solid #c9a84c',
+                padding: '6px 20px',
+                borderRadius: '20px',
+                fontFamily: 'Georgia, serif',
+                fontSize: '0.85rem',
+                cursor: 'pointer'
+              }}>
+              Sve
+            </button>
+            {categories.map(c => (
+              <button key={c.idCategory}
+                onClick={() => setSelectedCategory(c.idCategory)}
+                style={{
+                  backgroundColor: selectedCategory === c.idCategory ? '#c9a84c' : 'transparent',
+                  color: selectedCategory === c.idCategory ? '#1a1a1a' : '#c9a84c',
+                  border: '1px solid #c9a84c',
+                  padding: '6px 20px',
+                  borderRadius: '20px',
+                  fontFamily: 'Georgia, serif',
+                  fontSize: '0.85rem',
+                  cursor: 'pointer'
+                }}>
+                {c.categoryName}
+              </button>
+            ))}
+          </div>
+
           {/* Menu Items Cards */}
           <div className="row g-4">
-            {menuItems.map(item => (
+            {filteredItems.map(item => (
               <div key={item.idMenuItem} className="col-md-4">
                 <div style={{
                   backgroundColor: item.isAvailable ? '#1a1a1a' : '#111',
