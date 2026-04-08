@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import MenuPage from './pages/MenuPage'
+import NotFoundPage from './pages/NotFoundPage'
 import OrdersPage from './pages/OrdersPage'
 import ReservationsPage from './pages/ReservationsPage'
 import UsersPage from './pages/UsersPage'
@@ -31,6 +32,7 @@ function App() {
             <Route path="/users" element={
               <ProtectedRoute><UsersPage /></ProtectedRoute>
             } />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
         <Footer />
