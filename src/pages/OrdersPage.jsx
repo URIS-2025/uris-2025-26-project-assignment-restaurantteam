@@ -238,12 +238,30 @@ function OrdersPage() {
                   alignItems: 'center',
                   borderBottom: '1px solid #c9a84c'
                 }}>
-                  <span style={{ color: '#f5f0e8', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
+                 <span style={{ color: '#f5f0e8', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
                     Narudžbina #{order.idOrder}
-                  </span>
+                </span>
+
+                <div style={{ textAlign: 'right' }}>
                   <span style={{ color: '#c9a84c', fontSize: '0.85rem' }}>
                     {paymentLabels[order.paymentMethod]}
                   </span>
+
+                    {/* Samo admin vidi user info */}
+                    {isAdmin && order.userSummary && (
+                      <div style={{ marginTop: '6px', fontSize: '0.8rem', color: '#9b9080' }}>
+                        <span>👤 {order.userSummary.username}</span>
+                        {order.userSummary.phoneNumber && (
+                          <span style={{ marginLeft: '10px' }}>📞 {order.userSummary.phoneNumber}</span>
+                        )}
+                        {order.userSummary.street && (
+                          <span style={{ marginLeft: '10px' }}>
+                            📍 {order.userSummary.street} {order.userSummary.streetNumber}
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Card Body */}
