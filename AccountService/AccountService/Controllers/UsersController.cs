@@ -114,13 +114,18 @@ namespace AccountService.Controllers
         // GET: api/users/internal/{id}
         // Koristi se za inter-service komunikaciju
         [HttpGet("internal/{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> InternalGetUser(int id)
         {
             var apiKey = Request.Headers["X-Internal-Key"].FirstOrDefault();
             if (apiKey != _configuration["InternalApi:Key"])
                 return Unauthorized();
 
-            var user = await _context.Users.FindAsync(id);
+            // Dodaj Include za Address!
+            var user = await _context.Users
+                .Include(u => u.Address)
+                .FirstOrDefaultAsync(u => u.IdUser == id);
+
             if (user == null)
                 return NotFound();
 
@@ -128,7 +133,12 @@ namespace AccountService.Controllers
             {
                 user.IdUser,
                 user.Username,
-                user.Role
+                user.PhoneNumber,
+                Address = user.Address == null ? null : new
+                {
+                    user.Address.Street,
+                    user.Address.StreetNumber
+                }
             });
         }
 

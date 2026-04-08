@@ -80,6 +80,16 @@ public class Startup
         });
 
         services.AddAuthorization();
+
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowFrontend", policy =>
+            {
+                policy.WithOrigins("http://localhost:5173")
+                      .AllowAnyHeader()
+                      .AllowAnyMethod();
+            });
+        });
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -96,6 +106,8 @@ public class Startup
         }
 
         app.UseRouting();
+
+        app.UseCors("AllowFrontend");
 
         // Middleware redosled je kljucan
         app.UseAuthentication();

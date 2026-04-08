@@ -69,3 +69,4 @@ D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\AccountService
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\AccountService\AccountService\obj\Debug\net5.0\AccountService.pdb
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\AccountService\AccountService\obj\Debug\net5.0\AccountService.genruntimeconfig.cache
 D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\AccountService\AccountService\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\GRADIVO\4.GOD\1.SEMESTAR\URIS\Projekat URIS 2026\Projekat URIS\AccountService\AccountService\bin\Debug\net5.0\BCrypt.Net-Next.dll

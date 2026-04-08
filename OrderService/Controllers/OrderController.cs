@@ -6,9 +6,11 @@ using OrderService.DTO;
 using OrderService.Entities;
 using OrderService.Entities.Enums;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace OrderService.Controllers
@@ -41,29 +43,58 @@ namespace OrderService.Controllers
             int userId = int.Parse(userIdClaim);
 
             var orders = role == "ADMIN"
-                ? await _context.Orders
-                    .Include(o => o.OrderItems)
-                    .ToListAsync()
-                : await _context.Orders
-                    .Include(o => o.OrderItems)
-                    .Where(o => o.IdUser == userId)
-                    .ToListAsync();
+                ? await _context.Orders.Include(o => o.OrderItems).ToListAsync()
+                : await _context.Orders.Include(o => o.OrderItems)
+                    .Where(o => o.IdUser == userId).ToListAsync();
 
-            var response = orders.Select(o => new OrderResponseDto
+            // Ako je admin, dohvati user podatke za svaku narudžbinu
+            var response = new List<OrderResponseDto>();
+
+            foreach (var o in orders)
             {
-                IdOrder = o.IdOrder,
-                IdUser = o.IdUser,
-                OrderStatus = o.OrderStatus,
-                PaymentMethod = o.PaymentMethod,
-                TotalPrice = o.TotalPrice,
-                CreatedAt = o.CreatedAt,
-                Items = o.OrderItems.Select(i => new OrderItemDto
+                var dto = new OrderResponseDto
                 {
-                    IdMenuItem = i.IdMenuItem,
-                    Quantity = i.Quantity,
-                    PricePerItem = i.PricePerItem
-                }).ToList()
-            });
+                    IdOrder = o.IdOrder,
+                    IdUser = o.IdUser,
+                    OrderStatus = o.OrderStatus,
+                    PaymentMethod = o.PaymentMethod,
+                    TotalPrice = o.TotalPrice,
+                    CreatedAt = o.CreatedAt,
+                    Items = o.OrderItems.Select(i => new OrderItemDto
+                    {
+                        IdMenuItem = i.IdMenuItem,
+                        Quantity = i.Quantity,
+                        PricePerItem = i.PricePerItem
+                    }).ToList()
+                };
+
+                if (role == "ADMIN")
+                {
+                    var client = _httpClientFactory.CreateClient("AccountService");
+                    var userResponse = await client.GetAsync($"/api/users/internal/{o.IdUser}");
+
+                    if (userResponse.IsSuccessStatusCode)
+                    {
+                        var content = await userResponse.Content.ReadAsStringAsync();
+                        var userJson = System.Text.Json.JsonDocument.Parse(content).RootElement;
+
+                        dto.UserSummary = new UserSummaryDto
+                        {
+                            IdUser = o.IdUser,
+                            Username = userJson.TryGetProperty("username", out var uname)
+                             ? uname.GetString() : null,
+                                                PhoneNumber = userJson.TryGetProperty("phoneNumber", out var phone) && phone.ValueKind != JsonValueKind.Null
+                             ? phone.GetString() : null,
+                                                Street = userJson.TryGetProperty("address", out var addr) && addr.ValueKind != JsonValueKind.Null && addr.TryGetProperty("street", out var street)
+                             ? street.GetString() : null,
+                                                StreetNumber = addr.ValueKind != JsonValueKind.Null && addr.TryGetProperty("streetNumber", out var num)
+                             ? num.GetInt32() : null
+                        };
+                    }
+                }
+
+                response.Add(dto);
+            }
 
             return Ok(response);
         }

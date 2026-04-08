@@ -87,6 +87,16 @@ namespace MenuService
             });
 
             services.AddAuthorization();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -97,6 +107,8 @@ namespace MenuService
             }
 
             app.UseRouting();
+
+            app.UseCors("AllowFrontend");
 
             // Swagger mora biti pre auth da bi JSON endpoint radio
             app.UseSwagger();

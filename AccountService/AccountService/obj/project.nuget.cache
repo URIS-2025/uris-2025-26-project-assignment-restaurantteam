@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7R5VlY4WNnJjxQVl2CP0t4ebdWWdhBDIgNd8jq+t8Wb5D6kLaA9kh8xX0g2QwwXk1Vu6KIu5ykR0yvfrBnM1Zg==",
+  "dgSpecHash": "cbEFrxooOiXZa1VB7h8DZZP20NVQSvmwLZJvk0K8HMwQf6ay359HqlzhrUqhcEgY5EqT/eVU6hK4Lr6jd5g4UQ==",
   "success": true,
   "projectFilePath": "D:\\GRADIVO\\4.GOD\\1.SEMESTAR\\URIS\\Projekat URIS 2026\\Projekat URIS\\AccountService\\AccountService\\AccountService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pavel\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Pavel\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Pavel\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\Pavel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
     "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
