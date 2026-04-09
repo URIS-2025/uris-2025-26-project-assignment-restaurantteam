@@ -79,8 +79,9 @@ namespace AuthenticationService.Controllers
             [AllowAnonymous]
             public async Task<ActionResult<LoginResponseDTO>> Login([FromBody] LoginRequest loginRequest)
             {
+            
 
-                var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == loginRequest.Username);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == loginRequest.Username);
                 if (user == null) return Unauthorized("Korisnik ne postoji");
 
                 if (!_authHelper.VerifyPassword(loginRequest.Password, user.Password))
