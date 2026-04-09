@@ -25,6 +25,7 @@ function MenuPage() {
   const [newCategory, setNewCategory] = useState('')
   const [newIngredient, setNewIngredient] = useState({ ingredientName: '', isAllergen: false })
   const [selectedCategory, setSelectedCategory] = useState(null)
+  const [searchTerm, setSearchTerm] = useState('')
 
   const fetchAll = async () => {
     try {
@@ -121,9 +122,14 @@ function MenuPage() {
     </div>
   )
 
-  const filteredItems = selectedCategory
-  ? menuItems.filter(item => item.categories.some(c => c.idCategory === selectedCategory))
-  : menuItems
+  const filteredItems = menuItems
+  .filter(item => selectedCategory
+    ? item.categories.some(c => c.idCategory === selectedCategory)
+    : true)
+  .filter(item => searchTerm
+    ? item.menuItemName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase())
+    : true)
 
   return (
     <div style={{ paddingBottom: '60px' }}>
@@ -205,7 +211,7 @@ function MenuPage() {
                       onChange={(e) => setNewItem({ ...newItem, description: e.target.value })} />
                   </div>
                   <div className="col-md-3">
-                    <label style={labelStyle}>Cijena (RSD)</label>
+                    <label style={labelStyle}>Cena (RSD)</label>
                     <input type="number" style={inputStyle} value={newItem.price}
                       onFocus={e => e.target.style.borderColor = '#c9a84c'}
                       onBlur={e => e.target.style.borderColor = '#444'}
@@ -294,7 +300,7 @@ function MenuPage() {
                     onChange={(e) => setEditItem({ ...editItem, description: e.target.value })} />
                 </div>
                 <div className="col-md-3">
-                  <label style={labelStyle}>Cijena (RSD)</label>
+                  <label style={labelStyle}>Cena (RSD)</label>
                   <input type="number" style={inputStyle} value={editItem.price}
                     onFocus={e => e.target.style.borderColor = '#c9a84c'}
                     onBlur={e => e.target.style.borderColor = '#444'}
@@ -331,8 +337,11 @@ function MenuPage() {
             </div>
           )}
 
+         {/* Filter i Search u istoj liniji */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '32px' }}>
+          
           {/* Filter po kategorijama */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '32px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
             <button
               onClick={() => setSelectedCategory(null)}
               style={{
@@ -365,9 +374,49 @@ function MenuPage() {
             ))}
           </div>
 
+          {/* Search bar */}
+          <div style={{ position: 'relative' }}>
+            <input
+              type="text"
+              placeholder="Pretraži jela..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              style={{
+                width: '250px',
+                backgroundColor: '#1a1a1a',
+                border: '1px solid #c9a84c',
+                borderRadius: '6px',
+                padding: '8px 16px 8px 36px',
+                color: '#f5f0e8',
+                fontSize: '0.9rem',
+                outline: 'none',
+                fontFamily: 'Georgia, serif',
+                boxSizing: 'border-box'
+              }}
+              onFocus={e => e.target.style.borderColor = '#e8c96d'}
+              onBlur={e => e.target.style.borderColor = '#c9a84c'}
+            />
+            <span style={{
+              position: 'absolute',
+              left: '12px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              color: '#c9a84c',
+              fontSize: '0.9rem'
+            }}>
+              🔍
+            </span>
+          </div>
+
+        </div>
           {/* Menu Items Cards */}
-          <div className="row g-4">
-            {filteredItems.map(item => (
+          {filteredItems.length === 0 ? (
+            <p style={{ color: '#6b6457', fontFamily: 'Georgia, serif', textAlign: 'center', padding: '40px 0' }}>
+              Nema jela koja odgovaraju pretrazi.
+            </p>
+          ) : (
+            <div className="row g-4">
+              {filteredItems.map(item => (
               <div key={item.idMenuItem} className="col-md-4">
                 <div style={{
                   backgroundColor: item.isAvailable ? '#1a1a1a' : '#111',
@@ -452,7 +501,7 @@ function MenuPage() {
                           <button onClick={() => handleDeleteItem(item.idMenuItem)} style={{ ...smallButtonStyle, borderColor: '#e74c3c', color: '#e74c3c' }}
                             onMouseEnter={e => { e.target.style.backgroundColor = '#e74c3c'; e.target.style.color = '#fff' }}
                             onMouseLeave={e => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#e74c3c' }}>
-                            Obriši
+                             Obriši
                           </button>
                         </div>
                       )}
@@ -460,8 +509,9 @@ function MenuPage() {
                   </div>
                 </div>
               </div>
-            ))}
+           ))}
           </div>
+        )}
         </div>
       )}
 

@@ -173,7 +173,7 @@ function OrdersPage() {
               <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
                   <tr style={{ borderBottom: '1px solid #c9a84c' }}>
-                    {['Jelo', 'Količina', 'Cijena', ''].map((h, i) => (
+                    {['Jelo', 'Količina', 'Cena', ''].map((h, i) => (
                       <th key={i} style={{ color: '#c9a84c', fontFamily: 'Georgia, serif', padding: '8px', textAlign: 'left', fontSize: '0.85rem' }}>{h}</th>
                     ))}
                   </tr>
@@ -269,7 +269,7 @@ function OrdersPage() {
                   <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '8px' }}>
                     <thead>
                       <tr style={{ borderBottom: '1px solid #2c2c2c' }}>
-                        {['Jelo', 'Kol.', 'Cijena'].map((h, i) => (
+                        {['Jelo', 'Kol.', 'Cena'].map((h, i) => (
                           <th key={i} style={{ color: '#c9a84c', fontFamily: 'Georgia, serif', padding: '6px 4px', textAlign: 'left', fontSize: '0.8rem' }}>{h}</th>
                         ))}
                       </tr>
