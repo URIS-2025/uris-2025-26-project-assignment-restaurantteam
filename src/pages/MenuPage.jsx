@@ -35,10 +35,8 @@ function MenuPage() {
       setCategories(catRes.data)
       setIngredients(ingRes.data)
 
-      if (token) {
         const menuRes = await getAllMenuItems(token)
-        setMenuItems(menuRes.data)
-      }
+        setMenuItems(menuRes.data)    
     } catch (err) {
       setError('Greška pri učitavanju podataka.')
     } finally {
@@ -161,25 +159,7 @@ function MenuPage() {
         </div>
       )}
 
-      {!token && (
-        <div style={{
-          backgroundColor: '#1a1a1a',
-          border: '1px solid #c9a84c',
-          color: '#c9a84c',
-          padding: '14px 20px',
-          borderRadius: '8px',
-          marginBottom: '32px',
-          textAlign: 'center',
-          fontFamily: 'Georgia, serif'
-        }}>
-          Prijavite se da biste videli kompletan meni →{' '}
-          <span onClick={() => window.location.href = '/login'}
-            style={{ textDecoration: 'underline', cursor: 'pointer' }}>
-            Login
-          </span>
-        </div>
-      )}
-
+      
       {/* Tabs - samo admin */}
       {isAdmin && (
         <div style={{ display: 'flex', gap: '12px', marginBottom: '36px' }}>

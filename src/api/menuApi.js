@@ -10,7 +10,9 @@ const getAuthHeader = (token) => ({
 
 // Menu Items
 export const getAllMenuItems = (token) => {
-  return menuClient.get('/api/menu', getAuthHeader(token))
+  return token
+    ? menuClient.get('/api/menu', getAuthHeader(token))
+    : menuClient.get('/api/menu') 
 }
 
 export const getMenuItemById = (id, token) => {
