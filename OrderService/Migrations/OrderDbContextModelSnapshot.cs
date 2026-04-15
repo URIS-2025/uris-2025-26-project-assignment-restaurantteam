@@ -61,7 +61,7 @@ namespace OrderService.Migrations
                     b.Property<int>("IdMenuItem")
                         .HasColumnType("int");
 
-                    b.Property<int?>("OrderIdOrder")
+                    b.Property<int>("IdOrder")
                         .HasColumnType("int");
 
                     b.Property<decimal>("PricePerItem")
@@ -72,7 +72,7 @@ namespace OrderService.Migrations
 
                     b.HasKey("IdOrderItem");
 
-                    b.HasIndex("OrderIdOrder");
+                    b.HasIndex("IdOrder");
 
                     b.ToTable("OrderItems");
                 });
@@ -81,8 +81,9 @@ namespace OrderService.Migrations
                 {
                     b.HasOne("OrderService.Entities.Order", null)
                         .WithMany("OrderItems")
-                        .HasForeignKey("OrderIdOrder")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IdOrder")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("OrderService.Entities.Order", b =>

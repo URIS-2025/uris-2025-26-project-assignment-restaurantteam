@@ -13,7 +13,15 @@ namespace ReservationService.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+           /*modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Table)
+                .WithMany<Reservation>()
+                .HasForeignKey(r => r.IdTable);*/
 
+            modelBuilder.Entity<Table>()
+                 .HasMany<Reservation>()
+                 .WithOne(r => r.Table)
+                 .HasForeignKey(r => r.IdTable);
         }
     }
 }

@@ -3,11 +3,75 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "AuthenticationService\\AuthenticationService.csproj",
+        "Path": "OrderService\\OrderService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AccountService\\AccountService.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "AccountOrder",
+    "Projects": [
+      {
+        "Path": "OrderService\\OrderService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AccountService\\AccountService.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "AccountOrderMenu",
+    "Projects": [
+      {
+        "Path": "MenuService\\MenuService.csproj",
         "Action": "Start"
       },
       {
         "Path": "OrderService\\OrderService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AccountService\\AccountService.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "ReservationAccount",
+    "Projects": [
+      {
+        "Path": "ReservationService\\ReservationService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AccountService\\AccountService.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "all",
+    "Projects": [
+      {
+        "Path": "ReservationService\\ReservationService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MenuService\\MenuService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "OrderService\\OrderService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AccountService\\AccountService.csproj",
         "Action": "Start"
       }
     ]

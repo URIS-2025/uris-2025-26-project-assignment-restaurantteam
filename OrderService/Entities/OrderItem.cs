@@ -11,6 +11,9 @@ namespace OrderService.Entities
         public int IdMenuItem { get; set; }
 
         [Required]
+        public int IdOrder {  get; set; }
+
+        [Required]
         [Range(1, 100)]
         public int Quantity { get; set; }
 

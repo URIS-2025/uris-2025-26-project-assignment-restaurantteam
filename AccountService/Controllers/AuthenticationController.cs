@@ -8,7 +8,6 @@ namespace AccountService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class AuthenticationController : ControllerBase
     {
         private readonly IAuthenticationHandler authenticationHandler;
@@ -74,10 +73,8 @@ namespace AccountService.Controllers
         [AllowAnonymous]
         public async Task<ActionResult<LoginResponseDTO>> Login([FromBody] LoginDTO loginRequest)
         {
-            Console.WriteLine("THese are the credentials " + loginRequest.Username + " and " + loginRequest.Password);
 
             var token = await authenticationHandler.Login(loginRequest);
-         
             return Ok(token);
         }
     

@@ -1,11 +1,13 @@
-using ReservationService.Data;
-using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore;
-
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using ReservationService.Handlers.Table;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using ReservationService.Data;
+using ReservationService.Handlers.Links;
 using System.Text;
+using ReservationService.Handlers.Reservation;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,7 +24,9 @@ builder.Services.AddDbContext<ReservationDbContext>(options =>
            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
            );
 
-
+builder.Services.AddScoped<ITableHandler, TableHandler>();
+builder.Services.AddScoped<IReservationHandler, ReservationHandler>();
+builder.Services.AddScoped<IUserLink, UserLink>();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

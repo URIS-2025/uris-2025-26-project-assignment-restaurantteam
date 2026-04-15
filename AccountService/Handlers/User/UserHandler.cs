@@ -54,11 +54,11 @@ namespace AccountService.Handlers.User
 
             if (user == null)
             {
-                throw new Exception("User not found.");
+                throw new Exception("User not found. USER SERVICE");
             }
             var userDTO = UserMapper.ToUserDTO(user);
             userDTO.Address = AddressMapper.ToAddressDTO(user.Address);
-
+            Console.WriteLine("User je " + userDTO.IdUser);
             return userDTO;
         }
 

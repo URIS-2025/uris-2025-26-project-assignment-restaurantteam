@@ -1,4 +1,9 @@
 using MenuService.Data;
+using MenuService.Handlers.Category;
+using MenuService.Handlers.Ingredient;
+using MenuService.Handlers.MenuItem;
+using MenuService.Handlers.MenuItemCategory;
+using MenuService.Handlers.MenuItemIngredient;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -6,17 +11,32 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173") // React dev server
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();
 
+
+
 builder.Services.AddDbContext<MenuDbContext>(options =>
            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
            );
-
+builder.Services.AddScoped<IIngredientHandler, IngredientHandler>();
+builder.Services.AddScoped<ICategoryHandler, CategoryHandler>();
+builder.Services.AddScoped<IMenuItemHandler, MenuItemHandler>();
+builder.Services.AddScoped<IMenuItemCategoryHandler, MenuItemCategoryHandler>();
+builder.Services.AddScoped<IMenuItemIngredientHandler, MenuItemIngredientHandler>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -70,7 +90,7 @@ var app = builder.Build();
     app.UseSwagger();
     app.UseSwaggerUI();
 }*/
-
+app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

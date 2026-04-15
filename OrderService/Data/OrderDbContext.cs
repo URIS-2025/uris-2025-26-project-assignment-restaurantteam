@@ -16,10 +16,15 @@ namespace OrderService.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Order>()
+            /*modelBuilder.Entity<Order>()
                 .HasMany(o => o.OrderItems)
                 .WithOne()
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade);*/
+
+            modelBuilder.Entity<OrderItem>()
+                .HasOne<Order>()
+                .WithMany(o => o.OrderItems)
+                .HasForeignKey(oi => oi.IdOrder);
         }
     }
 }

@@ -5,6 +5,12 @@ using OrderService.Payloads;
 using OrderService.Entities;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
+using OrderService.Handlers.Order;
+using OrderService.Handlers.Links;
+using OrderService.DTO.Order;
+using OrderService.Handlers.OrderItem;
+using OrderService.DTO.OrderItem;
+using OrderService.DTO.MenuItem;
 
 namespace OrderService.Controllers
 {
@@ -15,167 +21,156 @@ namespace OrderService.Controllers
     {
         private readonly OrderDbContext _context;
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IOrderHandler orderHandler;
+        private readonly IMenuItemLink menuItemLink;
+        private readonly IOrderItemHandler orderItemHandler;
+        private readonly IUserLink userLink;
 
-        public OrderController(OrderDbContext context, IHttpClientFactory httpClientFactory)
+        public OrderController(OrderDbContext context,
+                                IHttpClientFactory httpClientFactory,
+                                IOrderHandler orderHandler,
+                                IUserLink userLink,
+                                IMenuItemLink menuItemLink,
+                                IOrderItemHandler orderItemHandler)
         {
             _context = context;
             _httpClientFactory = httpClientFactory;
+            this.orderHandler = orderHandler;
+            this.userLink = userLink;
+            this.menuItemLink = menuItemLink;
+            this.orderItemHandler = orderItemHandler;
         }
 
-        // GET: api/orders
-        // ADMIN vidi sve, USER vidi samo svoje porudžbine
-        [HttpGet]
-        public async Task<IActionResult> GetOrders()
-        {
-            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var role = User.FindFirst(ClaimTypes.Role)?.Value;
-
-            if (userIdClaim == null)
-                return Unauthorized();
-
-            int userId = int.Parse(userIdClaim);
-
-            var orders = role == "ADMIN"
-                ? await _context.Orders
-                    .Include(o => o.OrderItems)
-                    .ToListAsync()
-                : await _context.Orders
-                    .Include(o => o.OrderItems)
-                    .Where(o => o.IdUser == userId)
-                    .ToListAsync();
-
-            var response = orders.Select(o => new OrderResponse
-            {
-                IdOrder = o.IdOrder,
-                IdUser = o.IdUser,
-                OrderStatus = o.OrderStatus,
-                PaymentMethod = o.PaymentMethod,
-                TotalPrice = o.TotalPrice,
-                CreatedAt = o.CreatedAt,
-                Items = o.OrderItems.Select(i => new CreateOrderItem
-                {
-                    IdMenuItem = i.IdMenuItem,
-                    Quantity = i.Quantity,
-                    PricePerItem = i.PricePerItem
-                }).ToList()
-            });
-
-            return Ok(response);
-        }
-
-        // GET: api/orders/{id}
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetOrderById(int id)
-        {
-            var order = await _context.Orders
-                .Include(o => o.OrderItems)
-                .FirstOrDefaultAsync(o => o.IdOrder == id);
-
-            if (order == null)
-                return NotFound();
-
-            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
-                return Unauthorized();
-            var role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty;
-
-            if (order.IdUser != userId && role != "ADMIN")
-                return Forbid();
-
-            var response = new OrderResponse
-            {
-                IdOrder = order.IdOrder,
-                IdUser = order.IdUser,
-                OrderStatus = order.OrderStatus,
-                PaymentMethod = order.PaymentMethod,
-                TotalPrice = order.TotalPrice,
-                CreatedAt = order.CreatedAt,
-                Items = order.OrderItems.Select(i => new CreateOrderItem
-                {
-                    IdMenuItem = i.IdMenuItem,
-                    Quantity = i.Quantity,
-                    PricePerItem = i.PricePerItem
-                }).ToList()
-            };
-
-            return Ok(response);
-        }
-
-        // POST: api/orders
         [HttpPost]
-        public async Task<IActionResult> CreateOrder(CreateOrder dto)
+        public async Task<ActionResult<OrderDTO>> CreateOrder(CreateOrderDTO dto, [FromHeader] string authorization)
         {
-            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
-                return Unauthorized();
+ 
 
-            // POZIV KA AccountService
-            var client = _httpClientFactory.CreateClient("AccountService");
-            var response = await client.GetAsync($"/api/users/internal/{userId}");
-
-            if (!response.IsSuccessStatusCode)
+            var idUser = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            if (User.IsInRole("CUSTOMER") || User.IsInRole("EMPLOYEE"))
             {
-                return BadRequest("User does not exist in AccountService.");
+                dto.IdUser = idUser;
+                dto.OrderStatus = OrderStatus.PENDING;
+                dto.CreatedAt = DateTime.UtcNow;
+
+            }
+            dto.IdUser = idUser;
+            dto.OrderStatus = OrderStatus.PENDING;
+            dto.CreatedAt = DateTime.UtcNow;
+
+            var userDTO = userLink.GetUserById(dto.IdUser, authorization).Result;
+            if (userDTO == null)
+            {
+                BadRequest("User doesn't exist");
             }
 
-            var order = new Order
+            var orderDTO = await orderHandler.CreateOrder(dto, dto.IdUser);
+            orderDTO.UserDTO = userDTO;
+
+            List<OrderItemDTO> orderItemDTOs = new List<OrderItemDTO>();
+            decimal totalPrice = 0;
+            foreach (CreateOrderItemDTO orderItem in dto.OrderItems)
             {
-                IdUser = userId,
-                OrderStatus = OrderStatus.PENDING,
-                PaymentMethod = dto.PaymentMethod,
-                CreatedAt = DateTime.UtcNow,
-                OrderItems = dto.Items.Select(i => new OrderItem
+                var menuItemDTO = await menuItemLink.GetMenuItemById(orderItem.IdMenuItem, authorization);
+                if (menuItemDTO == null)
                 {
-                    IdMenuItem = i.IdMenuItem,
-                    Quantity = i.Quantity,
-                    PricePerItem = i.PricePerItem
-                }).ToList()
-            };
+                    BadRequest("Menu item doesn't exist");
+                }
+                totalPrice += menuItemDTO.Price * orderItem.Quantity;
+                orderItem.PricePerItem = menuItemDTO.Price;
+ 
+                var orderItemDTO = await orderItemHandler.CreateOrderItem(orderItem, orderDTO.IdOrder);
+                orderItemDTO.MenuItemDTO = menuItemDTO;
+                orderItemDTOs.Add(orderItemDTO);
+            }
 
-            order.TotalPrice = order.OrderItems.Sum(i => i.Quantity * i.PricePerItem);
+            orderDTO.OrderItems = orderItemDTOs;
+            orderDTO.TotalPrice = totalPrice;
 
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetOrderById), new { id = order.IdOrder }, order.IdOrder);
+            return Ok(orderDTO);
         }
 
-        // PUT: api/orders/{id}/status
-        // SAMO ADMIN može menjati status
-        [HttpPut("{id}/status")]
-        [Authorize(Roles = "ADMIN")]
-        public async Task<IActionResult> UpdateOrderStatus(int id, UpdateOrderStatus dto)
+        [HttpGet]
+        public async Task<ActionResult<List<OrderDTO>>> GetOrders([FromHeader] string authorization)
         {
-            var order = await _context.Orders.FindAsync(id);
+    
 
-            if (order == null)
-                return NotFound();
+            var orderDTOs = await orderHandler.GetOrders();
 
-            order.OrderStatus = dto.Status;
-            await _context.SaveChangesAsync();
+           /* List<OrderItemDTO> orderidk = orderDTOs[0].OrderItems;
+            Console.WriteLine("ovo je quantity " + orderidk[0].Quantity);*/
 
-            return NoContent();
+            foreach(OrderDTO orderDTO in orderDTOs)
+            {
+                
+                var userDTO = userLink.GetUserById(orderDTO.UserDTO.IdUser, authorization).Result;
+                orderDTO.UserDTO = userDTO;
+                foreach(OrderItemDTO orderItem in orderDTO.OrderItems)
+                {
+              
+
+
+                     var menuItemDTO = menuItemLink.GetMenuItemById(orderItem.MenuItemDTO.IdMenuItem, authorization).Result;
+                    if (menuItemDTO == null)
+                    {
+                        BadRequest("Menu item doesn't exist");
+                    }
+                    orderItem.MenuItemDTO = menuItemDTO;
+
+                }
+            }
+
+            
+
+            return Ok(orderDTOs);
         }
 
-        //  DELETE: api/orders/{id}
-        // ADMIN ili vlasnik porudžbine
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteOrder(int id)
+        [HttpGet("{idOrder}")]
+        public async Task<ActionResult<OrderDTO>> GetOrderById([FromHeader] string authorization, [FromRoute] int idOrder)
         {
-            var order = await _context.Orders.FindAsync(id);
+            var orderDTO = await orderHandler.GetOrderById(idOrder);
+            
 
-            if (order == null)
-                return NotFound();
+            var userDTO = userLink.GetUserById(orderDTO.UserDTO.IdUser, authorization).Result;
+            orderDTO.UserDTO = userDTO;
 
-            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
-                return Unauthorized();
-            var role = User.FindFirstValue(ClaimTypes.Role) ?? string.Empty;
-
-            if (order.IdUser != userId && role != "ADMIN")
-                return Forbid();
-
-            _context.Orders.Remove(order);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            foreach(OrderItemDTO orderItemDTO in orderDTO.OrderItems )
+            {
+                var menuItemDTO = await menuItemLink.GetMenuItemById(orderItemDTO.MenuItemDTO.IdMenuItem, authorization);
+                orderItemDTO.MenuItemDTO = menuItemDTO;
+            }
+            return Ok(orderDTO);
         }
+
+
+        [HttpPut("{idOrder}")]
+        public async Task<ActionResult<OrderDTO>> UpdateOrder([FromHeader] string authorization, [FromRoute] int idOrder, [FromBody] UpdateOrderDTO updateOrderDTO)
+        {
+            var orderDTO = await orderHandler.UpdateOrder(updateOrderDTO,idOrder);
+            
+
+            if(updateOrderDTO.OrderItems != null)
+            {
+                foreach (var orderItemDTO in orderDTO.OrderItems)
+                {
+                    await orderItemHandler.DeleteOrderItem(orderItemDTO.IdOrderItem);
+                }
+                foreach (CreateOrderItemDTO createOrderItemDTO in updateOrderDTO.OrderItems)
+                {
+                    await orderItemHandler.CreateOrderItem(createOrderItemDTO, idOrder);
+                }
+            }
+            
+            var userDTO = userLink.GetUserById(orderDTO.UserDTO.IdUser, authorization).Result;
+            orderDTO.UserDTO = userDTO;
+
+            foreach (OrderItemDTO orderItemDTO in orderDTO.OrderItems)
+            {
+                var menuItemDTO = await menuItemLink.GetMenuItemById(orderItemDTO.MenuItemDTO.IdMenuItem, authorization);
+                orderItemDTO.MenuItemDTO = menuItemDTO;
+            }
+            return Ok(orderDTO);
+        }
+     
     }
 }

@@ -1,86 +1,75 @@
-using System.Diagnostics;
+﻿using AccountService.DTO.User;
+using AccountService.DTO.Address;
+using AccountService.Handlers.Address;
+using AccountService.Handlers.User;
 using Microsoft.AspNetCore.Mvc;
-using AccountService.Data;
-using AccountService.DTO.User;
 using Microsoft.AspNetCore.Authorization;
-using AccountService.Entities;
 
 namespace AccountService.Controllers
 {
-    [Route("api/notuser")]
+    [Route("api/users")]
     [ApiController]
     [Authorize]
     public class UserController : ControllerBase
     {
 
-        private readonly AccountDbContext _context;
+        private readonly IUserHandler userHandler;
+        private readonly IAddressHandler addressHandler;
 
-        public UserController(AccountDbContext context)
+
+        public UserController(IUserHandler userHandler, IAddressHandler addressHandler)
         {
-            _context = context;
+            this.userHandler = userHandler;
+            this.addressHandler = addressHandler;
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<ActionResult<UserDTO>> CreateUser([FromBody] CreateUserDTO createUserDTO)
+        {
+            var address = await addressHandler.CreateAddress(createUserDTO.Address);
+            var user = await userHandler.CreateUser(createUserDTO, address.IdAddress);
+            user.Address = address;
+            return Ok(user);
+        }
 
         [HttpGet]
-        [Authorize(Roles = "ADMIN")]
-        public IActionResult GetAll()
+        public async Task<ActionResult<List<UserDTO>>> GetUsers()
         {
-            var users = _context.Users.ToList();
-
+            var users = await userHandler.GetUsers();
             return Ok(users);
         }
 
-
-        [HttpGet("claims")]
-        [Authorize(Roles = "CUSTOMER")]
-        public IActionResult Claims()
+        [HttpGet("{idUser}")]
+        public async Task<ActionResult<UserDTO>> GetUserById([FromRoute] int idUser)
         {
-            return Ok(User.Claims.Select(c => new { c.Type, c.Value }));
-        }
-
-        [HttpGet("{id}")]
-        [Authorize(Roles = "ADMIN")]
-        public IActionResult GetUserById([FromRoute] int id)
-        {
-            var user = _context.Users.Find(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
+            var user = await userHandler.GetUserById(idUser);
             return Ok(user);
         }
-        [HttpDelete("{id}")]
-        [Authorize(Roles = "ADMIN")]
-        public async Task<IActionResult> DeleteUser([FromRoute] int id)
+
+
+        [HttpPut("{idUser}")]
+        public async Task<ActionResult<UserDTO>> UpdateUser([FromRoute] int idUser, [FromBody] UpdateUserDTO updateUserDTO)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
-
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-
-            return NoContent(); 
-        }
-
-        [HttpPut("{id}")]
-        [Authorize(Roles = "ADMIN")]
-        public async Task<IActionResult> UpdateUser([FromRoute] int id, [FromBody] UpdateUserDTO dto)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
-
-            
-            user.Username = dto.Username ?? user.Username;
-            user.Email = dto.Email ?? user.Email;
-            user.PhoneNumber = dto.PhoneNumber ?? user.PhoneNumber;
-            //user.Role = dto.Role.ToString() ?? user.Role.ToString();
-
-            _context.Users.Update(user);
-            await _context.SaveChangesAsync();
-
+            var user = await userHandler.UpdateUser(updateUserDTO,idUser);
+            var address = await addressHandler.UpdateAddress(updateUserDTO.Address, user.Address.IdAddress);
+            user.Address = address;
             return Ok(user);
         }
-    }
+
+        [HttpPatch("{idUser}")]
+        public async Task<ActionResult<UserDTO>> UpdateUserRole([FromRoute] int idUser, [FromBody] UpdateUserRoleDTO updateUserRoleDTO)
+        {
+            var user = await userHandler.UpdateUserRole(updateUserRoleDTO, idUser);
+            return Ok(user);
+        }
+
+
+        [HttpDelete("{idUser}")]
+        public async Task<ActionResult<UserDTO>> DeleteUser([FromRoute] int idUser)
+        {
+            var user = await userHandler.DeleteUser(idUser);
+            return Ok(user);
+        }
+    }  
 }

@@ -145,4 +145,5 @@ C:\Users\pavle\source\repos\URIS\OrderService\obj\Debug\net8.0\refint\OrderServi
 C:\Users\pavle\source\repos\URIS\OrderService\obj\Debug\net8.0\OrderService.pdb
 C:\Users\pavle\source\repos\URIS\OrderService\obj\Debug\net8.0\OrderService.genruntimeconfig.cache
 C:\Users\pavle\source\repos\URIS\OrderService\obj\Debug\net8.0\ref\OrderService.dll
+C:\Users\pavle\source\repos\URIS\OrderService\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\pavle\source\repos\URIS\OrderService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

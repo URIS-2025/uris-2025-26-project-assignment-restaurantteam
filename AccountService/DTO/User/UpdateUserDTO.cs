@@ -23,11 +23,7 @@ namespace AccountService.DTO.User
         
         [MaxLength(15, ErrorMessage = "Phone number must be below 15 characters.")]
         public string? PhoneNumber { get; set; }
-
-        
         public UserRole Role { get; set; }
-
-        
         public UpdateAddressDTO? Address { get; set; }
     }
 }

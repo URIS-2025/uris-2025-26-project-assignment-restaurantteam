@@ -2,11 +2,12 @@
 using AccountService.Handlers.Address;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data.Entity.Infrastructure;
 using System.Security.Claims;
 
 namespace AccountService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class AddressController : ControllerBase
     {
@@ -17,7 +18,7 @@ namespace AccountService.Controllers
             this.addressHandler = addressHandler;
         }
 
-        [HttpPost]
+        [HttpPost("users/addresses")]
         [Authorize(Roles = "ADMIN")]
         public async Task<ActionResult<AddressDTO>> CreateAddress([FromBody] CreateAddressDTO createAddressDTO)
         {
@@ -25,14 +26,14 @@ namespace AccountService.Controllers
             return Ok(address);
         }
 
-        [HttpGet]
+        [HttpGet("users/addresses")]
         public async Task<ActionResult<List<AddressDTO>>> GetAddresses()
         {
             var addresses = await addressHandler.GetAddresses();
             return Ok(addresses);
         }
 
-        [HttpGet("{idAddress}")]
+        [HttpGet("users/addresses/{idAddress}")]
         public async Task<ActionResult<AddressDTO>> GetAddressById( [FromRoute] int idAddress)
         {
             try
@@ -47,10 +48,10 @@ namespace AccountService.Controllers
 
         }
 
-        [HttpPut("{idAddress}")]
+        [HttpPut("users/addresses/{idAddress}")]
         public async Task<ActionResult<AddressDTO>> UpdateAddress([FromBody] UpdateAddressDTO updateAddressDTO, [FromRoute] int idAddress)
         {
-            int userId = int.Parse(User.FindFirst("id").Value);
+            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             var role = User.FindFirst(ClaimTypes.Role).Value;
 
             if (role == null)
@@ -69,7 +70,8 @@ namespace AccountService.Controllers
             }     
         }
 
-        [HttpDelete("{idAddress}")]
+        [HttpDelete("users/addresses/{idAddress}")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<ActionResult<bool>> DeleteAddress([FromRoute] int idAddress)
         {
             try
@@ -77,10 +79,15 @@ namespace AccountService.Controllers
                 bool isDeleted = await addressHandler.DeleteAddress(idAddress);
                 return Ok(isDeleted);
             }
-            catch (Exception)
+            catch (DbUpdateException ue)
             {
-                return NotFound();
+                return Conflict(ue.Message);
             }
+            /*catch (Exception e)
+            {
+                return NotFound(e.Message);
+            }*/
+
 
         }
     }

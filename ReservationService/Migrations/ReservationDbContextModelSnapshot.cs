@@ -45,12 +45,9 @@ namespace ReservationService.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int>("TableIdTable")
-                        .HasColumnType("int");
-
                     b.HasKey("IdReservation");
 
-                    b.HasIndex("TableIdTable");
+                    b.HasIndex("IdTable");
 
                     b.ToTable("Reservations");
                 });
@@ -78,7 +75,7 @@ namespace ReservationService.Migrations
                 {
                     b.HasOne("ReservationService.Entities.Table", "Table")
                         .WithMany()
-                        .HasForeignKey("TableIdTable")
+                        .HasForeignKey("IdTable")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -16,7 +16,7 @@ namespace ReservationService.Entities
         public int NumberOfGuests { get; set; }
 
         [Required]
-        public ReservationStatus Status { get; set; }
+        public ReservationStatus? Status { get; set; }
 
         [Required]
         public int IdUser { get; set; }
