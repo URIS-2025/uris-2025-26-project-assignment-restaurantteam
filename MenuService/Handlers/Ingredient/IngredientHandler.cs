@@ -61,7 +61,6 @@ namespace MenuService.Handlers.Ingredient
         {
             Entities.Ingredient? ingredient = await _context.Ingredients.FindAsync(idIngredient);
 
-            Console.WriteLine("Ovo je sastojak: " + ingredient.IngredientName);
 
             if (ingredient == null)
             {

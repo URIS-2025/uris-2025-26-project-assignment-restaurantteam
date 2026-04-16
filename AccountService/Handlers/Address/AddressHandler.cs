@@ -64,11 +64,20 @@ namespace AccountService.Handlers.Address
                 throw new Exception("Address not found");
             }
 
-            address.City = updateAddressDTO.City;
-            address.Country = updateAddressDTO.Country;
-            address.Street = updateAddressDTO.Street;
-            address.StreetNumber = updateAddressDTO.StreetNumber;
-            address.PostalCode = updateAddressDTO.PostalCode;
+            if(updateAddressDTO.City != null)
+                address.City = updateAddressDTO.City;
+
+            if (updateAddressDTO.Country != null)
+                address.Country = updateAddressDTO.Country;
+
+            if (updateAddressDTO.Street != null)
+                address.Street = updateAddressDTO.Street;
+
+            if (updateAddressDTO.StreetNumber != null)
+                address.StreetNumber = updateAddressDTO.StreetNumber.Value;
+
+            if (updateAddressDTO.PostalCode != null)
+                address.PostalCode = updateAddressDTO.PostalCode.Value;
 
             _context.Addresses.Update(address);
             await _context.SaveChangesAsync();

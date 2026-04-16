@@ -37,8 +37,8 @@ namespace AccountService.Mappers
                 City = updateAddressDTO.City,
                 Country = updateAddressDTO.Country,
                 Street = updateAddressDTO.Street,
-                StreetNumber = updateAddressDTO.StreetNumber,
-                PostalCode = updateAddressDTO.PostalCode,
+                StreetNumber = updateAddressDTO.StreetNumber.Value,
+                PostalCode = updateAddressDTO.PostalCode.Value,
             };
         }
 

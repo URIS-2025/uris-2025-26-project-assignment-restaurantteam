@@ -19,55 +19,7 @@ namespace AccountService.Controllers
             this.authenticationHandler = authenticationHandler;
             _context = context;
         }
-
-
-        /*[HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterRequest dto)
-        {
-
-            var existsAddress = await _context.Addresss.FirstOrDefaultAsync(u =>
-                    u.City == dto.City &&
-                    u.Country == dto.Country &&
-                    u.Street == dto.Street &&
-                    u.StreetNumber == dto.StreetNumber
-                );
-            var passedAddress = existsAddress;
-
-            var address = new Address
-            {
-                City = dto.City,
-                Country = dto.Country,
-                Street = dto.Street,
-                StreetNumber = dto.StreetNumber,
-                PostalCode = dto.PostalCode,
-            };
-
-            if (existsAddress == null)
-            {
-
-                _context.Addresss.Add(address);
-
-                await _context.SaveChangesAsync();
-                passedAddress = address;
-            }
-
-
-
-            var exists = await _context.Users.AnyAsync(u => u.Username == dto.Username);
-            if (exists) return Conflict("Korisnik već postoji");
-            var user = new User
-            {
-                Username = dto.Username,
-                Email = dto.Email,
-                Password = _authHelper.HashPassword(dto.Password),
-                PhoneNumber = dto.PhoneNumber,
-                Role = dto.Role,
-                IdAddress = passedAddress.idAddress
-            };
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-            return Ok("Registracija uspješna");
-        }*/
+      
 
         [HttpPost("login")]
         [AllowAnonymous]

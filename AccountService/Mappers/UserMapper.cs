@@ -39,7 +39,7 @@ namespace AccountService.Mappers
                 Password = updateUserDTO.Password,
                 PhoneNumber = updateUserDTO.PhoneNumber,
                 Email = updateUserDTO.Email,
-                Role = updateUserDTO.Role,
+                Role = updateUserDTO.Role.Value,
                 IdAddress = idAddress
             };
         }

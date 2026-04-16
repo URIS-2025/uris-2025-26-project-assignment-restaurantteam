@@ -16,11 +16,13 @@ namespace OrderService.Handlers.Order
             _context = context;
         }
 
-        public async Task<OrderDTO> CreateOrder(CreateOrderDTO createOrderDTO, int idUser)
+        public async Task<OrderDTO> CreateOrder(CreateOrderDTO createOrderDTO)
         {
             var order = OrderMapper.ToOrder(createOrderDTO);
 
             _context.Orders.Add(order);
+            
+
             await _context.SaveChangesAsync();
 
             var orderDTO = OrderMapper.ToOrderDTO(order);
@@ -36,7 +38,6 @@ namespace OrderService.Handlers.Order
         public async Task<OrderDTO> GetOrderById(int idOrder)
         {
             Entities.Order? order = await _context.Orders.Include(o => o.OrderItems).FirstOrDefaultAsync(o => o.IdOrder == idOrder);
-
 
             if (order == null)
             {
@@ -77,25 +78,65 @@ namespace OrderService.Handlers.Order
             return orderDTOs;
         }
 
-        public async Task<OrderDTO> UpdateOrder(UpdateOrderDTO updateOrderDTO, int idUser)
+        public async Task<OrderDTO> UpdateOrder(UpdateOrderDTO updateOrderDTO, int idOrder)
         {
-            Entities.Order? order = await _context.Orders.FindAsync(idUser);
+            Entities.Order? order = await _context.Orders.Include(o => o.OrderItems).FirstOrDefaultAsync(o => o.IdOrder == idOrder);
 
             if (order == null)
             {
                 throw new Exception("Order not found");
             }
+            if(updateOrderDTO.PaymentMethod !=null)
+                order.PaymentMethod = updateOrderDTO.PaymentMethod;
 
-            order.PaymentMethod = updateOrderDTO.PaymentMethod;
-            order.TotalPrice = updateOrderDTO.TotalPrice;
-            order.OrderStatus = updateOrderDTO.OrderStatus;
-            order.CreatedAt = updateOrderDTO.CreatedAt;
+            if (updateOrderDTO.TotalPrice != null)
+                order.TotalPrice = updateOrderDTO.TotalPrice;
+
+            if (updateOrderDTO.OrderStatus != null)
+                order.OrderStatus = updateOrderDTO.OrderStatus;
+
+               
 
 
             _context.Orders.Update(order);
             await _context.SaveChangesAsync();
 
             OrderDTO orderDTO = OrderMapper.ToOrderDTO(order);
+            var orderItemDTOs = new List<OrderItemDTO>();
+            foreach (Entities.OrderItem orderItem in order.OrderItems)
+            {
+                orderItemDTOs.Add(OrderItemMapper.ToOrderItemDTO(orderItem));
+            }
+            orderDTO.OrderItems = orderItemDTOs;
+
+            return orderDTO;
+        }
+
+        public async Task<OrderDTO> UpdateOrderStatus(UpdateOrderDTO updateOrderDTO, int idOrder)
+        {
+            Entities.Order? order = await _context.Orders.Include(o => o.OrderItems).FirstOrDefaultAsync(o => o.IdOrder == idOrder);
+
+            if (order == null)
+            {
+                throw new Exception("Order not found");
+            }
+
+            if (updateOrderDTO.OrderStatus != null)
+                order.OrderStatus = updateOrderDTO.OrderStatus;
+
+
+
+
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+
+            OrderDTO orderDTO = OrderMapper.ToOrderDTO(order);
+            var orderItemDTOs = new List<OrderItemDTO>();
+            foreach (Entities.OrderItem orderItem in order.OrderItems)
+            {
+                orderItemDTOs.Add(OrderItemMapper.ToOrderItemDTO(orderItem));
+            }
+            orderDTO.OrderItems = orderItemDTOs;
 
             return orderDTO;
         }

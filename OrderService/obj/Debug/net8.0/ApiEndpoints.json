@@ -122,5 +122,41 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "OrderService.Controllers.OrderController",
+    "Method": "UpdateOrderStatus",
+    "RelativePath": "api/orders/{idOrder}/status",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorization",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idOrder",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateOrderDTO",
+        "Type": "OrderService.DTO.Order.UpdateOrderDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "OrderService.DTO.Order.OrderDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

@@ -10,11 +10,11 @@ namespace OrderService.Mappers
         {
             return new Entities.Order
             {
-                IdUser = createOrderDTO.IdUser,
-                OrderStatus = createOrderDTO.OrderStatus,
-                TotalPrice = createOrderDTO.TotalPrice,
+                IdUser = createOrderDTO.IdUser ?? 1,
+                OrderStatus = createOrderDTO.OrderStatus ?? Entities.OrderStatus.PENDING,
+                TotalPrice = createOrderDTO.TotalPrice ?? 0,
                 PaymentMethod = createOrderDTO.PaymentMethod,
-                CreatedAt = createOrderDTO.CreatedAt,
+                CreatedAt = createOrderDTO.CreatedAt ?? DateTime.Now,
             };
         }
 

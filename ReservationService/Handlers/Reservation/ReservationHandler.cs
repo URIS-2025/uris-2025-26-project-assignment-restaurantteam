@@ -52,14 +52,8 @@ namespace ReservationService.Handlers.Reservation
             List<ReservationDTO> reservationDTOs = new List<ReservationDTO>();
             foreach (var reservation in reservations)
             {
-                Console.WriteLine("OVO JE TABLE " + reservation.Table.IdTable);
-                Console.WriteLine("OVO JE TABLE " + reservation.Table.NumberOfSeats);
-                Console.WriteLine("OVO JE TABLE " + reservation.Table.Status);
 
                 var reservationDTO = ReservationMapper.ToReservationDTO(reservation);
-                Console.WriteLine("OVO JE TABLE DTO " + reservationDTO.TableDTO.IdTable);
-                Console.WriteLine("OVO JE TABLE DTO " + reservationDTO.TableDTO.NumberOfSeats);
-                Console.WriteLine("OVO JE TABLE DTO " + reservationDTO.TableDTO.Status);
                 reservationDTOs.Add(reservationDTO);
             }
             return reservationDTOs;

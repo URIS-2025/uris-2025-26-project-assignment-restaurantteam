@@ -14,8 +14,8 @@ namespace ReservationService.Handlers.Links
         public async Task<UserDTO> GetUserById(int idUser, string? token)
         {
             using HttpClient httpClient = new HttpClient();
-            Uri url = new($"https://localhost:7276/api/user/{idUser}");
-            Console.WriteLine("The id is " + idUser);
+            Uri url = new($"https://localhost:7276/api/users/{idUser}");
+            
 
             if (token != null)
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);

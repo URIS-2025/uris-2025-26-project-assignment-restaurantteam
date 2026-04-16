@@ -44,27 +44,25 @@ namespace OrderService.Controllers
         [HttpPost]
         public async Task<ActionResult<OrderDTO>> CreateOrder(CreateOrderDTO dto, [FromHeader] string authorization)
         {
- 
-
             var idUser = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             if (User.IsInRole("CUSTOMER") || User.IsInRole("EMPLOYEE"))
             {
                 dto.IdUser = idUser;
                 dto.OrderStatus = OrderStatus.PENDING;
                 dto.CreatedAt = DateTime.UtcNow;
-
             }
+            if(dto.IdUser == null)
             dto.IdUser = idUser;
             dto.OrderStatus = OrderStatus.PENDING;
-            dto.CreatedAt = DateTime.UtcNow;
+            dto.CreatedAt = DateTime.Now;
 
-            var userDTO = userLink.GetUserById(dto.IdUser, authorization).Result;
+            var userDTO = userLink.GetUserById(idUser, authorization).Result;
             if (userDTO == null)
             {
-                BadRequest("User doesn't exist");
+                return BadRequest("User doesn't exist");
             }
 
-            var orderDTO = await orderHandler.CreateOrder(dto, dto.IdUser);
+            var orderDTO = await orderHandler.CreateOrder(dto);
             orderDTO.UserDTO = userDTO;
 
             List<OrderItemDTO> orderItemDTOs = new List<OrderItemDTO>();
@@ -74,7 +72,7 @@ namespace OrderService.Controllers
                 var menuItemDTO = await menuItemLink.GetMenuItemById(orderItem.IdMenuItem, authorization);
                 if (menuItemDTO == null)
                 {
-                    BadRequest("Menu item doesn't exist");
+                    return BadRequest("Menu item doesn't exist");
                 }
                 totalPrice += menuItemDTO.Price * orderItem.Quantity;
                 orderItem.PricePerItem = menuItemDTO.Price;
@@ -86,6 +84,7 @@ namespace OrderService.Controllers
 
             orderDTO.OrderItems = orderItemDTOs;
             orderDTO.TotalPrice = totalPrice;
+            var updatedOrderDTO = await orderHandler.UpdateOrder(new UpdateOrderDTO { TotalPrice = totalPrice }, orderDTO.IdOrder);
 
             return Ok(orderDTO);
         }
@@ -96,9 +95,6 @@ namespace OrderService.Controllers
     
 
             var orderDTOs = await orderHandler.GetOrders();
-
-           /* List<OrderItemDTO> orderidk = orderDTOs[0].OrderItems;
-            Console.WriteLine("ovo je quantity " + orderidk[0].Quantity);*/
 
             foreach(OrderDTO orderDTO in orderDTOs)
             {
@@ -144,12 +140,13 @@ namespace OrderService.Controllers
 
 
         [HttpPut("{idOrder}")]
-        public async Task<ActionResult<OrderDTO>> UpdateOrder([FromHeader] string authorization, [FromRoute] int idOrder, [FromBody] UpdateOrderDTO updateOrderDTO)
+        public async Task<ActionResult<OrderDTO>> UpdateOrder([FromHeader] string authorization, 
+                                                                [FromRoute] int idOrder, 
+                                                                [FromBody] UpdateOrderDTO updateOrderDTO)
         {
             var orderDTO = await orderHandler.UpdateOrder(updateOrderDTO,idOrder);
             
-
-            if(updateOrderDTO.OrderItems != null)
+            if(updateOrderDTO.OrderItems != null && updateOrderDTO.OrderItems.Count != 0)
             {
                 foreach (var orderItemDTO in orderDTO.OrderItems)
                 {
@@ -171,6 +168,24 @@ namespace OrderService.Controllers
             }
             return Ok(orderDTO);
         }
-     
+
+        [HttpPatch("{idOrder}/status")]
+        public async Task<ActionResult<OrderDTO>> UpdateOrderStatus([FromHeader] string authorization,
+                                                        [FromRoute] int idOrder,
+                                                        [FromBody] UpdateOrderDTO updateOrderDTO)
+        {
+            var orderDTO = await orderHandler.UpdateOrderStatus(updateOrderDTO, idOrder);
+
+            var userDTO = userLink.GetUserById(orderDTO.UserDTO.IdUser, authorization).Result;
+            orderDTO.UserDTO = userDTO;
+
+            foreach (OrderItemDTO orderItemDTO in orderDTO.OrderItems)
+            {
+                var menuItemDTO = await menuItemLink.GetMenuItemById(orderItemDTO.MenuItemDTO.IdMenuItem, authorization);
+                orderItemDTO.MenuItemDTO = menuItemDTO;
+            }
+            return Ok(orderDTO);
+        }
+
     }
 }

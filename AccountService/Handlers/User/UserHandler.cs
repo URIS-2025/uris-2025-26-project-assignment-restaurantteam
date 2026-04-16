@@ -58,7 +58,6 @@ namespace AccountService.Handlers.User
             }
             var userDTO = UserMapper.ToUserDTO(user);
             userDTO.Address = AddressMapper.ToAddressDTO(user.Address);
-            Console.WriteLine("User je " + userDTO.IdUser);
             return userDTO;
         }
 
@@ -74,10 +73,6 @@ namespace AccountService.Handlers.User
             foreach(Entities.User u in users)
             {
                 var userDTO = UserMapper.ToUserDTO(u);
-                Console.WriteLine("Username is " + u.Username);
-                Console.WriteLine("Address ID is " + u.IdAddress);
-
-                Console.WriteLine("Address is " + u.Address.Country);
 
                 userDTO.Address = AddressMapper.ToAddressDTO(u.Address);
                 userDTOs.Add(userDTO);
@@ -89,6 +84,9 @@ namespace AccountService.Handlers.User
 
         public async Task<UserDTO> UpdateUser(UpdateUserDTO updateUserDTO, int idUser)
         {
+            if (updateUserDTO == null)
+                throw new Exception("Bad request");
+
             var user = await _context.Users
                 .Include(u => u.Address)
                 .FirstOrDefaultAsync(u => u.IdUser == idUser);
@@ -98,11 +96,16 @@ namespace AccountService.Handlers.User
                 throw new Exception("User not found");
             }
 
-            user.Username = updateUserDTO.Username;
-            user.Password = BCrypt.Net.BCrypt.HashPassword(updateUserDTO.Password, workFactor: 12);
-            user.Email = updateUserDTO.Email;
-            user.PhoneNumber = updateUserDTO.PhoneNumber;
-            user.Role = updateUserDTO.Role;
+            if(updateUserDTO.Username !=  null)
+                user.Username = updateUserDTO.Username;
+            if (updateUserDTO.Password != null)
+                user.Password = BCrypt.Net.BCrypt.HashPassword(updateUserDTO.Password, workFactor: 12);
+            if (updateUserDTO.Email != null)
+                user.Email = updateUserDTO.Email;
+            if (updateUserDTO.PhoneNumber != null)
+                user.PhoneNumber = updateUserDTO.PhoneNumber;
+            if (updateUserDTO.Role != null)
+                user.Role = updateUserDTO.Role.Value;
             
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
