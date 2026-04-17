@@ -9,7 +9,7 @@ namespace OrderService.Handlers.Order
         public Task<OrderDTO> GetOrderById(int idOrder);
         public Task<OrderDTO> UpdateOrder(UpdateOrderDTO updateOrderDTO, int idUser);
         public Task<OrderDTO> UpdateOrderStatus(UpdateOrderDTO updateOrderDTO, int idUser);
-
+        public Task<bool> IsUserInUse(int idUser);
         public Task<bool> DeleteOrder(int idOrder);
     }
 }

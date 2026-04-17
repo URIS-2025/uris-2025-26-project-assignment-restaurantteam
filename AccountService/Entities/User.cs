@@ -22,16 +22,15 @@ namespace AccountService.Entities
         [MinLength(0, ErrorMessage = "Password must be above 4 characters.")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "User needs to have a phone number.")]
+
         [MaxLength(15, ErrorMessage = "Phone number must be below 15 characters.")]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "User needs to have a role (CUSTOMER, EMPLOYEE or ADMIN.")]
         public Enums.UserRole Role { get; set; }
 
-        [Required(ErrorMessage = "User needs to have an address.")]
-        public int IdAddress { get; set; }
+        public int? IdAddress { get; set; }
 
-        public Address Address { get; set; }
+        public Address? Address { get; set; }
     }
 }

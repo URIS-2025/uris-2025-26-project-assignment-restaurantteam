@@ -1,7 +1,8 @@
 using AccountService.Data;
 using AccountService.Handlers.Address;
-using AccountService.Handlers.User;
 using AccountService.Handlers.Authentication;
+using AccountService.Handlers.Links;
+using AccountService.Handlers.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -32,6 +33,8 @@ builder.Services.AddDbContext<AccountDbContext>(options =>
 builder.Services.AddScoped<IAddressHandler, AddressHandler>();
 builder.Services.AddScoped<IUserHandler, UserHandler>();
 builder.Services.AddScoped<IAuthenticationHandler, AuthenticationHandler>();
+builder.Services.AddScoped<IOrderLink, OrderLink>();
+builder.Services.AddScoped<IReservationLink, ReservationLink>();
 
 
 builder.Services.AddAuthentication(options =>

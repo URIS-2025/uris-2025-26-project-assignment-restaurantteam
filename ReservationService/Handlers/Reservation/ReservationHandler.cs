@@ -39,9 +39,12 @@ namespace ReservationService.Handlers.Reservation
 
         public async Task<ReservationDTO> GetReservationById(int idReservation)
         {
+            Console.WriteLine("RESERVATION VBY ISS aaaa!!! " );
+
             var reservation = await _context.Reservations.Include(t => t.Table).FirstOrDefaultAsync(o => o.IdReservation == idReservation);
 
             var reservationDTO = ReservationMapper.ToReservationDTO(reservation);
+            Console.WriteLine("RESERVATION aaaa!!! " + reservationDTO.IdReservation);
 
             return reservationDTO;
         }
@@ -67,17 +70,31 @@ namespace ReservationService.Handlers.Reservation
                 throw new Exception("Reservation not found!");
             }
 
+            if(updateReservationDTO.Status != null)
+                reservation.Status = ReservationStatusParser.ToEnum(updateReservationDTO.Status);
 
-            reservation.Status = ReservationStatusParser.ToEnum(updateReservationDTO.Status);
-            reservation.ReservationDate = updateReservationDTO.ReservationDate;
-            reservation.IdTable = updateReservationDTO.IdTable;
-            reservation.NumberOfGuests = updateReservationDTO.NumberOfGuests;
+            if (updateReservationDTO.ReservationDate != null)
+                reservation.ReservationDate = updateReservationDTO.ReservationDate.Value;
+
+            if (updateReservationDTO.IdTable != null)
+                reservation.IdTable = updateReservationDTO.IdTable.Value;
+
+            if (updateReservationDTO.NumberOfGuests != null)
+                reservation.NumberOfGuests = updateReservationDTO.NumberOfGuests.Value;
 
             _context.Reservations.Update(reservation);
             await _context.SaveChangesAsync();
-
+            Console.WriteLine("Ovo je sto " +reservation.Table.NumberOfSeats + " " + reservation.Table.IdTable);
             var reservationDTO = ReservationMapper.ToReservationDTO(reservation);
             return reservationDTO;
+        }
+
+        public async Task<bool> IsUserInUse(int idUser)
+        {
+            var reservations = _context.Reservations.Where(o => o.IdUser == idUser).ToList();
+            if (reservations == null)
+                return false;
+            return true;
         }
     }
 }

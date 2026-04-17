@@ -19,7 +19,7 @@ namespace AccountService.Handlers.User
             _context = context;
         }
 
-        public async Task<UserDTO> CreateUser(CreateUserDTO createUserDTO, int idAddress)
+        public async Task<UserDTO> CreateUser(CreateUserDTO createUserDTO)
         {
 
             var existsUser = await _context.Users.FirstOrDefaultAsync(u =>
@@ -31,7 +31,8 @@ namespace AccountService.Handlers.User
                 throw new Exception("User already exists.");
             }
 
-            Entities.User user = UserMapper.ToUser(createUserDTO, idAddress);
+            createUserDTO.Role = Entities.Enums.UserRole.CUSTOMER;
+            Entities.User user = UserMapper.ToUser(createUserDTO);
             user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, workFactor: 12);
 
             _context.Users.Add(user);
@@ -41,9 +42,41 @@ namespace AccountService.Handlers.User
 
         }
 
-        public Task<bool> DeleteUser(int userID)
+        public async Task<UserDTO> CreateUserWithAddress(CreateUserDTO createUserDTO, int idAddress)
         {
-            throw new NotImplementedException();
+
+            var existsUser = await _context.Users.FirstOrDefaultAsync(u =>
+              u.Username == createUserDTO.Username
+              );
+
+            if (existsUser != null)
+            {
+                throw new Exception("User already exists.");
+            }
+
+            Entities.User user = UserMapper.ToUser(createUserDTO);
+            user.IdAddress = idAddress;
+            user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, workFactor: 12);
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            UserDTO userDTO = UserMapper.ToUserDTO(user);
+            return userDTO;
+
+        }
+
+        public async Task<bool> DeleteUser(int userID)
+        {
+            var user = await _context.Users
+                .Include(u => u.Address)
+                .FirstOrDefaultAsync(u => u.IdUser == userID);
+
+            if (user == null)
+                throw new Exception("User not found");
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<UserDTO> GetUserById(int userID)
@@ -57,7 +90,8 @@ namespace AccountService.Handlers.User
                 throw new Exception("User not found. USER SERVICE");
             }
             var userDTO = UserMapper.ToUserDTO(user);
-            userDTO.Address = AddressMapper.ToAddressDTO(user.Address);
+            if (user.Address != null)
+                userDTO.Address = AddressMapper.ToAddressDTO(user.Address);
             return userDTO;
         }
 
@@ -73,8 +107,8 @@ namespace AccountService.Handlers.User
             foreach(Entities.User u in users)
             {
                 var userDTO = UserMapper.ToUserDTO(u);
-
-                userDTO.Address = AddressMapper.ToAddressDTO(u.Address);
+                if(u.Address != null)
+                    userDTO.Address = AddressMapper.ToAddressDTO(u.Address);
                 userDTOs.Add(userDTO);
                 //var address = await _context.Addresses.FindAsync(u.IdAddress);
             }
@@ -111,8 +145,13 @@ namespace AccountService.Handlers.User
             await _context.SaveChangesAsync();
 
             UserDTO userDTO = UserMapper.ToUserDTO(user);
-            AddressDTO addressDTO = AddressMapper.ToAddressDTO(user.Address);
-            userDTO.Address = addressDTO;
+        
+            if (user.Address != null)
+            {
+                AddressDTO addressDTO = AddressMapper.ToAddressDTO(user.Address);
+                userDTO.Address = addressDTO;
+            }
+ 
 
             return userDTO;
         }

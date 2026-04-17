@@ -259,6 +259,32 @@
   },
   {
     "ContainingType": "ReservationService.Controllers.ReservationControllerV2",
+    "Method": "IsUserInUse",
+    "RelativePath": "api/v2/reservations/user/{idUser}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ReservationService.Controllers.ReservationControllerV2",
     "Method": "CreateReservation",
     "RelativePath": "api/v2/users/{idUser}/reservations",
     "HttpMethod": "POST",

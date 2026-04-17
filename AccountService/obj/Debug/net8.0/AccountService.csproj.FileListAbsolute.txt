@@ -302,7 +302,6 @@ C:\Users\pavle\source\repos\URIS\AccountService\obj\Debug\net8.0\AccountService.
 C:\Users\pavle\source\repos\URIS\AccountService\obj\Debug\net8.0\AccountService.genruntimeconfig.cache
 C:\Users\pavle\source\repos\URIS\AccountService\obj\Debug\net8.0\ref\AccountService.dll
 C:\Users\pavle\source\repos\URIS\AccountService\bin\Debug\net8.0\BCrypt.Net-Next.dll
-C:\Users\pavle\source\repos\URIS\AccountService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\pavle\source\repos\URIS\AccountService\bin\Debug\net8.0\AccountService.Api.Tests\obj\AccountService.Api.Tests.csproj.nuget.dgspec.json
 C:\Users\pavle\source\repos\URIS\AccountService\bin\Debug\net8.0\AccountService.Api.Tests\obj\project.assets.json
 C:\Users\pavle\source\repos\URIS\AccountService\bin\Debug\net8.0\MvcTestingAppManifest.json
@@ -627,3 +626,4 @@ C:\Users\pavle\source\repos\URIS\AccountService\bin\Debug\net8.0\xunit.abstracti
 C:\Users\pavle\source\repos\URIS\AccountService\bin\Debug\net8.0\xunit.core.dll
 C:\Users\pavle\source\repos\URIS\AccountService\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\pavle\source\repos\URIS\AccountService\obj\Debug\net8.0\MvcTestingAppManifest.json
+C:\Users\pavle\source\repos\URIS\AccountService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

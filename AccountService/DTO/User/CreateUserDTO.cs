@@ -20,14 +20,12 @@ namespace AccountService.DTO.User
         [MinLength(5, ErrorMessage = "Password must be above 4 characters.")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "User needs to have a phone number.")]
         [MaxLength(15, ErrorMessage = "Phone number must be below 15 characters.")]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
-        [Required(ErrorMessage = "User needs to have a role (CUSTOMER, EMPLOYEE or ADMIN.")]
-        public UserRole Role { get; set; }
+        public UserRole? Role { get; set; }
 
-        [Required(ErrorMessage = "User needs to have an address.")]
-        public CreateAddressDTO Address { get; set; }
+
+        public CreateAddressDTO? Address { get; set; }
     }
 }

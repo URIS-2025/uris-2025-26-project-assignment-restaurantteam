@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OrderService.Data;
-using OrderService.Payloads;
 using OrderService.Entities;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
@@ -183,10 +182,32 @@ namespace OrderService.Controllers
             return Ok(orderDTO);
         }
 
+
+        [HttpDelete("{idOrder}")]
+        public async Task<ActionResult<bool>> DeleteOrder([FromHeader] string authorization,
+                                                [FromRoute] int idOrder)
+        {
+            var orderDTO = await orderHandler.GetOrderById(idOrder);
+            foreach (var orderItemDTO in orderDTO.OrderItems)
+            {
+                await orderItemHandler.DeleteOrderItem(orderItemDTO.IdOrderItem);
+            }
+            var isDeleted = await orderHandler.DeleteOrder(idOrder);
+
+            return Ok(isDeleted);
+        }
+
         [HttpGet("items/{idMenuItem}")]
-        public async Task<ActionResult<OrderDTO>> IsMenuItemInUse( [FromRoute] int idMenuItem)
+        public async Task<ActionResult<bool>> IsMenuItemInUse( [FromRoute] int idMenuItem)
         {
             bool isInUse = await orderItemHandler.IsMenuItemInUse(idMenuItem);
+            return Ok(isInUse);
+        }
+
+        [HttpGet("user/{idUser}")]
+        public async Task<ActionResult<bool>> IsUserInUse([FromRoute]int idUser)
+        {
+            bool isInUse = await orderHandler.IsUserInUse(idUser);
             return Ok(isInUse);
         }
 

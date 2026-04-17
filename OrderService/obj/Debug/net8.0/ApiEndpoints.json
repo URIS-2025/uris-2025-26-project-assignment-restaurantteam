@@ -125,6 +125,37 @@
   },
   {
     "ContainingType": "OrderService.Controllers.OrderController",
+    "Method": "DeleteOrder",
+    "RelativePath": "api/orders/{idOrder}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorization",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idOrder",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OrderService.Controllers.OrderController",
     "Method": "UpdateOrderStatus",
     "RelativePath": "api/orders/{idOrder}/status",
     "HttpMethod": "PATCH",
@@ -175,7 +206,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "OrderService.DTO.Order.OrderDTO",
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OrderService.Controllers.OrderController",
+    "Method": "IsUserInUse",
+    "RelativePath": "api/orders/user/{idUser}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
         "MediaTypes": [
           "text/plain",
           "application/json",

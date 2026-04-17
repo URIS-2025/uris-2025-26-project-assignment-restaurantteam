@@ -84,9 +84,10 @@ namespace ReservationService.Controllers
         {
             ReservationDTO reservationDTO = await reservationHandler.GetReservationById(idReservation);
       
-
             UserDTO userDTO = await userLink.GetUserById(reservationDTO.UserDTO.IdUser, authorization);
+
             reservationDTO.UserDTO = userDTO;
+            Console.WriteLine("RESERVATION!!! " + reservationDTO.IdReservation + " " + reservationDTO.UserDTO.IdUser + " table " + reservationDTO.TableDTO.IdTable);
 
 
             return Ok(reservationDTO);
@@ -122,6 +123,13 @@ namespace ReservationService.Controllers
         {
             bool isDeleted = await reservationHandler.DeleteReservation(idReservation);
             return Ok(isDeleted);
+        }
+
+        [HttpGet("reservations/user/{idUser}")]
+        public async Task<ActionResult<bool>> IsUserInUse([FromRoute] int idUser)
+        {
+            bool isInUse = await reservationHandler.IsUserInUse(idUser);
+            return Ok(isInUse);
         }
     }
 }

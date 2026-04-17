@@ -9,5 +9,6 @@ namespace ReservationService.Handlers.Reservation
         public Task<ReservationDTO> GetReservationById(int idReservation);
         public Task<ReservationDTO> UpdateReservation(UpdateReservationDTO updateReservationDTO, int idReservation);
         public Task<bool> DeleteReservation(int idReservation);
+        public Task<bool> IsUserInUse(int idUser);
     }
 }

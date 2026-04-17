@@ -18,7 +18,7 @@ namespace AccountService.Mappers
             };
         }
 
-        public static User ToUser(CreateUserDTO createUserDTO, int idAddress)
+        public static User ToUser(CreateUserDTO createUserDTO)
         {
             return new User
             {
@@ -26,8 +26,7 @@ namespace AccountService.Mappers
                 Password = createUserDTO.Password,
                 PhoneNumber = createUserDTO.PhoneNumber,
                 Email = createUserDTO.Email,
-                Role = createUserDTO.Role,
-                IdAddress = idAddress
+                Role = createUserDTO.Role.Value
             };
         }
 

@@ -5,7 +5,9 @@ namespace AccountService.Handlers.User
 {
     public interface IUserHandler
     {
-        public Task<UserDTO> CreateUser(CreateUserDTO createUserDTOm , int idAddress);
+        public Task<UserDTO> CreateUser(CreateUserDTO createUserDTO);
+        public Task<UserDTO> CreateUserWithAddress(CreateUserDTO createUserDTO, int idAddress);
+
         public Task<List<UserDTO>> GetUsers();
         public Task<UserDTO> GetUserById(int userID);
         public Task<UserDTO> UpdateUser(UpdateUserDTO updateUserDTO, int idUser);

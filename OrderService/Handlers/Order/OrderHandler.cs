@@ -30,9 +30,18 @@ namespace OrderService.Handlers.Order
             return orderDTO;
         }
 
-        public Task<bool> DeleteOrder(int idOrder)
+        public async Task<bool> DeleteOrder(int idOrder)
         {
-            throw new NotImplementedException();
+            Entities.Order? order = await _context.Orders.FindAsync(idOrder);
+
+            if (order == null)
+            {
+                throw new Exception("Order not found");
+            }
+
+            _context.Orders.Remove(order);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<OrderDTO> GetOrderById(int idOrder)
@@ -139,6 +148,14 @@ namespace OrderService.Handlers.Order
             orderDTO.OrderItems = orderItemDTOs;
 
             return orderDTO;
+        }
+
+        public async Task<bool> IsUserInUse(int idUser)
+        {
+            var orders = _context.Orders.Where(o => o.IdUser == idUser).ToList();
+            if (orders == null)
+                return false;
+            return true;
         }
     }
 }
