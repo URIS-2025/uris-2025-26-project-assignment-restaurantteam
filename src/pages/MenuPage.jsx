@@ -39,6 +39,7 @@ function MenuPage() {
         const menuRes = await getAllMenuItems(token)
         setMenuItems(menuRes.data)    
     } catch (err) {
+      console.log(err)
       setError('Greška pri učitavanju podataka.')
     } finally {
       setLoading(false)
@@ -94,7 +95,9 @@ function MenuPage() {
     try {
       await deleteCategory(id, token)
       fetchAll()
-    } catch (err) { setError('Greška pri brisanju kategorije.') }
+    } catch (err) { 
+      console.log(err)
+      setError('Greška pri brisanju kategorije.') }
   }
 
   const handleCreateIngredient = async (e) => {

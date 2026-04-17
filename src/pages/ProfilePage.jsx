@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { getUserById, updateUser } from '../api/accountApi'
+import { jwtDecode } from 'jwt-decode'
 
 function ProfilePage() {
   const { token, userId, username, role } = useAuth()
@@ -11,38 +12,63 @@ function ProfilePage() {
   const [editing, setEditing] = useState(false)
   const [editData, setEditData] = useState(null)
 
-  console.log('userId iz AuthContext:', userId)
-  console.log('username iz AuthContext:', username)
+    const[name, setName] = useState()
+    const[idUser, setIdUser] = useState()
+    const[role2, setRole] = useState()
+  
+  useEffect(() => {
+    if (token) {
+      const decoded = jwtDecode(token)
+      setName(decoded.unique_name)
+      setRole(decoded.role)
+      setIdUser(decoded.nameid)
+      console.log('userId is :', idUser)
+      console.log('username is :', name)
+    }
+  }, [token])
+
 
   const fetchUser = async () => {
     try {
-      const response = await getUserById(userId, token)
+   
+
+      const response = await getUserById(idUser, token)
       setUser(response.data)
+
+      
       setEditData(response.data)
     } catch (err) {
+      console.log("ovo je error "+err)
       setError('Greška pri učitavanju profila.')
     } finally {
       setLoading(false)
     }
   }
 
-  useEffect(() => { fetchUser() }, [])
+  useEffect(() => { if(idUser && token) fetchUser() }, [idUser])
 
   const handleUpdate = async (e) => {
     e.preventDefault()
     setError('')
     setSuccess('')
     try {
-      await updateUser(userId, {
-        username: editData.username,
-        email: editData.email,
-        phoneNumber: editData.phoneNumber,
-        address: editData.address
+      await updateUser(idUser, {
+        username: editData.username === ""? null: editData.username,
+        email: editData.email === "" ? null:editData.email,
+        phoneNumber: editData.phoneNumber === "" ? null: editData.phoneNumber,
+        address: {
+              street: editData.address.street === ""? null: editData.address.street,
+              city: editData.address.city=== ""? null: editData.address.city,
+              postalCode: editData.address.postalCode === ""? null: editData.address.postalCode,
+              country: editData.address.country === ""? null: editData.address.country
+        }
       }, token)
       setSuccess('Profil uspješno ažuriran!')
       setEditing(false)
       fetchUser()
     } catch (err) {
+      console.log("ovo je error updejta "+err)
+
       setError('Greška pri ažuriranju profila.')
     }
   }
@@ -127,7 +153,7 @@ function ProfilePage() {
                 fontSize: '0.8rem',
                 fontFamily: 'Georgia, serif'
               }}>
-                {role === 'ADMIN' ? 'Admin' : 'Customer'}
+                {role2}
               </span>
             </div>
           </div>

@@ -2,17 +2,38 @@ import { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { getAllOrders, createOrder, deleteOrder, updateOrderStatus } from '../api/orderApi'
 import { getAllMenuItems } from '../api/menuApi'
+import { jwtDecode } from 'jwt-decode'
 
 function OrdersPage() {
+  const[name, setName] = useState()
+  const[role2, setRole] = useState()
+
+
   const { token, role } = useAuth()
-  const isAdmin = role === 'ADMIN'
+useEffect(() => {
+  if (token) {
+    const decoded = jwtDecode(token)
+    setName(decoded.unique_name)
+    setRole(decoded.role)
+  }
+}, [token])
+  
+
+  console.log("El ovo " + name)
+
+
+  
+
+
+
+  const isAdmin = role2 === 'ADMIN'
 
   const [orders, setOrders] = useState([])
   const [menuItems, setMenuItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
-  const [newOrder, setNewOrder] = useState({ paymentMethod: 0, items: [] })
+  const [newOrder, setNewOrder] = useState({ paymentMethod: 0, orderItems: [] })
   const [selectedItem, setSelectedItem] = useState({ idMenuItem: '', quantity: 1, pricePerItem: 0 })
 
   const statusLabels = {
@@ -33,6 +54,8 @@ function OrdersPage() {
       setOrders(ordersRes.data)
       setMenuItems(menuRes.data)
     } catch (err) {
+      console.log(err)
+      console.log(err)
       setError('Greška pri učitavanju narudžbina.')
     } finally {
       setLoading(false)
@@ -44,34 +67,39 @@ function OrdersPage() {
   const handleAddItem = () => {
     if (!selectedItem.idMenuItem) return
     const menuItem = menuItems.find(m => m.idMenuItem === parseInt(selectedItem.idMenuItem))
-    const exists = newOrder.items.find(i => i.idMenuItem === parseInt(selectedItem.idMenuItem))
+    const exists = newOrder.orderItems.find(i => i.idMenuItem === parseInt(selectedItem.idMenuItem))
     if (exists) return
     setNewOrder({
       ...newOrder,
-      items: [...newOrder.items, {
+      orderItems: [...newOrder.orderItems, {
         idMenuItem: parseInt(selectedItem.idMenuItem),
         quantity: parseInt(selectedItem.quantity),
-        pricePerItem: menuItem.price
+        pricePerItem: parseInt(menuItem.price)
       }]
     })
-    setSelectedItem({ idMenuItem: '', quantity: 1, pricePerItem: 0 })
+    setSelectedItem({ idMenuItem: '', quantity: 1})
   }
 
   const handleRemoveItem = (idMenuItem) => {
-    setNewOrder({ ...newOrder, items: newOrder.items.filter(i => i.idMenuItem !== idMenuItem) })
+    setNewOrder({ ...newOrder, orderItems: newOrder.orderItems.filter(i => i.idMenuItem !== idMenuItem) })
   }
 
   const handleCreateOrder = async (e) => {
     e.preventDefault()
-    if (newOrder.items.length === 0) {
+    if (newOrder.orderItems.length === 0) {
       setError('Dodajte bar jedno jelo u narudžbinu.')
       return
     }
     try {
-      await createOrder(newOrder, token)
-      setNewOrder({ paymentMethod: 0, items: [] })
+      const payload = {
+  ...newOrder,
+  orderItems: newOrder.orderItems.map(({ pricePerItem, ...rest }) => rest)
+}
+      await createOrder(payload, token)
+      setNewOrder({ paymentMethod: 0, orderItems: [] })
       fetchAll()
     } catch (err) {
+      console.log(err)
       setError('Greška pri kreiranju narudžbine.')
     }
   }
@@ -82,6 +110,7 @@ function OrdersPage() {
       await deleteOrder(id, token)
       fetchAll()
     } catch (err) {
+      console.log(err)
       setError('Greška pri brisanju narudžbine.')
     }
   }
@@ -168,7 +197,7 @@ function OrdersPage() {
           </div>
 
           {/* Izabrana jela */}
-          {newOrder.items.length > 0 && (
+          {newOrder.orderItems.length > 0 && (
             <div style={{ marginBottom: '20px' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
@@ -179,13 +208,13 @@ function OrdersPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {newOrder.items.map(item => {
+                  {newOrder.orderItems.map(item => {
                     const menuItem = menuItems.find(m => m.idMenuItem === item.idMenuItem)
                     return (
                       <tr key={item.idMenuItem} style={{ borderBottom: '1px solid #2c2c2c' }}>
                         <td style={{ color: '#f5f0e8', padding: '10px 8px' }}>{menuItem?.menuItemName}</td>
                         <td style={{ color: '#f5f0e8', padding: '10px 8px' }}>{item.quantity}</td>
-                        <td style={{ color: '#c9a84c', padding: '10px 8px', fontFamily: 'Georgia, serif' }}>{(item.pricePerItem * item.quantity).toFixed(2)} RSD</td>
+                        <td style={{ color: '#c9a84c', padding: '10px 8px', fontFamily: 'Georgia, serif' }}>{(menuItem.price * item.quantity).toFixed(2)} RSD</td>
                         <td style={{ padding: '10px 8px' }}>
                           <button type="button" onClick={() => handleRemoveItem(item.idMenuItem)}
                             style={{ background: 'none', border: 'none', color: '#e74c3c', cursor: 'pointer', fontSize: '1rem' }}>✕</button>
@@ -196,7 +225,7 @@ function OrdersPage() {
                   <tr>
                     <td colSpan="2" style={{ color: '#c9a84c', fontFamily: 'Georgia, serif', padding: '12px 8px', fontWeight: 'bold' }}>Ukupno:</td>
                     <td colSpan="2" style={{ color: '#c9a84c', fontFamily: 'Georgia, serif', padding: '12px 8px', fontWeight: 'bold', fontSize: '1.1rem' }}>
-                      {newOrder.items.reduce((sum, i) => sum + i.pricePerItem * i.quantity, 0).toFixed(2)} RSD
+                      {newOrder.orderItems.reduce((sum, i) => sum + i.pricePerItem * i.quantity, 0).toFixed(2)} RSD
                     </td>
                   </tr>
                 </tbody>
@@ -248,15 +277,15 @@ function OrdersPage() {
                   </span>
 
                     {/* Samo admin vidi user info */}
-                    {isAdmin && order.userSummary && (
+                    {isAdmin && order.userDTO && (
                       <div style={{ marginTop: '6px', fontSize: '0.8rem', color: '#9b9080' }}>
-                        <span>👤 {order.userSummary.username}</span>
-                        {order.userSummary.phoneNumber && (
-                          <span style={{ marginLeft: '10px' }}>📞 {order.userSummary.phoneNumber}</span>
+                        <span>👤 {order.userDTO.username}</span>
+                        {order.userDTO.phoneNumber && (
+                          <span style={{ marginLeft: '10px' }}>📞 {order.userDTO.phoneNumber}</span>
                         )}
-                        {order.userSummary.street && (
+                        {order.userDTO.address.street && (
                           <span style={{ marginLeft: '10px' }}>
-                            📍 {order.userSummary.street} {order.userSummary.streetNumber}
+                            📍 {order.userDTO.address.street} {order.userDTO.address.streetNumber}
                           </span>
                         )}
                       </div>
@@ -275,15 +304,27 @@ function OrdersPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {order.items?.map(item => (
-                        <tr key={item.idMenuItem} style={{ borderBottom: '1px solid #2c2c2c' }}>
+                      {order.orderItems?.map(item => (
+                        <tr key={item.menuItemDTO.idMenuItem} style={{ borderBottom: '1px solid #2c2c2c' }}>
                           <td style={{ color: '#f5f0e8', padding: '8px 4px', fontSize: '0.9rem' }}>
-                            {menuItems.find(m => m.idMenuItem === item.idMenuItem)?.menuItemName || `#${item.idMenuItem}`}
+                            {menuItems.find(m => m.idMenuItem === item.menuItemDTO.idMenuItem)?.menuItemName || `#${item.menuItemDTO.idMenuItem}`}
                           </td>
                           <td style={{ color: '#9b9080', padding: '8px 4px', fontSize: '0.9rem' }}>{item.quantity}</td>
                           <td style={{ color: '#c9a84c', padding: '8px 4px', fontSize: '0.9rem' }}>{(item.pricePerItem * item.quantity).toFixed(2)} RSD</td>
                         </tr>
                       ))}
+                      <tr>
+                                                
+                        <td style={{ color: '#f5f0e8', padding: '8px 4px', fontSize: '0.9rem' }}>
+                          Ukupna cena:
+                        </td>
+                        <td style={{ color: '#9b9080', padding: '8px 4px', fontSize: '0.9rem' }}>
+                          
+                        </td>
+                        <td style={{ color: '#c9a84c', padding: '8px 4px', fontSize: '0.9rem' }}>
+                          {order.totalPrice.toFixed(2)} RSD
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>

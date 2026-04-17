@@ -44,6 +44,7 @@ function UsersPage() {
       setEditUser(null)
       fetchUsers()
     } catch (err) {
+      console.log(err)
       setError('Greška pri izmeni korisnika.')
     }
   }

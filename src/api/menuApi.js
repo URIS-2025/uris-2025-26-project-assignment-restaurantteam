@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const menuClient = axios.create({
-  baseURL: 'https://localhost:44385'
+  baseURL: 'https://localhost:7278'
 })
 
 const getAuthHeader = (token) => ({
@@ -11,8 +11,8 @@ const getAuthHeader = (token) => ({
 // Menu Items
 export const getAllMenuItems = (token) => {
   return token
-    ? menuClient.get('/api/menu', getAuthHeader(token))
-    : menuClient.get('/api/menu') 
+    ? menuClient.get('/api/menu/', getAuthHeader(token))
+    : menuClient.get('/api/menu/') 
 }
 
 export const getMenuItemById = (id, token) => {
@@ -20,7 +20,7 @@ export const getMenuItemById = (id, token) => {
 }
 
 export const createMenuItem = (data, token) => {
-  return menuClient.post('/api/menu', data, getAuthHeader(token))
+  return menuClient.post('/api/menu/', data, getAuthHeader(token))
 }
 
 export const updateMenuItem = (id, data, token) => {

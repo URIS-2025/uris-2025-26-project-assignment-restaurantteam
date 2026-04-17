@@ -4,6 +4,7 @@ import {
   getAllReservations, createReservation, updateReservation, deleteReservation,
   getAllTables, createTable, updateTable, deleteTable
 } from '../api/reservationApi'
+import { jwtDecode } from 'jwt-decode'
 
 function ReservationsPage() {
   const { token, role } = useAuth()
@@ -26,6 +27,21 @@ function ReservationsPage() {
     0: { label: 'Slobodan', color: '#2ecc71', bg: '#001a00' },
     1: { label: 'Zauzet', color: '#e74c3c', bg: '#2c0000' }
   }
+    const[name, setName] = useState()
+    const[idUser, setIdUser] = useState()
+    const[role2, setRole] = useState()
+  
+  useEffect(() => {
+    if (token) {
+      const decoded = jwtDecode(token)
+      setName(decoded.unique_name)
+      setRole(decoded.role)
+      setIdUser(decoded.nameid)
+      console.log('userId is :', idUser)
+      console.log('username is :', name)
+      if(role2!= null) role = role2
+    }
+  }, [token])
 
   const fetchAll = async () => {
     try {
@@ -36,6 +52,7 @@ function ReservationsPage() {
       setReservations(resRes.data)
       setTables(tabRes.data)
     } catch (err) {
+      console.log(err)
       setError('Greška pri učitavanju podataka.')
     } finally {
       setLoading(false)
@@ -47,7 +64,7 @@ function ReservationsPage() {
   const handleCreateReservation = async (e) => {
     e.preventDefault()
     try {
-      await createReservation({
+      await createReservation(idUser,{
         reservationDate: new Date(newReservation.reservationDate).toISOString(),
         numberOfGuests: parseInt(newReservation.numberOfGuests),
         idTable: parseInt(newReservation.idTable)

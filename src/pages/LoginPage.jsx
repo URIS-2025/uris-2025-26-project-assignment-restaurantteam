@@ -21,10 +21,11 @@ function LoginPage() {
 
   try {
     const response = await loginUser(username, password)
-    const { token, role, idUser, username: uname } = response.data
-    login(token, role, idUser, uname)
+    const { token} = response.data
+    login(token)
     navigate(from)
   } catch (err) {
+    console.log(err)
     setError('Pogrešno korisničko ime ili lozinka.')
   } finally {
     setLoading(false)
