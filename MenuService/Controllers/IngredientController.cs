@@ -43,5 +43,12 @@ namespace MenuService.Controllers
             IngredientDTO ingredient = await ingredientHandler.UpdateIngredient(updateIngredientDTO, idIngredient);
             return Ok(ingredient);
         }
+
+        [HttpDelete("{idIngredient}")]
+        public async Task<ActionResult<bool>> DeleteIngredient([FromRoute] int idIngredient)
+        {
+            bool isDeleted = await ingredientHandler.DeleteIngredient(idIngredient);
+            return Ok(isDeleted);
+        }
     }
 }

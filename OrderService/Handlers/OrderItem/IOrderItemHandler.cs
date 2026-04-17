@@ -9,5 +9,6 @@ namespace OrderService.Handlers.OrderItem
         public Task<OrderItemDTO> GetOrderItemById(int idOrderItem);
         public Task<OrderItemDTO> UpdateOrderItem(UpdateOrderItemDTO updateOrderItemDTO, int idOrderItem);
         public Task<bool> DeleteOrderItem(int idOrderItem);
+        public Task<bool> IsMenuItemInUse(int idMenuItem);
     }
 }

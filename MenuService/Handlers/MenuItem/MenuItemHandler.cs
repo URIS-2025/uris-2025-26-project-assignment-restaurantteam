@@ -2,6 +2,7 @@
 using MenuService.DTO.MenuItem;
 using Microsoft.EntityFrameworkCore;
 using MenuService.Mappers;
+using MenuService.Middleware;
 
 namespace MenuService.Handlers.MenuItem
 {
@@ -40,11 +41,19 @@ namespace MenuService.Handlers.MenuItem
 
             if (idMenuItem == null)
             {
-                throw new Exception("Menu item not found");
+                throw new NotFoundException("Menu item not found");
             }
 
-            _context.MenuItems.Remove(menuItem);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.MenuItems.Remove(menuItem);
+                await _context.SaveChangesAsync();
+            }
+            catch(DbUpdateException e)
+            {
+                throw new DbUpdateException("Menu item is being used.");
+            }
+
             return true;
 
 
@@ -64,7 +73,7 @@ namespace MenuService.Handlers.MenuItem
 
             if (menuItem == null)
             {
-                throw new Exception("Menu item not found");
+                throw new NotFoundException("Menu item not found");
 
             }
 
@@ -77,7 +86,7 @@ namespace MenuService.Handlers.MenuItem
 
             if (menuItem == null)
             {
-                throw new Exception("Menu item not found");
+                throw new NotFoundException("Menu item not found");
             }
 
             menuItem.MenuItemName = updateMenuItemDTO.MenuItemName;

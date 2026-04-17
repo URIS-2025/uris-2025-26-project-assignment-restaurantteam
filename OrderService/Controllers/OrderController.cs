@@ -26,15 +26,11 @@ namespace OrderService.Controllers
         private readonly IOrderItemHandler orderItemHandler;
         private readonly IUserLink userLink;
 
-        public OrderController(OrderDbContext context,
-                                IHttpClientFactory httpClientFactory,
-                                IOrderHandler orderHandler,
+        public OrderController(IOrderHandler orderHandler,
                                 IUserLink userLink,
                                 IMenuItemLink menuItemLink,
                                 IOrderItemHandler orderItemHandler)
         {
-            _context = context;
-            _httpClientFactory = httpClientFactory;
             this.orderHandler = orderHandler;
             this.userLink = userLink;
             this.menuItemLink = menuItemLink;
@@ -185,6 +181,13 @@ namespace OrderService.Controllers
                 orderItemDTO.MenuItemDTO = menuItemDTO;
             }
             return Ok(orderDTO);
+        }
+
+        [HttpGet("items/{idMenuItem}")]
+        public async Task<ActionResult<OrderDTO>> IsMenuItemInUse( [FromRoute] int idMenuItem)
+        {
+            bool isInUse = await orderItemHandler.IsMenuItemInUse(idMenuItem);
+            return Ok(isInUse);
         }
 
     }

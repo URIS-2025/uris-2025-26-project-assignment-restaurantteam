@@ -3,6 +3,8 @@ using MenuService.Entities;
 using MenuService.Handlers.MenuItem;
 using MenuService.Handlers.MenuItemCategory;
 using MenuService.Handlers.MenuItemIngredient;
+using MenuService.Handlers.Links;
+
 using MenuService.DTO.Ingredient;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,16 +23,20 @@ namespace MenuService.Controllers
         private readonly IMenuItemHandler menuItemHandler;
         private readonly IMenuItemCategoryHandler menuItemCategoryHandler;
         private readonly IMenuItemIngredientHandler menuItemIngredientHandler;
+        private readonly IOrderLink orderLink;
+
 
         public MenuController(MenuDbContext context, 
                                 IMenuItemHandler menuItemHandler,
                                 IMenuItemCategoryHandler menuItemCategoryHandler,
-                                IMenuItemIngredientHandler menuItemIngredientHandler)
+                                IMenuItemIngredientHandler menuItemIngredientHandler,
+                                IOrderLink orderLink)
         {
             _context = context;
             this.menuItemHandler = menuItemHandler;
             this.menuItemCategoryHandler = menuItemCategoryHandler;
             this.menuItemIngredientHandler = menuItemIngredientHandler;
+            this.orderLink = orderLink;
         }
 
 
@@ -63,7 +69,7 @@ namespace MenuService.Controllers
         }
 
         [HttpGet("menu/{idMenuItem}")]
-        public async Task<ActionResult<List<MenuItemDTO>>> GetMenuItemById([FromRoute] int idMenuItem)
+        public async Task<ActionResult<MenuItemDTO>> GetMenuItemById([FromRoute] int idMenuItem)
         {
             var menuItemDTO = await menuItemHandler.GetMenuItemById(idMenuItem);
 
@@ -92,11 +98,26 @@ namespace MenuService.Controllers
 
 
         [HttpDelete("menu/{idMenuItem}")]
-        public async Task<ActionResult<bool>> DeleteMenu([FromRoute] int idMenuItem)
+        public async Task<ActionResult<bool>> DeleteMenu([FromRoute] int idMenuItem, [FromHeader] string authorization)
         {
-            await menuItemCategoryHandler.DeleteMenuItemCategories(idMenuItem);
-            var isDeleted = await menuItemHandler.DeleteMenuItem(idMenuItem);
-            return Ok(isDeleted);
+            try
+            {
+                bool? isInUse = await orderLink.IsMenuItemInUse(idMenuItem, authorization);
+                if (!isInUse.Value)
+                    await menuItemCategoryHandler.DeleteMenuItemCategories(idMenuItem);
+                else
+                {
+                    return Conflict("Menu item is in use.");
+                }
+                    var isDeleted = await menuItemHandler.DeleteMenuItem(idMenuItem);
+                return Ok(isDeleted);
+            }
+            catch(Exception e)
+            {
+                return NotFound("Menu couldn't be found");
+            }
+           
+            
         }
 
        

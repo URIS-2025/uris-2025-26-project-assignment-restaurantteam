@@ -43,5 +43,12 @@ namespace MenuService.Controllers
             CategoryDTO category = await categoryHandler.UpdateCategory(updateCategoryDTO, idCategory);
             return Ok(category);
         }
+
+        [HttpDelete("{idCategory}")]
+        public async Task<ActionResult<bool>> DeleteCategory([FromRoute] int idCategory)
+        {
+            bool isDeleted = await categoryHandler.DeleteCategory(idCategory);
+            return Ok(isDeleted);
+        }
     }
 }

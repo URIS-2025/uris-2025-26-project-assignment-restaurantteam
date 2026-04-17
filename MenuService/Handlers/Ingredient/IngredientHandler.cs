@@ -1,6 +1,7 @@
 ﻿using MenuService.Data;
 using MenuService.DTO.Ingredient;
 using MenuService.Mappers;
+using MenuService.Middleware;
 using Microsoft.EntityFrameworkCore;
 
 namespace MenuService.Handlers.Ingredient
@@ -21,7 +22,7 @@ namespace MenuService.Handlers.Ingredient
             );
 
             if (existIngredient != null)
-                throw new Exception("Ingredient exists!");
+                throw new AlreadyExistsException("Ingredient exists!");
 
             var ingredient = IngredientMapper.ToIngredient(createIngredientDTO);
 
@@ -40,11 +41,20 @@ namespace MenuService.Handlers.Ingredient
 
             if (ingredient == null)
             {
-                throw new Exception("Ingredient not found");
+                throw new NotFoundException("Ingredient not found");
             }
 
-            _context.Ingredients.Remove(ingredient);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Ingredients.Remove(ingredient);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException e)
+            {
+                throw new DbUpdateException("Ingredient is being used.");
+            }
+            
+            
             return true;
 
 
@@ -64,7 +74,7 @@ namespace MenuService.Handlers.Ingredient
 
             if (ingredient == null)
             {
-                throw new Exception("Ingredients not found");
+                throw new NotFoundException("Ingredients not found");
 
             }
 
@@ -77,7 +87,7 @@ namespace MenuService.Handlers.Ingredient
 
             if (ingredient == null)
             {
-                throw new Exception("Ingredient not found");
+                throw new NotFoundException("Ingredient not found");
             }
 
             ingredient.IngredientName = updateIngredientDTO.IngredientName;

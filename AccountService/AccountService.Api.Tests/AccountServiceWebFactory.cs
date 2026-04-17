@@ -6,7 +6,7 @@ namespace AccountService.AccountService.Api.Tests
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
-            builder
+            //builder
             base.ConfigureWebHost(builder);
         }
     }

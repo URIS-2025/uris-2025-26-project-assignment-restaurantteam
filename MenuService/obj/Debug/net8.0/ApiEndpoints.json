@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[MenuService.DTO.MenuItem.MenuItemDTO, MenuService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "MenuService.DTO.MenuItem.MenuItemDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -114,6 +114,11 @@
         "Name": "idMenuItem",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "authorization",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -232,6 +237,32 @@
     ]
   },
   {
+    "ContainingType": "MenuService.Controllers.CategoryController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/menu/categories/{idCategory}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategory",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MenuService.Controllers.IngredientController",
     "Method": "CreateIngredient",
     "RelativePath": "api/menu/ingredients",
@@ -325,6 +356,32 @@
     "ReturnTypes": [
       {
         "Type": "MenuService.DTO.Ingredient.IngredientDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MenuService.Controllers.IngredientController",
+    "Method": "DeleteIngredient",
+    "RelativePath": "api/menu/ingredients/{idIngredient}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idIngredient",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
         "MediaTypes": [
           "text/plain",
           "application/json",

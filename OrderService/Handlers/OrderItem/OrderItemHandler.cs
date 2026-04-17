@@ -1,4 +1,5 @@
-﻿using OrderService.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using OrderService.Data;
 using OrderService.DTO.Order;
 using OrderService.DTO.OrderItem;
 using OrderService.Entities;
@@ -62,6 +63,14 @@ namespace OrderService.Handlers.OrderItem
         public Task<OrderItemDTO> UpdateOrderItem(UpdateOrderItemDTO updateOrderItemDTO, int idOrderItem)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> IsMenuItemInUse(int idMenuItem)
+        {
+            var orderItems = _context.OrderItems.Where(oi => oi.IdMenuItem == idMenuItem).ToList();
+            if (orderItems == null)
+                return false;
+            return true;
         }
     }
 }

@@ -4,6 +4,9 @@ using MenuService.Handlers.Ingredient;
 using MenuService.Handlers.MenuItem;
 using MenuService.Handlers.MenuItemCategory;
 using MenuService.Handlers.MenuItemIngredient;
+using MenuService.Handlers.Links;
+
+using MenuService.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -36,6 +39,8 @@ builder.Services.AddScoped<IIngredientHandler, IngredientHandler>();
 builder.Services.AddScoped<ICategoryHandler, CategoryHandler>();
 builder.Services.AddScoped<IMenuItemHandler, MenuItemHandler>();
 builder.Services.AddScoped<IMenuItemCategoryHandler, MenuItemCategoryHandler>();
+builder.Services.AddScoped<IOrderLink, OrderLink>();
+
 builder.Services.AddScoped<IMenuItemIngredientHandler, MenuItemIngredientHandler>();
 
 builder.Services.AddAuthentication(options =>
@@ -95,6 +100,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();
 
 app.Run();

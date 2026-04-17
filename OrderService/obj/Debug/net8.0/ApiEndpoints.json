@@ -158,5 +158,31 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "OrderService.Controllers.OrderController",
+    "Method": "IsMenuItemInUse",
+    "RelativePath": "api/orders/items/{idMenuItem}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idMenuItem",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "OrderService.DTO.Order.OrderDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

@@ -1,6 +1,7 @@
 ﻿using MenuService.Data;
 using MenuService.DTO.Category;
 using MenuService.Mappers;
+using MenuService.Middleware;
 using Microsoft.EntityFrameworkCore;
 
 namespace MenuService.Handlers.Category
@@ -21,7 +22,7 @@ namespace MenuService.Handlers.Category
             );
 
             if (existCategory != null)
-                throw new Exception("Category exists!");
+                throw new AlreadyExistsException("Category exists!");
 
             var category = CategoryMapper.ToCategory(createCategoryDTO);
 
@@ -39,11 +40,19 @@ namespace MenuService.Handlers.Category
 
             if (category == null)
             {
-                throw new Exception("Category not found");
+                throw new NotFoundException("Category not found");
             }
 
-            _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Categories.Remove(category);
+                await _context.SaveChangesAsync();
+            }
+            catch(DbUpdateException)
+            {
+                throw new DbUpdateException("Category is being used.");
+            }
+
             return true;
 
             
@@ -62,7 +71,7 @@ namespace MenuService.Handlers.Category
 
             if (category == null)
             {
-                throw new Exception("Category not found");
+                throw new NotFoundException("Category not found");
 
             }
 
@@ -75,7 +84,7 @@ namespace MenuService.Handlers.Category
 
             if (category == null)
             {
-                throw new Exception("Category not found");
+                throw new NotFoundException("Category not found");
             }
 
             category.CategoryName = updateCategoryDTO.CategoryName;
