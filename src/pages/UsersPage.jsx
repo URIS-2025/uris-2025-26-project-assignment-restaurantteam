@@ -116,7 +116,8 @@ function UsersPage() {
               <select style={inputStyle} value={editUser.role}
                 onChange={(e) => setEditUser({ ...editUser, role: parseInt(e.target.value) })}>
                 <option value={0}>Customer</option>
-                <option value={1}>Admin</option>
+                <option value={1}>Customer</option>
+                <option value={2}>Admin</option>
               </select>
             </div>
             <div className="col-md-3">
