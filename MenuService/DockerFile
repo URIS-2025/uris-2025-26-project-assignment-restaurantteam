@@ -5,8 +5,7 @@ COPY MenuService.csproj .
 RUN dotnet restore
 
 COPY . .
-WORKDIR /src/MenuService
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet publish MenuService.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
