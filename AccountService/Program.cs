@@ -112,6 +112,13 @@ app.Use(async (context, next) =>
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.MapGet("/ping", () => "pong");
+
+app.MapGet("/health/db", async (AccountDbContext db) =>
+{
+    var canConnect = await db.Database.CanConnectAsync();
+    return Results.Ok(new { database = canConnect });
+});
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
