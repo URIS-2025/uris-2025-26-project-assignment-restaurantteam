@@ -1,0 +1,293 @@
+{
+  "info": {
+    "_postman_id": "a29a0cf8-618a-4785-85d7-a323ec2e66b2",
+    "name": "OrderService",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49052756",
+    "_collection_link": "https://go.postman.co/collection/49052756-a29a0cf8-618a-4785-85d7-a323ec2e66b2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "get all orders",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/orders",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"IdUser\": 3,\r\n    \"orderStatus\": 1,\r\n    \"TotalPrice\": 100,\r\n    \"PaymentMethod\": 1,\r\n    \"CreatedAt\": \"2026-04-12T11:30:00\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/orders/create",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create order 2",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"PaymentMethod\": 1,\r\n    \"OrderItems\": \r\n    [\r\n        {\r\n            \"IdMenuItem\": 7,\r\n            \"Quantity\": 2\r\n        },\r\n                {\r\n            \"IdMenuItem\": 8,\r\n            \"Quantity\": 1\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/orders/",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"PaymentMethod\": 1,\r\n    \"OrderItems\": \r\n    [\r\n        {\r\n            \"IdMenuItem\": 7,\r\n            \"Quantity\": 3\r\n        },\r\n                {\r\n            \"IdMenuItem\": 8,\r\n            \"Quantity\": 1\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/orders/update/3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "update",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update order status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"OrderStatus\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}api/orders/7/status",
+              "host": [
+                "{{baseURL}}api"
+              ],
+              "path": [
+                "orders",
+                "7",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get order by id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/orders/19",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "19"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/orders/19",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "19"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "OrderItem",
+      "item": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "let isLocal = pm.globals.get(\"isLocal\");\r",
+          "let userServiceLocalURL = pm.globals.get(\"orderServiceLocalURL\");\r",
+          "let userServiceURL = pm.globals.get(\"orderServiceURL\");\r",
+          "\r",
+          "\r",
+          "let baseURL = isLocal == \"1\"\r",
+          "    ? pm.globals.get(\"orderServiceLocalURL\")\r",
+          "    : pm.globals.get(\"orderServiceURL\");\r",
+          "\r",
+          "pm.globals.set(\"baseURL\", baseURL);\r",
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}

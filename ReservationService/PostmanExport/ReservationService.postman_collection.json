@@ -1,0 +1,333 @@
+{
+  "info": {
+    "_postman_id": "d19d7a94-bbda-4d55-9a1d-8e22b845b89d",
+    "name": "ReservationService",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49052756",
+    "_collection_link": "https://go.postman.co/collection/49052756-d19d7a94-bbda-4d55-9a1d-8e22b845b89d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Table",
+      "item": [
+        {
+          "name": "create table",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"NumberOfSeats\": 5,\r\n    \"Status\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/tables",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "tables"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get tables",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/tables",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "tables"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get table by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/table/2",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "table",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update table",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"NumberOfSeats\": 3,\r\n    \"Status\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/table/3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "table",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete table",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/table/2",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "table",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reservations",
+      "item": [
+        {
+          "name": "create reservation",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ReservationDate\": \"2026-05-13T11:30:00\",\r\n    \"NumberOfGuests\": 2,\r\n    \"IdTable\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v2/users/5/reservations",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "users",
+                "5",
+                "reservations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get reservations",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/v2/reservations",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "reservations"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get reservation by id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/v2/reservations/1",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "reservations",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete reservation",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/v2/reservations/1",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "reservations",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update reservation",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ReservationDate\": \"2026-05-13T11:30:00\",\r\n    \"NumberOfGuests\": 5,\r\n    \"IdTable\": 2,\r\n    \"Status\": \"ACTIVE\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v2/reservations/3",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "reservations",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "let isLocal = pm.globals.get(\"isLocal\");\r",
+          "let userServiceLocalURL = pm.globals.get(\"orderServiceLocalURL\");\r",
+          "let userServiceURL = pm.globals.get(\"orderServiceURL\");\r",
+          "\r",
+          "\r",
+          "let baseURL = isLocal == \"1\"\r",
+          "    ? pm.globals.get(\"orderServiceLocalURL\")\r",
+          "    : pm.globals.get(\"orderServiceURL\");\r",
+          "\r",
+          "pm.globals.set(\"baseURL\", baseURL);"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
