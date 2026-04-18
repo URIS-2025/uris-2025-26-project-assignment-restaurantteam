@@ -116,7 +116,7 @@ function UsersPage() {
               <select style={inputStyle} value={editUser.role}
                 onChange={(e) => setEditUser({ ...editUser, role: parseInt(e.target.value) })}>
                 <option value={0}>Customer</option>
-                <option value={1}>Customer</option>
+                <option value={1}>Employee</option>
                 <option value={2}>Admin</option>
               </select>
             </div>
@@ -140,6 +140,13 @@ function UsersPage() {
                 onFocus={e => e.target.style.borderColor = '#c9a84c'}
                 onBlur={e => e.target.style.borderColor = '#444'}
                 onChange={(e) => setEditUser({ ...editUser, address: { ...editUser.address, postalCode: e.target.value } })} />
+            </div>
+            <div className="col-md-3">
+              <label style={labelStyle}>Grad</label>
+              <input style={inputStyle} value={editUser.address?.city || ''}
+                onFocus={e => e.target.style.borderColor = '#c9a84c'}
+                onBlur={e => e.target.style.borderColor = '#444'}
+                onChange={(e) => setEditUser({ ...editUser, address: { ...editUser.address, city: e.target.value } })} />
             </div>
             <div className="col-md-3">
               <label style={labelStyle}>Država</label>
