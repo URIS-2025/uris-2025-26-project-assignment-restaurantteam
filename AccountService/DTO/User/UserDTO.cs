@@ -13,7 +13,7 @@ namespace AccountService.DTO.User
         [MaxLength(20, ErrorMessage = "Username must be below 20 characters.")]
         public string Username { get; set; }
 
-        [MaxLength(20, ErrorMessage = "Email must be below 20 characters.")]
+        [MaxLength(50, ErrorMessage = "Email must be below 20 characters.")]
         [EmailAddress]
         public string Email { get; set; }
 

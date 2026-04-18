@@ -13,7 +13,7 @@ namespace AccountService.Entities
         public string Username { get; set; }
 
         [Required(ErrorMessage = "User needs to have an email.")]
-        [MaxLength(20, ErrorMessage = "Email must be below 20 characters.")]
+        [MaxLength(50, ErrorMessage = "Email must be below 20 characters.")]
         [EmailAddress]
         public string Email { get; set; }
 

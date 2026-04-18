@@ -55,6 +55,10 @@ namespace AccountService.Handlers.User
             }
 
             Entities.User user = UserMapper.ToUser(createUserDTO);
+            if(createUserDTO.Role == null)
+            {
+                createUserDTO.Role = Entities.Enums.UserRole.CUSTOMER;
+            }
             user.IdAddress = idAddress;
             user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password, workFactor: 12);
 
@@ -116,7 +120,7 @@ namespace AccountService.Handlers.User
             return userDTOs;
         }
 
-        public async Task<UserDTO> UpdateUser(UpdateUserDTO updateUserDTO, int idUser)
+        public async Task<UserDTO> UpdateUser(UpdateUserDTO updateUserDTO, int idUser, int? idAddress)
         {
             if (updateUserDTO == null)
                 throw new Exception("Bad request");
@@ -140,7 +144,9 @@ namespace AccountService.Handlers.User
                 user.PhoneNumber = updateUserDTO.PhoneNumber;
             if (updateUserDTO.Role != null)
                 user.Role = updateUserDTO.Role.Value;
-            
+            if(idAddress != null)
+                user.IdAddress = idAddress.Value;
+
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
 

@@ -145,3 +145,4 @@ C:\Users\pavle\source\repos\URIS\MenuService\obj\Debug\net8.0\refint\MenuService
 C:\Users\pavle\source\repos\URIS\MenuService\obj\Debug\net8.0\MenuService.pdb
 C:\Users\pavle\source\repos\URIS\MenuService\obj\Debug\net8.0\MenuService.genruntimeconfig.cache
 C:\Users\pavle\source\repos\URIS\MenuService\obj\Debug\net8.0\ref\MenuService.dll
+C:\Users\pavle\source\repos\URIS\MenuService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

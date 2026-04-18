@@ -1,6 +1,7 @@
 ﻿using AccountService.Data;
 using AccountService.DTO.Address;
 using AccountService.Mappers;
+using AccountService.Middleware;
 using Microsoft.EntityFrameworkCore;
 
 namespace AccountService.Handlers.Address
@@ -48,7 +49,7 @@ namespace AccountService.Handlers.Address
             
             if (address == null)
             {
-                throw new Exception("Address not found");
+                throw new NotFoundException("Address not found");
                 
             }
             
@@ -64,27 +65,38 @@ namespace AccountService.Handlers.Address
                 throw new Exception("Address not found");
             }
 
-            if(updateAddressDTO.City != null)
-                address.City = updateAddressDTO.City;
+            var existsAddress = await _context.Addresses.FirstOrDefaultAsync(u =>
+                   u.City == updateAddressDTO.City &&
+                   u.Country == updateAddressDTO.Country &&
+                   u.Street == updateAddressDTO.Street &&
+                   u.StreetNumber == updateAddressDTO.StreetNumber &&
+                   u.PostalCode == updateAddressDTO.PostalCode
+           );
+            if (existsAddress == null)
+            {
+                if (updateAddressDTO.City != null)
+                    address.City = updateAddressDTO.City;
 
-            if (updateAddressDTO.Country != null)
-                address.Country = updateAddressDTO.Country;
+                if (updateAddressDTO.Country != null)
+                    address.Country = updateAddressDTO.Country;
 
-            if (updateAddressDTO.Street != null)
-                address.Street = updateAddressDTO.Street;
+                if (updateAddressDTO.Street != null)
+                    address.Street = updateAddressDTO.Street;
 
-            if (updateAddressDTO.StreetNumber != null)
-                address.StreetNumber = updateAddressDTO.StreetNumber.Value;
+                if (updateAddressDTO.StreetNumber != null)
+                    address.StreetNumber = updateAddressDTO.StreetNumber.Value;
 
-            if (updateAddressDTO.PostalCode != null)
-                address.PostalCode = updateAddressDTO.PostalCode.Value;
+                if (updateAddressDTO.PostalCode != null)
+                    address.PostalCode = updateAddressDTO.PostalCode.Value;
 
-            _context.Addresses.Update(address);
-            await _context.SaveChangesAsync();
+                _context.Addresses.Update(address);
+                await _context.SaveChangesAsync();
+                AddressDTO addressDTO = AddressMapper.ToAddressDTO(address);
 
-            AddressDTO addressDTO = AddressMapper.ToAddressDTO(address);
+                return addressDTO;
+            }
 
-            return addressDTO;
+            return AddressMapper.ToAddressDTO(existsAddress);
         }
 
         public async Task<bool> DeleteAddress(int idAddress)
@@ -93,9 +105,16 @@ namespace AccountService.Handlers.Address
 
             if (address != null)
             {
-                _context.Addresses.Remove(address);
-                await _context.SaveChangesAsync();
-                return true;
+                try
+                {
+                    _context.Addresses.Remove(address);
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                catch(DbUpdateException e)
+                {
+                    throw new DbUpdateException("Address is in use.");
+                }
             }
 
             return false;

@@ -11,7 +11,7 @@ namespace AccountService.DTO.User
         public string? Username { get; set; }
 
         
-        [MaxLength(20, ErrorMessage = "Email must be below 20 characters.")]
+        [MaxLength(50, ErrorMessage = "Email must be below 50 characters.")]
         [EmailAddress]
         public string? Email { get; set; }
 
@@ -24,6 +24,6 @@ namespace AccountService.DTO.User
         [MaxLength(15, ErrorMessage = "Phone number must be below 15 characters.")]
         public string? PhoneNumber { get; set; }
         public UserRole? Role { get; set; }
-        public UpdateAddressDTO? Address { get; set; }
+        public CreateAddressDTO? Address { get; set; }
     }
 }

@@ -1,10 +1,11 @@
-﻿using AccountService.DTO.User;
-using AccountService.DTO.Address;
+﻿using AccountService.DTO.Address;
+using AccountService.DTO.User;
+using AccountService.Entities;
 using AccountService.Handlers.Address;
-using AccountService.Handlers.User;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using AccountService.Handlers.Links;
+using AccountService.Handlers.User;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AccountService.Controllers
 {
@@ -36,6 +37,10 @@ namespace AccountService.Controllers
         [AllowAnonymous]
         public async Task<ActionResult<UserDTO>> CreateUser([FromBody] CreateUserDTO createUserDTO)
         {
+            if (!ModelState.IsValid)
+            {
+                return Conflict(ModelState);
+            }
             AddressDTO address = new AddressDTO();
             UserDTO user;
             if (createUserDTO.Address != null)
@@ -71,12 +76,25 @@ namespace AccountService.Controllers
         [HttpPut("{idUser}")]
         public async Task<ActionResult<UserDTO>> UpdateUser([FromRoute] int idUser, [FromBody] UpdateUserDTO updateUserDTO)
         {
-            var user = await userHandler.UpdateUser(updateUserDTO,idUser);
-            if(updateUserDTO.Address != null)
+            if (!ModelState.IsValid)
             {
-                var address = await addressHandler.UpdateAddress(updateUserDTO.Address, user.Address.IdAddress);
-                user.Address = address;
+                return Conflict(ModelState);
             }
+            UserDTO user;
+            AddressDTO address;
+            if (updateUserDTO.Address != null)
+            {
+                address = await addressHandler.CreateAddress(updateUserDTO.Address);
+                user = await userHandler.UpdateUser(updateUserDTO, idUser, address.IdAddress);
+                user.Address = address;
+
+            }
+            else
+            {
+                user = await userHandler.UpdateUser(updateUserDTO, idUser, null);
+
+            }
+
 
             return Ok(user);
         }
