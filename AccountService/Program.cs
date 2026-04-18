@@ -27,7 +27,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 
 builder.Services.AddDbContext<AccountDbContext>(options =>
-           options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+           options.UseSqlServer(builder.Configuration.GetConnectionString("HostConnection"))
            );
 
 builder.Services.AddScoped<IAddressHandler, AddressHandler>();

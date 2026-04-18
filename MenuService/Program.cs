@@ -33,7 +33,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 
 builder.Services.AddDbContext<MenuDbContext>(options =>
-           options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+           options.UseSqlServer(builder.Configuration.GetConnectionString("HostConnection"))
            );
 builder.Services.AddScoped<IIngredientHandler, IngredientHandler>();
 builder.Services.AddScoped<ICategoryHandler, CategoryHandler>();

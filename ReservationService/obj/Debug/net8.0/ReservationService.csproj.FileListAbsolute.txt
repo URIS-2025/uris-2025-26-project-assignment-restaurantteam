@@ -146,4 +146,3 @@ C:\Users\pavle\source\repos\URIS\ReservationService\obj\Debug\net8.0\Reservation
 C:\Users\pavle\source\repos\URIS\ReservationService\obj\Debug\net8.0\ReservationService.genruntimeconfig.cache
 C:\Users\pavle\source\repos\URIS\ReservationService\obj\Debug\net8.0\ref\ReservationService.dll
 C:\Users\pavle\source\repos\URIS\ReservationService\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\pavle\source\repos\URIS\ReservationService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
