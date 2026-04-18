@@ -118,14 +118,10 @@ app.MapGet("/health/db", async (AccountDbContext db) =>
 {
     try
     {
-        var conn = db.Database.GetConnectionString();
-        var canConnect = await db.Database.CanConnectAsync();
+        await db.Database.OpenConnectionAsync();
+        await db.Database.CloseConnectionAsync();
 
-        return Results.Ok(new
-        {
-            database = canConnect,
-            connectionString = conn
-        });
+        return Results.Ok(new { database = true });
     }
     catch (Exception ex)
     {
