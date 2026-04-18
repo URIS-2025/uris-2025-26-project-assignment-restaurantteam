@@ -22,8 +22,6 @@ function ProfilePage() {
       setName(decoded.unique_name)
       setRole(decoded.role)
       setIdUser(decoded.nameid)
-      console.log('userId is :', idUser)
-      console.log('username is :', name)
     }
   }, [token])
 

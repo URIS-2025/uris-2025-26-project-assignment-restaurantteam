@@ -51,7 +51,8 @@ function UsersPage() {
 
   const roleLabels = {
     0: { label: 'Customer', color: '#3498db', bg: '#001a2c' },
-    1: { label: 'Admin', color: '#c9a84c', bg: '#2c1a00' }
+    1: { label: 'Employee', color: '#3498db', bg: '#001a2c' },
+    2: { label: 'Admin', color: '#c9a84c', bg: '#2c1a00' }
   }
 
   if (loading) return (
