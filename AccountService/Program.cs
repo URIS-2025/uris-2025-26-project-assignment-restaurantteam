@@ -116,8 +116,15 @@ app.MapGet("/ping", () => "pong");
 
 app.MapGet("/health/db", async (AccountDbContext db) =>
 {
-    var canConnect = await db.Database.CanConnectAsync();
-    return Results.Ok(new { database = canConnect });
+    try
+    {
+        var canConnect = await db.Database.CanConnectAsync();
+        return Results.Ok(new { database = canConnect });
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem(ex.ToString());
+    }
 });
 app.MapControllerRoute(
     name: "default",
