@@ -5,11 +5,12 @@ namespace OrderService.Handlers.Links
 {
     public class MenuItemLink : IMenuItemLink
     {
-
+        private readonly string hostUrl = "https://uris2026restaurant.onrender.com/api/menu/";
+        private readonly string localUrl = "https://localhost:7278/api/menu/";
         public async Task<MenuItemDTO> GetMenuItemById(int idMenuItem, string? token)
         {
             using HttpClient httpClient = new HttpClient();
-            Uri url = new($"https://localhost:7278/api/menu/{idMenuItem}");
+            Uri url = new($"{hostUrl}{idMenuItem}");
 
             if (token != null)
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);

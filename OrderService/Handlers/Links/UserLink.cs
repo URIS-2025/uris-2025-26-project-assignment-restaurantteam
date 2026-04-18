@@ -5,7 +5,8 @@ namespace OrderService.Handlers.Links
 {
     public class UserLink : IUserLink
     {
-
+        private readonly string hostUrl = "https://accountservice-py1t.onrender.com/api/users/";
+        private readonly string localUrl = "https://localhost:7276/api/users/";
         public UserLink()
         {
 
@@ -18,7 +19,7 @@ namespace OrderService.Handlers.Links
         public async Task<UserDTO> GetUserById(int idUser, string? token)
         {
             using HttpClient httpClient = new HttpClient();
-            Uri url = new($"https://localhost:7276/api/users/{idUser}");
+            Uri url = new($"{hostUrl}{idUser}");
 
             if (token != null)
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);
