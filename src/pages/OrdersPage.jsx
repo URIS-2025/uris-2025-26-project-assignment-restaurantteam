@@ -19,9 +19,6 @@ useEffect(() => {
 }, [token])
   
 
-  console.log("El ovo " + name)
-
-
   
 
 

@@ -39,7 +39,6 @@ function ReservationsPage() {
       setIdUser(decoded.nameid)
       console.log('userId is :', idUser)
       console.log('username is :', name)
-      if(role2!= null) role = role2
     }
   }, [token])
 
