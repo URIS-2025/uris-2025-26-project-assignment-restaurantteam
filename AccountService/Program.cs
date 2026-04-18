@@ -118,12 +118,23 @@ app.MapGet("/health/db", async (AccountDbContext db) =>
 {
     try
     {
+        var conn = db.Database.GetConnectionString();
         var canConnect = await db.Database.CanConnectAsync();
-        return Results.Ok(new { database = canConnect });
+
+        return Results.Ok(new
+        {
+            database = canConnect,
+            connectionString = conn
+        });
     }
     catch (Exception ex)
     {
-        return Results.Problem(ex.ToString());
+        return Results.Ok(new
+        {
+            database = false,
+            error = ex.Message,
+            full = ex.ToString()
+        });
     }
 });
 app.MapControllerRoute(
