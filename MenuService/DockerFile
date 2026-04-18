@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY MenuService/MenuService.csproj MenuService/
-RUN dotnet restore MenuService/MenuService.csproj
+COPY MenuService.csproj .
+RUN dotnet restore
 
 COPY . .
 WORKDIR /src/MenuService
