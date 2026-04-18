@@ -1,7 +1,9 @@
 import axios from 'axios'
+const hostUrl = "https://uris2026restaurant.onrender.com"
+const localUrl = "https://localhost:7278"
 
 const menuClient = axios.create({
-  baseURL: 'https://localhost:7278'
+  baseURL: hostUrl
 })
 
 const getAuthHeader = (token) => ({

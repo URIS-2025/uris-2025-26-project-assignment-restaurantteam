@@ -1,7 +1,9 @@
 import axios from 'axios'
+const hostUrl = "https://orderservice-40ju.onrender.com"
+const localUrl = "https://localhost:7150"
 
 const orderClient = axios.create({
-  baseURL: 'https://localhost:7150'
+  baseURL: hostUrl
 })
 
 const getAuthHeader = (token) => ({

@@ -1,7 +1,8 @@
 import axios from 'axios'
-
+const hostUrl = "https://accountservice-py1t.onrender.com"
+const localUrl = "https://localhost:7276"
 const authClient = axios.create({
-  baseURL: 'https://localhost:7276'
+  baseURL: hostUrl
 })
 
 export const loginUser = (username, password) => {

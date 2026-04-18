@@ -1,7 +1,9 @@
 import axios from 'axios'
+const hostUrl = "https://reservationservice-opql.onrender.com"
+const localUrl = "https://localhost:7149"
 
 const reservationClient = axios.create({
-  baseURL: 'https://localhost:7149'
+  baseURL: hostUrl
 })
 
 const getAuthHeader = (token) => ({

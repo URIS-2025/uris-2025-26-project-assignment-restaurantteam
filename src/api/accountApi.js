@@ -1,7 +1,9 @@
 import axios from 'axios'
+const hostUrl = "https://accountservice-py1t.onrender.com"
+const localUrl = "https://localhost:7276"
 
 const accountClient = axios.create({
-  baseURL: 'https://localhost:7276'
+  baseURL: hostUrl
 })
 
 const getAuthHeader = (token) => ({
