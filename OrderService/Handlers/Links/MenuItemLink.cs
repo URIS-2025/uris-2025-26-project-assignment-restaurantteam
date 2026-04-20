@@ -9,8 +9,9 @@ namespace OrderService.Handlers.Links
         private readonly string localUrl = "https://localhost:7278/api/menu/";
         public async Task<MenuItemDTO> GetMenuItemById(int idMenuItem, string? token)
         {
+            string stringUrl = hostUrl + idMenuItem.ToString();
             using HttpClient httpClient = new HttpClient();
-            Uri url = new($"{hostUrl}{idMenuItem}");
+            Uri url = new(stringUrl);
 
             if (token != null)
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);

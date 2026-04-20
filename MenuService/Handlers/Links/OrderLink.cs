@@ -6,8 +6,9 @@
         private readonly string localUrl = "https://localhost:7150/api/orders/items/";
         public async Task<bool?> IsMenuItemInUse(int idMenuItem, string? token)
         {
+            string stringUrl = hostUrl + idMenuItem.ToString();
             using HttpClient httpClient = new HttpClient();
-            Uri url = new($"{hostUrl}{idMenuItem}");
+            Uri url = new(stringUrl);
 
             if (token != null)
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);

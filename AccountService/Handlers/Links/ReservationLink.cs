@@ -2,10 +2,13 @@
 {
     public class ReservationLink : IReservationLink
     {
+        private readonly string hostUrl = "https://reservationservice-opql.onrender.com/api/v2/reservations/user/";
+        private readonly string localUrl = "https://localhost:7150/api/v2/reservations/user/";
         public async Task<bool?> IsUserInUse(int idUser, string? token)
         {
+            string stringUrl = hostUrl+idUser.ToString();
             using HttpClient httpClient = new HttpClient();
-            Uri url = new($"https://localhost:7150/api/v2/reservations/user/{idUser}");
+            Uri url = new(stringUrl);
 
             if (token != null)
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);

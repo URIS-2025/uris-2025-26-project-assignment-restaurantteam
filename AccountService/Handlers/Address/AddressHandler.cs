@@ -72,6 +72,7 @@ namespace AccountService.Handlers.Address
                    u.StreetNumber == updateAddressDTO.StreetNumber &&
                    u.PostalCode == updateAddressDTO.PostalCode
            );
+
             if (existsAddress == null)
             {
                 if (updateAddressDTO.City != null)

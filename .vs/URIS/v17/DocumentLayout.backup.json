@@ -3,24 +3,168 @@
   "WorkspaceRootPath": "C:\\Users\\pavle\\source\\repos\\URIS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\address\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\address\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\address\\shortaddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\address\\shortaddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\address\\updateaddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\address\\updateaddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\user\\updateuserroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\user\\updateuserroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\ingredient\\ingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\ingredient\\ingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\controllers\\ingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\controllers\\ingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\ingredient\\ingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\ingredient\\ingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\ingredient\\createingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\ingredient\\createingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\data\\menudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\data\\menudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\order\\orderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\order\\orderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\ireservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\ireservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\controllers\\reservationcontrollerv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\controllers\\reservationcontrollerv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\controllers\\tablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\controllers\\tablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\menuitem\\createmenuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\menuitem\\createmenuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\menuitem\\menuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\menuitem\\menuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\menuitemcategory\\menuitemcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\menuitemcategory\\menuitemcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\address\\shortaddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\address\\shortaddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\menuservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\menuservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\user\\userhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\user\\userhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\reservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\reservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\menuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\menuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\authentication\\iauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\authentication\\iauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\middleware\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\middleware\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\middleware\\alreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\middleware\\alreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\authentication\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\authentication\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\address\\addresshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,20 +175,48 @@
       "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\address\\iaddresshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\user\\iuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\user\\iuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\middleware\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\middleware\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\middleware\\alreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\middleware\\alreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\iuserlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\iuserlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\imenuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\imenuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\dto\\reservation\\createreservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\dto\\reservation\\createreservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\handlers\\reservation\\ireservationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\handlers\\reservation\\ireservationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\address\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\address\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\middleware\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,58 +235,6 @@
       "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\middleware\\alreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\user\\userhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\user\\userhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\user\\iuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\user\\iuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\reservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\reservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\user\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\ireservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\ireservationlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\entities\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\authentication\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\authentication\\authenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\mappers\\userroleparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\mappers\\userroleparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -125,22 +245,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\authentication\\iauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\authentication\\iauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -155,22 +259,6 @@
       "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\controllers\\reservationcontrollerv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\controllers\\reservationcontrollerv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\controllers\\tablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\controllers\\tablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\order\\iorderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\order\\iorderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -179,20 +267,8 @@
       "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\orderitem\\iorderitemhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\dto\\reservation\\createreservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\dto\\reservation\\createreservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\handlers\\reservation\\ireservationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\handlers\\reservation\\ireservationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\handlers\\reservation\\reservationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\handlers\\reservation\\reservationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\order\\orderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\order\\orderhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\orderitem\\orderitemhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -207,40 +283,12 @@
       "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\menuitem\\imenuitemhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\ingredient\\ingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\ingredient\\ingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\controllers\\ingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\controllers\\ingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\links\\orderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\links\\iorderlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\dto\\reservation\\updatereservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\dto\\reservation\\updatereservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\dto\\reservation\\reservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\dto\\reservation\\reservationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|solutionrelative:reservationservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D9269FC-3836-45D4-A40E-5C7D942F7655}|ReservationService\\ReservationService.csproj|c:\\users\\pavle\\source\\repos\\uris\\reservationservice\\handlers\\table\\tablehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -259,32 +307,12 @@
       "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\orderservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\menuservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\menuservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{956628A3-A7E3-4AFA-B965-E1BF49E3A2D7}|MenuService.Tests\\MenuService.Tests.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice.tests\\menucontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{956628A3-A7E3-4AFA-B965-E1BF49E3A2D7}|MenuService.Tests\\MenuService.Tests.csproj|solutionrelative:menuservice.tests\\menucontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\ingredient\\iingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\ingredient\\iingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\menuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\menuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\iuserlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\iuserlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\menuitemcategory\\menuitemcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\handlers\\menuitemcategory\\menuitemcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\imenuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\imenuitemlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\handlers\\menuitemingredient\\imenuitemingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -297,10 +325,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\accountservice.api.tests\\accountservicewebfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -333,10 +357,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\dto\\order\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\dto\\order\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\handlers\\links\\userlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|c:\\users\\pavle\\source\\repos\\uris\\orderservice\\dto\\order\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -381,10 +401,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|c:\\users\\pavle\\source\\repos\\uris\\accountservice\\dto\\authentication\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F0E27B3-FBC0-EF27-E0A6-A10E2C626281}|AccountService\\AccountService.csproj|solutionrelative:accountservice\\dto\\authentication\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\menuitem\\menuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\menuitem\\menuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\mappers\\menuitemmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -467,24 +483,8 @@
       "RelativeMoniker": "D:0:0:{0ECABC86-162F-46A8-9DEA-1A0507DA0B3D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\dto\\category\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\ingredient\\ingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\ingredient\\ingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\category\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\category\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\ingredient\\createingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\ingredient\\createingredientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\dto\\menuitem\\createmenuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\dto\\menuitem\\createmenuitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|c:\\users\\pavle\\source\\repos\\uris\\menuservice\\data\\menudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2816D593-0187-4AB5-876D-D9E2DEB96F81}|MenuService\\MenuService.csproj|solutionrelative:menuservice\\data\\menudbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -494,127 +494,127 @@
       "DocumentGroups": [
         {
           "DockedHeight": 262,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 13,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\NotFoundException.cs",
-              "RelativeDocumentMoniker": "AccountService\\Middleware\\NotFoundException.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\NotFoundException.cs",
-              "RelativeToolTip": "AccountService\\Middleware\\NotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:17:43.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "AccountService\\Middleware\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "AccountService\\Middleware\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:17:34.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AlreadyExistsException.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\AlreadyExistsException.cs",
-              "RelativeDocumentMoniker": "AccountService\\Middleware\\AlreadyExistsException.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\AlreadyExistsException.cs",
-              "RelativeToolTip": "AccountService\\Middleware\\AlreadyExistsException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T19:17:23.665Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "AccountService\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\UserController.cs",
               "RelativeToolTip": "AccountService\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwFcAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAcwHQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T17:30:50.954Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "MenuService\\Middleware\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "MenuService\\Middleware\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAA9wEEAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "IngredientController.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\IngredientController.cs",
+              "RelativeDocumentMoniker": "MenuService\\Controllers\\IngredientController.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\IngredientController.cs",
+              "RelativeToolTip": "MenuService\\Controllers\\IngredientController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T15:50:19.394Z",
+              "WhenOpened": "2026-04-10T14:16:48.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MenuDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Data\\MenuDbContext.cs",
+              "RelativeDocumentMoniker": "MenuService\\Data\\MenuDbContext.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Data\\MenuDbContext.cs",
+              "RelativeToolTip": "MenuService\\Data\\MenuDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA0wBkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T12:26:31.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "NotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\NotFoundException.cs",
-              "RelativeDocumentMoniker": "MenuService\\Middleware\\NotFoundException.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\NotFoundException.cs",
-              "RelativeToolTip": "MenuService\\Middleware\\NotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Title": "CreateIngredientDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
+              "RelativeDocumentMoniker": "MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
+              "RelativeToolTip": "MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T15:51:41.227Z",
+              "WhenOpened": "2026-04-09T16:37:01.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddressDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\AddressDTO.cs",
-              "RelativeDocumentMoniker": "AccountService\\DTO\\Address\\AddressDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\AddressDTO.cs",
-              "RelativeToolTip": "AccountService\\DTO\\Address\\AddressDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "IngredientDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
+              "RelativeDocumentMoniker": "MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
+              "RelativeToolTip": "MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T19:57:49.731Z",
+              "WhenOpened": "2026-04-10T13:10:16.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddressHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\AddressHandler.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\Address\\AddressHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\AddressHandler.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\Address\\AddressHandler.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAcwHMAAABDAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "OrderLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\OrderLink.cs",
+              "RelativeDocumentMoniker": "MenuService\\Handlers\\Links\\OrderLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\OrderLink.cs",
+              "RelativeToolTip": "MenuService\\Handlers\\Links\\OrderLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T19:59:07.559Z",
+              "WhenOpened": "2026-04-17T17:12:08.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IngredientHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
+              "RelativeDocumentMoniker": "MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
+              "RelativeToolTip": "MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T16:36:17.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IAddressHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\IAddressHandler.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\Address\\IAddressHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\IAddressHandler.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\Address\\IAddressHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Entities\\Ingredient.cs",
+              "RelativeDocumentMoniker": "MenuService\\Entities\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Entities\\Ingredient.cs",
+              "RelativeToolTip": "MenuService\\Entities\\Ingredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T15:24:59.122Z",
+              "WhenOpened": "2026-04-02T15:44:01.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateAddressDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
+              "RelativeDocumentMoniker": "AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
+              "RelativeToolTip": "AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T13:09:28.663Z",
               "EditorCaption": ""
             },
             {
@@ -633,123 +633,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UpdateAddressDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
-              "RelativeDocumentMoniker": "AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
-              "RelativeToolTip": "AccountService\\DTO\\Address\\UpdateAddressDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\User\\UserDTO.cs",
+              "RelativeDocumentMoniker": "AccountService\\DTO\\User\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\User\\UserDTO.cs",
+              "RelativeToolTip": "AccountService\\DTO\\User\\UserDTO.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T13:09:28.663Z",
+              "WhenOpened": "2026-04-08T16:42:40.639Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ShortAddressDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\ShortAddressDTO.cs",
-              "RelativeDocumentMoniker": "AccountService\\DTO\\Address\\ShortAddressDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\ShortAddressDTO.cs",
-              "RelativeToolTip": "AccountService\\DTO\\Address\\ShortAddressDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T19:59:33.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AlreadyExistsException.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\AlreadyExistsException.cs",
-              "RelativeDocumentMoniker": "MenuService\\Middleware\\AlreadyExistsException.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\AlreadyExistsException.cs",
-              "RelativeToolTip": "MenuService\\Middleware\\AlreadyExistsException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T15:57:32.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\UserHandler.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\User\\UserHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\UserHandler.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\User\\UserHandler.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T16:38:34.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IUserHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\IUserHandler.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\User\\IUserHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\IUserHandler.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\User\\IUserHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T16:37:13.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ReservationLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\ReservationLink.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\ReservationLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\ReservationLink.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\Links\\ReservationLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T19:59:08.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "OrderLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\OrderLink.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\OrderLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\OrderLink.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\Links\\OrderLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T19:58:58.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AccountService.csproj",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\AccountService.csproj",
-              "RelativeDocumentMoniker": "AccountService\\AccountService.csproj",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\AccountService.csproj",
-              "RelativeToolTip": "AccountService\\AccountService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-16T17:02:33.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "AccountService\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "AccountService\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T13:14:09.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
               "Title": "UpdateUserDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\User\\UpdateUserDTO.cs",
               "RelativeDocumentMoniker": "AccountService\\DTO\\User\\UpdateUserDTO.cs",
@@ -762,46 +658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\User\\UserDTO.cs",
-              "RelativeDocumentMoniker": "AccountService\\DTO\\User\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\User\\UserDTO.cs",
-              "RelativeToolTip": "AccountService\\DTO\\User\\UserDTO.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T16:42:40.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AddressController.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AddressController.cs",
-              "RelativeDocumentMoniker": "AccountService\\Controllers\\AddressController.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AddressController.cs",
-              "RelativeToolTip": "AccountService\\Controllers\\AddressController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T19:53:34.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IReservationLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IReservationLink.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\IReservationLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IReservationLink.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\Links\\IReservationLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T19:57:45.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 0,
               "Title": "CreateUserDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\User\\CreateUserDTO.cs",
               "RelativeDocumentMoniker": "AccountService\\DTO\\User\\CreateUserDTO.cs",
@@ -814,98 +671,280 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "AccountService\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\User.cs",
-              "RelativeToolTip": "AccountService\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "MenuService\\Controllers\\MenuController.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "MenuService\\Controllers\\MenuController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwG0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T15:21:13.905Z",
+              "WhenOpened": "2026-04-02T12:49:38.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\Address.cs",
-              "RelativeDocumentMoniker": "AccountService\\Entities\\Address.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\Address.cs",
-              "RelativeToolTip": "AccountService\\Entities\\Address.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBQAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Program.cs",
+              "RelativeDocumentMoniker": "MenuService\\Program.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Program.cs",
+              "RelativeToolTip": "MenuService\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABUAAACQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T20:02:11.68Z",
+              "WhenOpened": "2026-04-02T12:31:12.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AuthenticationHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowFUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T13:03:03.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Program.cs",
               "RelativeDocumentMoniker": "AccountService\\Program.cs",
               "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Program.cs",
               "RelativeToolTip": "AccountService\\Program.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHIAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T17:47:52.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "UserRoleParser.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserRoleParser.cs",
-              "RelativeDocumentMoniker": "AccountService\\Mappers\\UserRoleParser.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserRoleParser.cs",
-              "RelativeToolTip": "AccountService\\Mappers\\UserRoleParser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "AccountService\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "AccountService\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T20:03:33.256Z",
+              "WhenOpened": "2026-04-09T13:14:09.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\OrderHandler.cs",
+              "RelativeDocumentMoniker": "OrderService\\Handlers\\Order\\OrderHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\OrderHandler.cs",
+              "RelativeToolTip": "OrderService\\Handlers\\Order\\OrderHandler.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAIwJwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T17:48:32.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "OrderService\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "OrderService\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAmwMoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T19:29:16.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\OrderLink.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\OrderLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\OrderLink.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\Links\\OrderLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T19:58:58.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IReservationLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IReservationLink.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\IReservationLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IReservationLink.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\Links\\IReservationLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T19:57:45.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ReservationControllerV2.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\ReservationControllerV2.cs",
+              "RelativeDocumentMoniker": "ReservationService\\Controllers\\ReservationControllerV2.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\ReservationControllerV2.cs",
+              "RelativeToolTip": "ReservationService\\Controllers\\ReservationControllerV2.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwH8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T12:04:35.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TableController.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\TableController.cs",
+              "RelativeDocumentMoniker": "ReservationService\\Controllers\\TableController.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\TableController.cs",
+              "RelativeToolTip": "ReservationService\\Controllers\\TableController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwBAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T11:14:09.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\UserLink.cs",
+              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\UserLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\UserLink.cs",
+              "RelativeToolTip": "OrderService\\Handlers\\Links\\UserLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T22:48:07.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IOrderLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\IOrderLink.cs",
+              "RelativeDocumentMoniker": "MenuService\\Handlers\\Links\\IOrderLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\IOrderLink.cs",
+              "RelativeToolTip": "MenuService\\Handlers\\Links\\IOrderLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T17:12:00.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CreateMenuItemDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
+              "RelativeDocumentMoniker": "MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
+              "RelativeToolTip": "MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T16:37:17.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MenuItemDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
+              "RelativeDocumentMoniker": "MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
+              "RelativeToolTip": "MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T13:09:08.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MenuItemCategoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
+              "RelativeDocumentMoniker": "MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
+              "RelativeToolTip": "MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwFcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T17:21:49.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ShortAddressDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\ShortAddressDTO.cs",
+              "RelativeDocumentMoniker": "AccountService\\DTO\\Address\\ShortAddressDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\ShortAddressDTO.cs",
+              "RelativeToolTip": "AccountService\\DTO\\Address\\ShortAddressDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T19:59:33.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "DbSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Data\\DbSeeder.cs",
-              "RelativeDocumentMoniker": "AccountService\\Data\\DbSeeder.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Data\\DbSeeder.cs",
-              "RelativeToolTip": "AccountService\\Data\\DbSeeder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T18:54:39.678Z",
+              "Title": "MenuService.csproj",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\MenuService.csproj",
+              "RelativeDocumentMoniker": "MenuService\\MenuService.csproj",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\MenuService.csproj",
+              "RelativeToolTip": "MenuService\\MenuService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-02T12:45:42.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "UserMapper.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserMapper.cs",
-              "RelativeDocumentMoniker": "AccountService\\Mappers\\UserMapper.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserMapper.cs",
-              "RelativeToolTip": "AccountService\\Mappers\\UserMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
+              "Title": "UserHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\UserHandler.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\User\\UserHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\UserHandler.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\User\\UserHandler.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T16:40:51.991Z",
+              "WhenOpened": "2026-04-08T16:38:34.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
+              "Title": "ReservationLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\ReservationLink.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\ReservationLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\ReservationLink.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\Links\\ReservationLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T19:59:08.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MenuItemLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\MenuItemLink.cs",
+              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\MenuItemLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\MenuItemLink.cs",
+              "RelativeToolTip": "OrderService\\Handlers\\Links\\MenuItemLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T17:32:41.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IOrderLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IOrderLink.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\IOrderLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IOrderLink.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\Links\\IOrderLink.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T19:57:33.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "IAuthenticationHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Authentication\\IAuthenticationHandler.cs",
               "RelativeDocumentMoniker": "AccountService\\Handlers\\Authentication\\IAuthenticationHandler.cs",
@@ -918,152 +957,174 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Program.cs",
-              "RelativeDocumentMoniker": "ReservationService\\Program.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Program.cs",
-              "RelativeToolTip": "ReservationService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAB7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T12:48:14.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\appsettings.json",
-              "RelativeDocumentMoniker": "ReservationService\\appsettings.json",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\appsettings.json",
-              "RelativeToolTip": "ReservationService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-18T15:13:46.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\appsettings.json",
-              "RelativeDocumentMoniker": "OrderService\\appsettings.json",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\appsettings.json",
-              "RelativeToolTip": "OrderService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-04T16:51:34.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\appsettings.json",
               "RelativeDocumentMoniker": "AccountService\\appsettings.json",
               "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\appsettings.json",
               "RelativeToolTip": "AccountService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-18T15:10:45.19Z"
+              "WhenOpened": "2026-04-18T15:10:45.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Program.cs",
-              "RelativeDocumentMoniker": "MenuService\\Program.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Program.cs",
-              "RelativeToolTip": "MenuService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAACQAAAAAAAAAA==",
+              "DocumentIndex": 36,
+              "Title": "AddressController.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AddressController.cs",
+              "RelativeDocumentMoniker": "AccountService\\Controllers\\AddressController.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Controllers\\AddressController.cs",
+              "RelativeToolTip": "AccountService\\Controllers\\AddressController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwDYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T12:31:12.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Program.cs",
-              "RelativeDocumentMoniker": "OrderService\\Program.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Program.cs",
-              "RelativeToolTip": "OrderService\\Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAowBMAAAB7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T16:52:44.923Z"
+              "WhenOpened": "2026-04-07T19:53:34.447Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 37,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\appsettings.json",
-              "RelativeDocumentMoniker": "MenuService\\appsettings.json",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\appsettings.json",
-              "RelativeToolTip": "MenuService\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-02T12:28:22.482Z"
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "AccountService\\Middleware\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\NotFoundException.cs",
+              "RelativeToolTip": "AccountService\\Middleware\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T19:17:43.715Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "ReservationControllerV2.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\ReservationControllerV2.cs",
-              "RelativeDocumentMoniker": "ReservationService\\Controllers\\ReservationControllerV2.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\ReservationControllerV2.cs",
-              "RelativeToolTip": "ReservationService\\Controllers\\ReservationControllerV2.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAADwv38AAAAfAAAAAAAAAA==",
+              "DocumentIndex": 38,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "AccountService\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "AccountService\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T12:04:35.139Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "TableController.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\TableController.cs",
-              "RelativeDocumentMoniker": "ReservationService\\Controllers\\TableController.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Controllers\\TableController.cs",
-              "RelativeToolTip": "ReservationService\\Controllers\\TableController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwBAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T11:14:09.995Z"
+              "WhenOpened": "2026-04-18T19:17:34.585Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 39,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "OrderService\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "OrderService\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Title": "AlreadyExistsException.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\AlreadyExistsException.cs",
+              "RelativeDocumentMoniker": "AccountService\\Middleware\\AlreadyExistsException.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Middleware\\AlreadyExistsException.cs",
+              "RelativeToolTip": "AccountService\\Middleware\\AlreadyExistsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T19:29:16.235Z"
+              "WhenOpened": "2026-04-18T19:17:23.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AuthenticationHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\Authentication\\AuthenticationHandler.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowFMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T13:03:03.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AddressHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\AddressHandler.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\Address\\AddressHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\AddressHandler.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\Address\\AddressHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T19:59:07.559Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 42,
-              "Title": "IOrderHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\IOrderHandler.cs",
-              "RelativeDocumentMoniker": "OrderService\\Handlers\\Order\\IOrderHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\IOrderHandler.cs",
-              "RelativeToolTip": "OrderService\\Handlers\\Order\\IOrderHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Title": "IAddressHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\IAddressHandler.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\Address\\IAddressHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Address\\IAddressHandler.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\Address\\IAddressHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T16:56:46.682Z"
+              "WhenOpened": "2026-04-08T15:24:59.122Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 43,
-              "Title": "IOrderItemHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
-              "RelativeDocumentMoniker": "OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
-              "RelativeToolTip": "OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Title": "IUserHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\IUserHandler.cs",
+              "RelativeDocumentMoniker": "AccountService\\Handlers\\User\\IUserHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\User\\IUserHandler.cs",
+              "RelativeToolTip": "AccountService\\Handlers\\User\\IUserHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T17:42:40.727Z"
+              "WhenOpened": "2026-04-08T16:37:13.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 44,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "AccountService\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\User.cs",
+              "RelativeToolTip": "AccountService\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T15:21:13.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\Address.cs",
+              "RelativeDocumentMoniker": "AccountService\\Entities\\Address.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Entities\\Address.cs",
+              "RelativeToolTip": "AccountService\\Entities\\Address.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T20:02:11.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IUserLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IUserLink.cs",
+              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\IUserLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IUserLink.cs",
+              "RelativeToolTip": "OrderService\\Handlers\\Links\\IUserLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T22:47:58.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IMenuItemLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IMenuItemLink.cs",
+              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\IMenuItemLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IMenuItemLink.cs",
+              "RelativeToolTip": "OrderService\\Handlers\\Links\\IMenuItemLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T10:26:30.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
               "Title": "CreateReservationDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\Reservation\\CreateReservationDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\Reservation\\CreateReservationDTO.cs",
@@ -1075,7 +1136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "IReservationHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Reservation\\IReservationHandler.cs",
               "RelativeDocumentMoniker": "ReservationService\\Handlers\\Reservation\\IReservationHandler.cs",
@@ -1088,6 +1149,198 @@
             {
               "$type": "Document",
               "DocumentIndex": 46,
+              "Title": "UserLink.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Links\\UserLink.cs",
+              "RelativeDocumentMoniker": "ReservationService\\Handlers\\Links\\UserLink.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Links\\UserLink.cs",
+              "RelativeToolTip": "ReservationService\\Handlers\\Links\\UserLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T12:00:10.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Program.cs",
+              "RelativeDocumentMoniker": "OrderService\\Program.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Program.cs",
+              "RelativeToolTip": "OrderService\\Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAowFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T16:52:44.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Program.cs",
+              "RelativeDocumentMoniker": "ReservationService\\Program.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Program.cs",
+              "RelativeToolTip": "ReservationService\\Program.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAABkAAACQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:48:14.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AddressDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\AddressDTO.cs",
+              "RelativeDocumentMoniker": "AccountService\\DTO\\Address\\AddressDTO.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Address\\AddressDTO.cs",
+              "RelativeToolTip": "AccountService\\DTO\\Address\\AddressDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T19:57:49.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "MenuService\\Middleware\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\NotFoundException.cs",
+              "RelativeToolTip": "MenuService\\Middleware\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T15:51:41.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "MenuService\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "MenuService\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA9wEEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T15:50:19.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "AlreadyExistsException.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\AlreadyExistsException.cs",
+              "RelativeDocumentMoniker": "MenuService\\Middleware\\AlreadyExistsException.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Middleware\\AlreadyExistsException.cs",
+              "RelativeToolTip": "MenuService\\Middleware\\AlreadyExistsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T15:57:32.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "AccountService.csproj",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\AccountService.csproj",
+              "RelativeDocumentMoniker": "AccountService\\AccountService.csproj",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\AccountService.csproj",
+              "RelativeToolTip": "AccountService\\AccountService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-16T17:02:33.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "UserRoleParser.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserRoleParser.cs",
+              "RelativeDocumentMoniker": "AccountService\\Mappers\\UserRoleParser.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserRoleParser.cs",
+              "RelativeToolTip": "AccountService\\Mappers\\UserRoleParser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T20:03:33.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Data\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "AccountService\\Data\\DbSeeder.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Data\\DbSeeder.cs",
+              "RelativeToolTip": "AccountService\\Data\\DbSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T18:54:39.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserMapper.cs",
+              "RelativeDocumentMoniker": "AccountService\\Mappers\\UserMapper.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Mappers\\UserMapper.cs",
+              "RelativeToolTip": "AccountService\\Mappers\\UserMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T16:40:51.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\appsettings.json",
+              "RelativeDocumentMoniker": "ReservationService\\appsettings.json",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\appsettings.json",
+              "RelativeToolTip": "ReservationService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-18T15:13:46.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\appsettings.json",
+              "RelativeDocumentMoniker": "OrderService\\appsettings.json",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\appsettings.json",
+              "RelativeToolTip": "OrderService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-04T16:51:34.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\appsettings.json",
+              "RelativeDocumentMoniker": "MenuService\\appsettings.json",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\appsettings.json",
+              "RelativeToolTip": "MenuService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T12:28:22.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "IOrderHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\IOrderHandler.cs",
+              "RelativeDocumentMoniker": "OrderService\\Handlers\\Order\\IOrderHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\IOrderHandler.cs",
+              "RelativeToolTip": "OrderService\\Handlers\\Order\\IOrderHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T16:56:46.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "IOrderItemHandler.cs",
+              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
+              "RelativeDocumentMoniker": "OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
+              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
+              "RelativeToolTip": "OrderService\\Handlers\\OrderItem\\IOrderItemHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T17:42:40.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
               "Title": "ReservationHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Reservation\\ReservationHandler.cs",
               "RelativeDocumentMoniker": "ReservationService\\Handlers\\Reservation\\ReservationHandler.cs",
@@ -1099,19 +1352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "OrderHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\OrderHandler.cs",
-              "RelativeDocumentMoniker": "OrderService\\Handlers\\Order\\OrderHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Order\\OrderHandler.cs",
-              "RelativeToolTip": "OrderService\\Handlers\\Order\\OrderHandler.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAIwJgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T17:48:32.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 67,
               "Title": "OrderItemHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\OrderItem\\OrderItemHandler.cs",
               "RelativeDocumentMoniker": "OrderService\\Handlers\\OrderItem\\OrderItemHandler.cs",
@@ -1123,7 +1364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 68,
               "Title": "MenuItemHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItem\\MenuItemHandler.cs",
               "RelativeDocumentMoniker": "MenuService\\Handlers\\MenuItem\\MenuItemHandler.cs",
@@ -1135,7 +1376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 69,
               "Title": "IMenuItemHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItem\\IMenuItemHandler.cs",
               "RelativeDocumentMoniker": "MenuService\\Handlers\\MenuItem\\IMenuItemHandler.cs",
@@ -1147,79 +1388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "IngredientHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
-              "RelativeDocumentMoniker": "MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
-              "RelativeToolTip": "MenuService\\Handlers\\Ingredient\\IngredientHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T16:36:17.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\MenuController.cs",
-              "RelativeDocumentMoniker": "MenuService\\Controllers\\MenuController.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\MenuController.cs",
-              "RelativeToolTip": "MenuService\\Controllers\\MenuController.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAcwEkAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T12:49:38.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "IngredientController.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\IngredientController.cs",
-              "RelativeDocumentMoniker": "MenuService\\Controllers\\IngredientController.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\IngredientController.cs",
-              "RelativeToolTip": "MenuService\\Controllers\\IngredientController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAxwDIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T14:16:48.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "OrderLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\OrderLink.cs",
-              "RelativeDocumentMoniker": "MenuService\\Handlers\\Links\\OrderLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\OrderLink.cs",
-              "RelativeToolTip": "MenuService\\Handlers\\Links\\OrderLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T17:12:08.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "IOrderLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IOrderLink.cs",
-              "RelativeDocumentMoniker": "AccountService\\Handlers\\Links\\IOrderLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Handlers\\Links\\IOrderLink.cs",
-              "RelativeToolTip": "AccountService\\Handlers\\Links\\IOrderLink.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T19:57:33.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "IOrderLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\IOrderLink.cs",
-              "RelativeDocumentMoniker": "MenuService\\Handlers\\Links\\IOrderLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Links\\IOrderLink.cs",
-              "RelativeToolTip": "MenuService\\Handlers\\Links\\IOrderLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T17:12:00.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 75,
               "Title": "OrderService.csproj",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\OrderService.csproj",
               "RelativeDocumentMoniker": "OrderService\\OrderService.csproj",
@@ -1231,7 +1400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 71,
               "Title": "ReservationDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\Reservation\\ReservationDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\Reservation\\ReservationDTO.cs",
@@ -1243,7 +1412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 70,
               "Title": "UpdateReservationDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\Reservation\\UpdateReservationDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\Reservation\\UpdateReservationDTO.cs",
@@ -1255,7 +1424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 73,
               "Title": "ReservationMapper.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Mappers\\ReservationMapper.cs",
               "RelativeDocumentMoniker": "ReservationService\\Mappers\\ReservationMapper.cs",
@@ -1267,19 +1436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "UserLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Links\\UserLink.cs",
-              "RelativeDocumentMoniker": "ReservationService\\Handlers\\Links\\UserLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Links\\UserLink.cs",
-              "RelativeToolTip": "ReservationService\\Handlers\\Links\\UserLink.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T12:00:10.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 72,
               "Title": "TableHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Table\\TableHandler.cs",
               "RelativeDocumentMoniker": "ReservationService\\Handlers\\Table\\TableHandler.cs",
@@ -1291,7 +1448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 74,
               "Title": "ITableHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Table\\ITableHandler.cs",
               "RelativeDocumentMoniker": "ReservationService\\Handlers\\Table\\ITableHandler.cs",
@@ -1303,19 +1460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "MenuService.csproj",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\MenuService.csproj",
-              "RelativeDocumentMoniker": "MenuService\\MenuService.csproj",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\MenuService.csproj",
-              "RelativeToolTip": "MenuService\\MenuService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-02T12:45:42.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 76,
               "Title": "MenuControllerTest.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService.Tests\\MenuControllerTest.cs",
               "RelativeDocumentMoniker": "MenuService.Tests\\MenuControllerTest.cs",
@@ -1327,31 +1472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "MenuItemCategoryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
-              "RelativeDocumentMoniker": "MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
-              "RelativeToolTip": "MenuService\\Handlers\\MenuItemCategory\\MenuItemCategoryHandler.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T17:21:49.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "IMenuItemLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IMenuItemLink.cs",
-              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\IMenuItemLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IMenuItemLink.cs",
-              "RelativeToolTip": "OrderService\\Handlers\\Links\\IMenuItemLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T10:26:30.258Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 77,
               "Title": "IIngredientHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Ingredient\\IIngredientHandler.cs",
               "RelativeDocumentMoniker": "MenuService\\Handlers\\Ingredient\\IIngredientHandler.cs",
@@ -1363,31 +1484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "MenuItemLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\MenuItemLink.cs",
-              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\MenuItemLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\MenuItemLink.cs",
-              "RelativeToolTip": "OrderService\\Handlers\\Links\\MenuItemLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T17:32:41.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "IUserLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IUserLink.cs",
-              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\IUserLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\IUserLink.cs",
-              "RelativeToolTip": "OrderService\\Handlers\\Links\\IUserLink.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T22:47:58.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 78,
               "Title": "IMenuItemIngredientHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItemIngredient\\IMenuItemIngredientHandler.cs",
               "RelativeDocumentMoniker": "MenuService\\Handlers\\MenuItemIngredient\\IMenuItemIngredientHandler.cs",
@@ -1399,7 +1496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 79,
               "Title": "CategoryHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\Category\\CategoryHandler.cs",
               "RelativeDocumentMoniker": "MenuService\\Handlers\\Category\\CategoryHandler.cs",
@@ -1411,7 +1508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 80,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "MenuService\\Controllers\\CategoryController.cs",
@@ -1423,7 +1520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 81,
               "Title": "AccountServiceWebFactory.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\AccountService.Api.Tests\\AccountServiceWebFactory.cs",
               "RelativeDocumentMoniker": "AccountService\\AccountService.Api.Tests\\AccountServiceWebFactory.cs",
@@ -1435,19 +1532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "Ingredient.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Entities\\Ingredient.cs",
-              "RelativeDocumentMoniker": "MenuService\\Entities\\Ingredient.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Entities\\Ingredient.cs",
-              "RelativeToolTip": "MenuService\\Entities\\Ingredient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T15:44:01.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 82,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\AccountService.Api.Tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "AccountService\\AccountService.Api.Tests\\UnitTest1.cs",
@@ -1459,7 +1544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 86,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ReservationService\\Properties\\launchSettings.json",
@@ -1471,7 +1556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 85,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "OrderService\\Properties\\launchSettings.json",
@@ -1483,7 +1568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 84,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "MenuService\\Properties\\launchSettings.json",
@@ -1495,7 +1580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 83,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AccountService\\Properties\\launchSettings.json",
@@ -1507,7 +1592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 89,
               "Title": "CreateOrderDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\Order\\CreateOrderDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\Order\\CreateOrderDTO.cs",
@@ -1519,7 +1604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 88,
               "Title": "UpdateOrderDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\Order\\UpdateOrderDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\Order\\UpdateOrderDTO.cs",
@@ -1531,7 +1616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 87,
               "Title": "UpdateOrderStatusDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\Order\\UpdateOrderStatusDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\Order\\UpdateOrderStatusDTO.cs",
@@ -1543,7 +1628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 90,
               "Title": "OrderMapper.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Mappers\\OrderMapper.cs",
               "RelativeDocumentMoniker": "OrderService\\Mappers\\OrderMapper.cs",
@@ -1555,19 +1640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
-              "Title": "UserLink.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\UserLink.cs",
-              "RelativeDocumentMoniker": "OrderService\\Handlers\\Links\\UserLink.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Handlers\\Links\\UserLink.cs",
-              "RelativeToolTip": "OrderService\\Handlers\\Links\\UserLink.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwBQAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T22:48:07.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 91,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "OrderService\\Entities\\Order.cs",
@@ -1579,7 +1652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 92,
               "Title": "Reservation.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Entities\\Reservation.cs",
               "RelativeDocumentMoniker": "ReservationService\\Entities\\Reservation.cs",
@@ -1591,7 +1664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 93,
               "Title": "TableStatus.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Entities\\Enums\\TableStatus.cs",
               "RelativeDocumentMoniker": "ReservationService\\Entities\\Enums\\TableStatus.cs",
@@ -1603,7 +1676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 94,
               "Title": "ReservationStatus.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Entities\\Enums\\ReservationStatus.cs",
               "RelativeDocumentMoniker": "ReservationService\\Entities\\Enums\\ReservationStatus.cs",
@@ -1615,7 +1688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 95,
               "Title": "ReservationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Data\\ReservationDbContext.cs",
               "RelativeDocumentMoniker": "ReservationService\\Data\\ReservationDbContext.cs",
@@ -1627,7 +1700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 96,
               "Title": "MenuItemIngredientHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItemIngredient\\MenuItemIngredientHandler.cs",
               "RelativeDocumentMoniker": "MenuService\\Handlers\\MenuItemIngredient\\MenuItemIngredientHandler.cs",
@@ -1639,7 +1712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 97,
               "Title": "IMenuItemCategoryHandler.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Handlers\\MenuItemCategory\\IMenuItemCategoryHandler.cs",
               "RelativeDocumentMoniker": "MenuService\\Handlers\\MenuItemCategory\\IMenuItemCategoryHandler.cs",
@@ -1651,7 +1724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 98,
               "Title": "LoginResponseDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Authentication\\LoginResponseDTO.cs",
               "RelativeDocumentMoniker": "AccountService\\DTO\\Authentication\\LoginResponseDTO.cs",
@@ -1663,7 +1736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 99,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\AccountService\\DTO\\Authentication\\LoginDTO.cs",
               "RelativeDocumentMoniker": "AccountService\\DTO\\Authentication\\LoginDTO.cs",
@@ -1675,19 +1748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
-              "Title": "MenuItemDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
-              "RelativeDocumentMoniker": "MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
-              "RelativeToolTip": "MenuService\\DTO\\MenuItem\\MenuItemDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T13:09:08.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 100,
               "Title": "MenuItemMapper.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Mappers\\MenuItemMapper.cs",
               "RelativeDocumentMoniker": "MenuService\\Mappers\\MenuItemMapper.cs",
@@ -1699,7 +1760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 101,
               "Title": "CategoryMapper.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Mappers\\CategoryMapper.cs",
               "RelativeDocumentMoniker": "MenuService\\Mappers\\CategoryMapper.cs",
@@ -1711,7 +1772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 102,
               "Title": "Table.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Entities\\Table.cs",
               "RelativeDocumentMoniker": "ReservationService\\Entities\\Table.cs",
@@ -1723,7 +1784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 103,
               "Title": "ReservationStatusParser.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Mappers\\ReservationStatusParser.cs",
               "RelativeDocumentMoniker": "ReservationService\\Mappers\\ReservationStatusParser.cs",
@@ -1735,7 +1796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 104,
               "Title": "TableMapper.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Mappers\\TableMapper.cs",
               "RelativeDocumentMoniker": "ReservationService\\Mappers\\TableMapper.cs",
@@ -1747,7 +1808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 105,
               "Title": "UpdateTableDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\Table\\UpdateTableDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\Table\\UpdateTableDTO.cs",
@@ -1759,7 +1820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 106,
               "Title": "TableDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\Table\\TableDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\Table\\TableDTO.cs",
@@ -1771,7 +1832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 107,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\User\\UserDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\User\\UserDTO.cs",
@@ -1783,7 +1844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 108,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\Entities\\OrderItem.cs",
               "RelativeDocumentMoniker": "OrderService\\Entities\\OrderItem.cs",
@@ -1795,7 +1856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 109,
               "Title": "OrderDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\Order\\OrderDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\Order\\OrderDTO.cs",
@@ -1807,7 +1868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 110,
               "Title": "CreateTableDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\Table\\CreateTableDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\Table\\CreateTableDTO.cs",
@@ -1819,7 +1880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 111,
               "Title": "OrderItemDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\OrderItem\\OrderItemDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\OrderItem\\OrderItemDTO.cs",
@@ -1831,7 +1892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 112,
               "Title": "IUserLink.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\Handlers\\Links\\IUserLink.cs",
               "RelativeDocumentMoniker": "ReservationService\\Handlers\\Links\\IUserLink.cs",
@@ -1843,7 +1904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 113,
               "Title": "AddressDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\Address\\AddressDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\Address\\AddressDTO.cs",
@@ -1855,7 +1916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 114,
               "Title": "AddressDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\ReservationService\\DTO\\Address\\AddressDTO.cs",
               "RelativeDocumentMoniker": "ReservationService\\DTO\\Address\\AddressDTO.cs",
@@ -1867,7 +1928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 115,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\User\\UserDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\User\\UserDTO.cs",
@@ -1879,7 +1940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 116,
               "Title": "IngredientMapper.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Mappers\\IngredientMapper.cs",
               "RelativeDocumentMoniker": "MenuService\\Mappers\\IngredientMapper.cs",
@@ -1891,7 +1952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 117,
               "Title": "MenuItemDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\MenuItem\\MenuItemDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\MenuItem\\MenuItemDTO.cs",
@@ -1903,7 +1964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 118,
               "Title": "IngredientDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\Ingredient\\IngredientDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\Ingredient\\IngredientDTO.cs",
@@ -1915,7 +1976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 119,
               "Title": "CategoryDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\OrderService\\DTO\\Category\\CategoryDTO.cs",
               "RelativeDocumentMoniker": "OrderService\\DTO\\Category\\CategoryDTO.cs",
@@ -1927,19 +1988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
-              "Title": "IngredientDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
-              "RelativeDocumentMoniker": "MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
-              "RelativeToolTip": "MenuService\\DTO\\Ingredient\\IngredientDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T13:10:16.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 120,
               "Title": "CategoryDTO.cs",
               "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Category\\CategoryDTO.cs",
               "RelativeDocumentMoniker": "MenuService\\DTO\\Category\\CategoryDTO.cs",
@@ -1948,42 +1997,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-10T13:10:05.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 118,
-              "Title": "CreateIngredientDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
-              "RelativeDocumentMoniker": "MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
-              "RelativeToolTip": "MenuService\\DTO\\Ingredient\\CreateIngredientDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T16:37:01.914Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 119,
-              "Title": "CreateMenuItemDTO.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
-              "RelativeDocumentMoniker": "MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
-              "RelativeToolTip": "MenuService\\DTO\\MenuItem\\CreateMenuItemDTO.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T16:37:17.418Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 120,
-              "Title": "MenuDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Data\\MenuDbContext.cs",
-              "RelativeDocumentMoniker": "MenuService\\Data\\MenuDbContext.cs",
-              "ToolTip": "C:\\Users\\pavle\\source\\repos\\URIS\\MenuService\\Data\\MenuDbContext.cs",
-              "RelativeToolTip": "MenuService\\Data\\MenuDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T12:26:31.117Z"
             }
           ]
         },

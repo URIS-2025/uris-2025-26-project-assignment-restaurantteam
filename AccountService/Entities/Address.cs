@@ -18,7 +18,7 @@ namespace AccountService.Entities
         public int StreetNumber { get; set; }
 
         [Required(ErrorMessage = "Address has to have a postal code.")]
-        [Range(1, 10000, ErrorMessage = "Postal code can't be negative or above 10000")]
+        [Range(1, 99999, ErrorMessage = "Postal code can't be negative or above 99999")]
         public int PostalCode { get; set; }
 
         [Required(ErrorMessage = "Address has to have a country name.")]

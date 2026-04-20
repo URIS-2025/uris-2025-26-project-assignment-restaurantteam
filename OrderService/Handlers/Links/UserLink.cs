@@ -18,8 +18,9 @@ namespace OrderService.Handlers.Links
 
         public async Task<UserDTO> GetUserById(int idUser, string? token)
         {
+            string stringUrl = hostUrl+idUser.ToString();
             using HttpClient httpClient = new HttpClient();
-            Uri url = new($"{hostUrl}{idUser}");
+            Uri url = new(stringUrl);
 
             if (token != null)
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);
