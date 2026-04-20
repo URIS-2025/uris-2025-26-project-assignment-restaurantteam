@@ -67,8 +67,8 @@ namespace OrderService.Handlers.OrderItem
 
         public async Task<bool> IsMenuItemInUse(int idMenuItem)
         {
-            var orderItems = _context.OrderItems.Where(oi => oi.IdMenuItem == idMenuItem).ToList();
-            if (orderItems == null)
+            bool orderItems = await _context.OrderItems.AnyAsync(oi => oi.IdMenuItem == idMenuItem);
+            if (!orderItems)
                 return false;
             return true;
         }

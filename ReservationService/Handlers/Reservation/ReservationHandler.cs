@@ -91,8 +91,8 @@ namespace ReservationService.Handlers.Reservation
 
         public async Task<bool> IsUserInUse(int idUser)
         {
-            var reservations = _context.Reservations.Where(o => o.IdUser == idUser).ToList();
-            if (reservations == null)
+            var reservations = await _context.Reservations.AnyAsync(o => o.IdUser == idUser);
+            if (!reservations)
                 return false;
             return true;
         }
