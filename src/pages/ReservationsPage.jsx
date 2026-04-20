@@ -284,7 +284,7 @@ function ReservationsPage() {
                         Rezervacija #{r.idReservation}
                       </span>
                       <span style={{ color: '#c9a84c', fontSize: '0.85rem' }}>
-                        Sto #{r.idTable}
+                        Sto #{r.tableDTO.idTable}
                       </span>
                     </div>
                     <div style={{ padding: '20px 24px' }}>

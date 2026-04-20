@@ -112,7 +112,7 @@ function UsersPage() {
                 onChange={(e) => setEditUser({ ...editUser, phoneNumber: e.target.value })} />
             </div>
             <div className="col-md-6">
-              <label style={labelStyle}>Rola</label>
+              <label style={labelStyle}>Role</label>
               <select style={inputStyle} value={editUser.role}
                 onChange={(e) => setEditUser({ ...editUser, role: parseInt(e.target.value) })}>
                 <option value={0}>Customer</option>

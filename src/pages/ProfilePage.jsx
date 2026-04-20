@@ -56,6 +56,7 @@ function ProfilePage() {
         phoneNumber: editData.phoneNumber === "" ? null: editData.phoneNumber,
         address: {
               street: editData.address.street === ""? null: editData.address.street,
+              streetNumber: editData.address.streetNumber === ""? null: editData.address.streetNumber,
               city: editData.address.city=== ""? null: editData.address.city,
               postalCode: editData.address.postalCode === ""? null: editData.address.postalCode,
               country: editData.address.country === ""? null: editData.address.country
@@ -263,6 +264,13 @@ function ProfilePage() {
                       onFocus={e => e.target.style.borderColor = '#c9a84c'}
                       onBlur={e => e.target.style.borderColor = '#444'}
                       onChange={(e) => setEditData({ ...editData, address: { ...editData.address, country: e.target.value } })} />
+                  </div>
+                  <div className="col-md-3">
+                    <label style={labelStyle}>Grad</label>
+                    <input style={inputStyle} value={editData?.address?.city || ''}
+                      onFocus={e => e.target.style.borderColor = '#c9a84c'}
+                      onBlur={e => e.target.style.borderColor = '#444'}
+                      onChange={(e) => setEditData({ ...editData, address: { ...editData.address, city: e.target.value } })} />
                   </div>
                 </div>
                 <div style={{ marginTop: '24px', display: 'flex', gap: '12px' }}>
