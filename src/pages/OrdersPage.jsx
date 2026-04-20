@@ -282,7 +282,7 @@ useEffect(() => {
                         )}
                         
                           <span style={{ marginLeft: '10px' }}>
-                            { order.userDTO.address ?'📍 {order.userDTO.address.street} {order.userDTO.address.streetNumber}' : '-'} 
+                            { order.userDTO.address ? `📍 ${order.userDTO.address.street} ${order.userDTO.address.streetNumber}` : '-'} 
                           </span>
                         
                       </div>
