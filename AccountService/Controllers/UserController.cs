@@ -114,11 +114,11 @@ namespace AccountService.Controllers
             bool? isInUseInReservations = await reservationLink.IsUserInUse(idUser, authorization);
             bool? isInUseInOrders = await orderLink.IsUserInUse(idUser, authorization);
 
-            if(isInUseInReservations.HasValue == true)
+            if(isInUseInReservations == true)
             {
                 return Conflict("User has reservations.");
             }
-            else if (isInUseInOrders.HasValue == true)
+            else if (isInUseInOrders == true)
             {
                 return Conflict("User has orders.");
 
