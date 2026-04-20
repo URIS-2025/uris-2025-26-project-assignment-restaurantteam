@@ -84,7 +84,6 @@ namespace ReservationService.Handlers.Reservation
 
             _context.Reservations.Update(reservation);
             await _context.SaveChangesAsync();
-            Console.WriteLine("Ovo je sto " +reservation.Table.NumberOfSeats + " " + reservation.Table.IdTable);
             var reservationDTO = ReservationMapper.ToReservationDTO(reservation);
             return reservationDTO;
         }
@@ -92,9 +91,7 @@ namespace ReservationService.Handlers.Reservation
         public async Task<bool> IsUserInUse(int idUser)
         {
             var reservations = await _context.Reservations.AnyAsync(o => o.IdUser == idUser);
-            if (!reservations)
-                return false;
-            return true;
+            return reservations;
         }
     }
 }

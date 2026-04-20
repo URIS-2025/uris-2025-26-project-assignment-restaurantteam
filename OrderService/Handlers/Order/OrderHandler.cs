@@ -4,6 +4,7 @@ using OrderService.DTO.Order;
 using OrderService.DTO.OrderItem;
 
 using OrderService.Mappers;
+using System.Reflection.Metadata.Ecma335;
 
 namespace OrderService.Handlers.Order
 {
@@ -153,9 +154,7 @@ namespace OrderService.Handlers.Order
         public async Task<bool> IsUserInUse(int idUser)
         {
             bool orders = await _context.Orders.AnyAsync(o => o.IdUser == idUser);
-            if (!orders)
-                return false;
-            return true;
+            return orders;
         }
     }
 }
