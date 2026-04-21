@@ -65,7 +65,7 @@ function ReservationsPage() {
   }
 
   useEffect(() => { 
-  if (token) fetchAll() 
+  if (token && role) fetchAll() 
 }, [name, role])
 
   const handleCreateReservation = async (e) => {
@@ -291,9 +291,22 @@ function ReservationsPage() {
                       <span style={{ color: '#f5f0e8', fontFamily: 'Georgia, serif', fontWeight: 'bold' }}>
                         Rezervacija #{r.idReservation}
                       </span>
-                      <span style={{ color: '#c9a84c', fontSize: '0.85rem' }}>
-                        Sto #{r.tableDTO.idTable}
-                      </span>
+                      <div style={{ textAlign: 'right' }}>
+                        <span style={{ color: '#c9a84c', fontSize: '0.85rem' }}>
+                          Sto #{r.tableDTO.idTable}
+                        </span>
+                        {(isAdmin || isEmployee) && r.userDTO && (
+                          <div style={{ marginTop: '6px', fontSize: '0.8rem', color: '#9b9080' }}>
+                            <span>👤 {r.userDTO.username}</span>
+                            {r.userDTO.phoneNumber && (
+                              <span style={{ marginLeft: '10px' }}>📞 {r.userDTO.phoneNumber}</span>
+                            )}
+                            {r.userDTO.address?.street && (
+                              <span style={{ marginLeft: '10px' }}>📍 {r.userDTO.address.street} {r.userDTO.address.streetNumber}</span>
+                            )}
+                          </div>
+                        )}
+                      </div>
                     </div>
                     <div style={{ padding: '20px 24px' }}>
                       <div style={{ display: 'flex', gap: '32px', marginBottom: '8px' }}>

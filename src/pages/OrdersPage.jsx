@@ -60,7 +60,7 @@ useEffect(() => {
   }
 
   useEffect(() => { 
-  if (token) fetchAll() 
+  if (token && role2) fetchAll() 
 }, [name, role2])
 
   const handleAddItem = () => {
