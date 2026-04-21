@@ -9,6 +9,7 @@ import { jwtDecode } from 'jwt-decode'
 function ReservationsPage() {
   const { token, role } = useAuth()
   const isAdmin = role === 'ADMIN'
+  const isEmployee = role === 'EMPLOYEE'
 
   const [reservations, setReservations] = useState([])
   const [tables, setTables] = useState([])
@@ -48,7 +49,12 @@ function ReservationsPage() {
         getAllReservations(token),
         getAllTables()
       ])
-      setReservations(resRes.data)
+
+      const filteredReservations = (isAdmin || isEmployee)
+      ? resRes.data
+      : resRes.data.filter(r => r.userDTO?.username === name)
+
+      setReservations(filteredReservations)
       setTables(tabRes.data)
     } catch (err) {
       console.log(err)
@@ -58,7 +64,9 @@ function ReservationsPage() {
     }
   }
 
-  useEffect(() => { fetchAll() }, [])
+  useEffect(() => { 
+  if (token) fetchAll() 
+}, [name, role])
 
   const handleCreateReservation = async (e) => {
     e.preventDefault()

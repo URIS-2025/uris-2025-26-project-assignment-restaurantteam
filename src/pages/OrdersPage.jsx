@@ -9,7 +9,7 @@ function OrdersPage() {
   const[role2, setRole] = useState()
 
 
-  const { token, role } = useAuth()
+  const { token, role, username  } = useAuth()
 useEffect(() => {
   if (token) {
     const decoded = jwtDecode(token)
@@ -17,12 +17,7 @@ useEffect(() => {
     setRole(decoded.role)
   }
 }, [token])
-  
-
-  
-
-
-
+  const isEmployee = role2 === 'EMPLOYEE'
   const isAdmin = role2 === 'ADMIN'
 
   const [orders, setOrders] = useState([])
@@ -48,7 +43,12 @@ useEffect(() => {
         getAllOrders(token),
         getAllMenuItems(token)
       ])
-      setOrders(ordersRes.data)
+
+       const filteredOrders = (isAdmin || isEmployee)
+        ? ordersRes.data
+        : ordersRes.data.filter(order => order.userDTO?.username === name)
+
+      setOrders(filteredOrders)
       setMenuItems(menuRes.data)
     } catch (err) {
       console.log(err)
@@ -59,7 +59,9 @@ useEffect(() => {
     }
   }
 
-  useEffect(() => { fetchAll() }, [])
+  useEffect(() => { 
+  if (token) fetchAll() 
+}, [name, role2])
 
   const handleAddItem = () => {
     if (!selectedItem.idMenuItem) return
@@ -274,7 +276,7 @@ useEffect(() => {
                   </span>
 
                     {/* Samo admin vidi user info */}
-                    {isAdmin && order.userDTO && (
+                    {(isAdmin || isEmployee) && order.userDTO && (
                       <div style={{ marginTop: '6px', fontSize: '0.8rem', color: '#9b9080' }}>
                         <span>👤 {order.userDTO.username}</span>
                         {order.userDTO.phoneNumber && (
