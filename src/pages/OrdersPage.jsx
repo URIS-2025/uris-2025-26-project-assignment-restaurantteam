@@ -336,7 +336,7 @@ useEffect(() => {
                   justifyContent: 'space-between',
                   alignItems: 'center'
                 }}>
-                  {isAdmin ? (
+                  {(isAdmin || isEmployee) ? (
                     <select
                       value={order.orderStatus}
                       onChange={(e) => handleStatusChange(order.idOrder, e.target.value)}
